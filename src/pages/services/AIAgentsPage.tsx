@@ -41,12 +41,16 @@ export default function AIAgentsPage() {
   return (
     <ServicePageLayout
       title="AI Agents & Automation"
-      subtitle="Intelligent Automation"
+      subtitle="Intelligent Automation with n8n"
       description="Automate SEO tasks and deploy AI agents for sales and marketing with custom n8n workflows. Work smarter, not harder."
       icon={Bot}
       features={features}
       benefits={benefits}
       ctaText="Automate Your Marketing"
+      relatedServices={[
+        { name: "App Creation", href: "/services/app-creation", description: "Full-stack apps with Base44" },
+        { name: "SEO Services", href: "/services/seo", description: "Optimize your organic presence" },
+      ]}
     />
   );
 }

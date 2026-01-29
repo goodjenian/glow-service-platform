@@ -47,6 +47,10 @@ export default function SocialMediaPage() {
       features={features}
       benefits={benefits}
       ctaText="Elevate Your Social Presence"
+      relatedServices={[
+        { name: "Site Express", href: "/services/site-express", description: "Fast frontend development with Lovable" },
+        { name: "SEO Services", href: "/services/seo", description: "Optimize your organic presence" },
+      ]}
     />
   );
 }

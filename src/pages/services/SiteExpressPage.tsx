@@ -41,12 +41,16 @@ export default function SiteExpressPage() {
   return (
     <ServicePageLayout
       title="Site Express"
-      subtitle="Rapid Frontend Development"
-      description="Professional website development at lightning speed. We create beautiful, responsive sites using modern technologies like Lovable to get you online faster."
+      subtitle="Rapid Frontend Development with Lovable"
+      description="Professional website development at lightning speed. We create beautiful, responsive sites using Lovable to get you online faster—perfect for landing pages, portfolios, and business websites."
       icon={Zap}
       features={features}
       benefits={benefits}
       ctaText="Launch Your Site Fast"
+      relatedServices={[
+        { name: "App Creation", href: "/services/app-creation", description: "Full-stack apps with Base44" },
+        { name: "SEO Services", href: "/services/seo", description: "Optimize your new site for search" },
+      ]}
     />
   );
 }

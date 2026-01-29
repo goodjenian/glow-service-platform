@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu } from "lucide-react";
 import logo from "@/assets/logo.png";
+import logoDark from "@/assets/logo-dark.png";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -16,8 +17,9 @@ import {
 const services = [
   { name: "SEO Services", href: "/services/seo", description: "Technical, On-Page & Content SEO" },
   { name: "GEO Optimization", href: "/services/geo", description: "AI Search Visibility for LLMs" },
-  { name: "Site Express", href: "/services/site-express", description: "Fast Frontend Development" },
-  { name: "AI Agents", href: "/services/ai-agents", description: "Automation & Sales AI" },
+  { name: "Site Express", href: "/services/site-express", description: "Fast Frontend Development with Lovable" },
+  { name: "App Creation", href: "/services/app-creation", description: "Full-Stack Apps with Base44" },
+  { name: "AI Agents", href: "/services/ai-agents", description: "Automation & Sales AI with n8n" },
   { name: "Social Media", href: "/services/social-media", description: "Visual Content Creation" },
 ];
 
@@ -27,14 +29,14 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between px-4 md:px-6">
-        <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="Goody SEO" className="h-10 w-10" />
+      <nav className="container flex h-16 items-center justify-between px-4 md:px-6" aria-label="Main navigation">
+        <Link to="/" className="flex items-center gap-3" aria-label="Goody SEO Home">
+          <img src={logoDark} alt="" className="h-10 w-10" aria-hidden="true" />
           <span className="text-xl font-bold text-foreground">Goody SEO</span>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-6">
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
@@ -74,20 +76,19 @@ export function Header() {
               Book a Call
             </a>
           </Button>
-        </nav>
+        </div>
 
         {/* Mobile Navigation */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon">
+            <Button variant="ghost" size="icon" aria-label="Open menu">
               <Menu className="h-6 w-6" />
-              <span className="sr-only">Toggle menu</span>
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="w-[300px] sm:w-[400px]">
             <div className="flex flex-col gap-6 mt-8">
               <Link to="/" className="flex items-center gap-3" onClick={() => setIsOpen(false)}>
-                <img src={logo} alt="Goody SEO" className="h-8 w-8" />
+                <img src={logoDark} alt="" className="h-8 w-8" aria-hidden="true" />
                 <span className="text-lg font-bold">Goody SEO</span>
               </Link>
               
@@ -114,7 +115,7 @@ export function Header() {
             </div>
           </SheetContent>
         </Sheet>
-      </div>
+      </nav>
     </header>
   );
 }

@@ -47,6 +47,10 @@ export default function SEOServicesPage() {
       features={features}
       benefits={benefits}
       ctaText="Get Your SEO Audit"
+      relatedServices={[
+        { name: "GEO Optimization", href: "/services/geo", description: "AI search visibility for LLMs" },
+        { name: "AI Agents", href: "/services/ai-agents", description: "Automate SEO tasks with n8n" },
+      ]}
     />
   );
 }
