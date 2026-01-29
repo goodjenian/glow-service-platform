@@ -1,4 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
+import { HeroSection } from "@/components/home/HeroSection";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -12,7 +13,8 @@ import {
   CheckCircle2,
   Target,
   TrendingUp,
-  Users
+  Users,
+  Smartphone
 } from "lucide-react";
 import logo from "@/assets/logo.png";
 
@@ -33,10 +35,17 @@ const services = [
   },
   {
     title: "Site Express",
-    description: "Rapid frontend development with modern technologies. Get your professional site live in days, not months.",
+    description: "Rapid frontend development with Lovable. Get your professional site live in days, not months.",
     icon: Zap,
     href: "/services/site-express",
     color: "bg-amber-500/10 text-amber-600",
+  },
+  {
+    title: "App Creation",
+    description: "Full-stack web applications with Base44. Databases, auth, and AI features included.",
+    icon: Smartphone,
+    href: "/services/app-creation",
+    color: "bg-cyan-500/10 text-cyan-600",
   },
   {
     title: "AI Agents",
@@ -54,72 +63,10 @@ const services = [
   },
 ];
 
-const stats = [
-  { value: "150+", label: "Clients Served" },
-  { value: "3x", label: "Average Traffic Growth" },
-  { value: "95%", label: "Client Satisfaction" },
-  { value: "10+", label: "Years Experience" },
-];
-
 const Index = () => {
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative bg-gradient-hero py-20 md:py-32 lg:py-40 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_hsl(217_91%_60%/0.15),_transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_hsl(217_91%_60%/0.1),_transparent_40%)]" />
-        
-        <div className="container px-4 md:px-6 relative">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-full px-4 py-2 mb-8">
-              <img src={logo} alt="" className="h-5 w-5" />
-              <span className="text-sm font-medium text-primary-foreground">
-                Boutique SEO Agency
-              </span>
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary-foreground mb-6 leading-tight animate-fade-in">
-              High-Impact SEO
-              <span className="block text-accent">That Drives Growth</span>
-            </h1>
-            
-            <p className="text-lg md:text-xl text-primary-foreground/80 mb-10 max-w-2xl mx-auto animate-slide-up">
-              Goody SEO is a boutique agency specializing in cost-efficient strategies 
-              that enhance your online presence and drive measurable business results.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
-              <Button variant="hero" size="xl" asChild>
-                <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
-                  Book a Free Consultation
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
-              </Button>
-              <Button variant="heroOutline" size="xl" asChild>
-                <Link to="/services/seo">
-                  Explore Services
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-12 bg-card border-y border-border">
-        <div className="container px-4 md:px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-foreground mb-1">
-                  {stat.value}
-                </div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <HeroSection />
 
       {/* Services Section */}
       <section className="py-16 md:py-24">

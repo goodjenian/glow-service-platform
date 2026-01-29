@@ -5,19 +5,20 @@ const services = [
   { name: "SEO Services", href: "/services/seo" },
   { name: "GEO Optimization", href: "/services/geo" },
   { name: "Site Express", href: "/services/site-express" },
+  { name: "App Creation", href: "/services/app-creation" },
   { name: "AI Agents", href: "/services/ai-agents" },
   { name: "Social Media", href: "/services/social-media" },
 ];
 
 export function Footer() {
   return (
-    <footer className="bg-primary text-primary-foreground">
+    <footer className="bg-primary text-primary-foreground" role="contentinfo">
       <div className="container px-4 md:px-6 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <Link to="/" className="flex items-center gap-3 mb-4">
-              <img src={logo} alt="Goody SEO" className="h-10 w-10" />
+            <Link to="/" className="flex items-center gap-3 mb-4" aria-label="Goody SEO Home">
+              <img src={logo} alt="" className="h-10 w-10" aria-hidden="true" />
               <span className="text-xl font-bold">Goody SEO</span>
             </Link>
             <p className="text-primary-foreground/80 max-w-md">
@@ -29,7 +30,7 @@ export function Footer() {
           {/* Services */}
           <div>
             <h4 className="font-semibold mb-4">Services</h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2" aria-label="Our services">
               {services.map((service) => (
                 <li key={service.href}>
                   <Link 
@@ -46,13 +47,13 @@ export function Footer() {
           {/* Contact */}
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>
-            <ul className="space-y-2 text-primary-foreground/70">
+            <ul className="space-y-2 text-primary-foreground/70" aria-label="Contact information">
               <li>
                 <a 
-                  href="mailto:hello@goodyseo.com" 
+                  href="mailto:business@goodyseo.com" 
                   className="hover:text-primary-foreground transition-colors"
                 >
-                  hello@goodyseo.com
+                  business@goodyseo.com
                 </a>
               </li>
               <li>

@@ -47,6 +47,10 @@ export default function GEOPage() {
       features={features}
       benefits={benefits}
       ctaText="Start Your GEO Audit"
+      relatedServices={[
+        { name: "SEO Services", href: "/services/seo", description: "Traditional search optimization" },
+        { name: "App Creation", href: "/services/app-creation", description: "Full-stack apps with Base44" },
+      ]}
     />
   );
 }

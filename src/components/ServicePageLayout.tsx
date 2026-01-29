@@ -2,10 +2,17 @@ import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import type { LucideIcon } from "lucide-react";
 
 interface Feature {
   title: string;
+  description: string;
+}
+
+interface RelatedService {
+  name: string;
+  href: string;
   description: string;
 }
 
@@ -17,6 +24,7 @@ interface ServicePageLayoutProps {
   features: Feature[];
   benefits: string[];
   ctaText?: string;
+  relatedServices?: RelatedService[];
 }
 
 export function ServicePageLayout({
@@ -27,6 +35,7 @@ export function ServicePageLayout({
   features,
   benefits,
   ctaText = "Get Started Today",
+  relatedServices,
 }: ServicePageLayoutProps) {
   return (
     <Layout>
@@ -113,6 +122,37 @@ export function ServicePageLayout({
           </div>
         </div>
       </section>
+
+      {/* Related Services Section */}
+      {relatedServices && relatedServices.length > 0 && (
+        <section className="py-16 md:py-24">
+          <div className="container px-4 md:px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Related Services</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Explore our other services that complement this offering
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              {relatedServices.map((service, index) => (
+                <Link key={index} to={service.href} className="group">
+                  <Card className="h-full hover-lift border-border/50 bg-gradient-card transition-all duration-300 group-hover:border-accent/30">
+                    <CardContent className="p-6">
+                      <h3 className="text-xl font-semibold mb-2 group-hover:text-accent transition-colors">
+                        {service.name}
+                      </h3>
+                      <p className="text-muted-foreground">{service.description}</p>
+                      <div className="mt-4 flex items-center text-accent font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                        Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA Section */}
       <section className="py-16 md:py-24">
