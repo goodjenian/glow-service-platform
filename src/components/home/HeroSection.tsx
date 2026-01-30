@@ -1,90 +1,85 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Sparkles, TrendingUp, Zap } from "lucide-react";
-import logo from "@/assets/logo.png";
-
-const floatingIcons = [
-  { icon: Sparkles, delay: "0s", position: "top-20 left-[10%]" },
-  { icon: TrendingUp, delay: "1s", position: "top-32 right-[15%]" },
-  { icon: Zap, delay: "2s", position: "bottom-32 left-[20%]" },
-];
+import { ArrowRight } from "lucide-react";
+import { DottedSurface } from "@/components/ui/dotted-surface";
 
 export function HeroSection() {
   return (
-    <section className="relative bg-gradient-hero py-20 md:py-32 lg:py-40 overflow-hidden">
-      {/* Animated Background Gradients */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_hsl(217_91%_60%/0.15),_transparent_50%)] animate-pulse-slow" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_hsl(217_91%_60%/0.1),_transparent_40%)]" />
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[hsl(220,70%,4%)]">
+      {/* 3D Dotted Surface Background */}
+      <DottedSurface className="z-0" />
       
-      {/* Floating Icons */}
-      {floatingIcons.map((item, index) => (
-        <div
-          key={index}
-          className={`absolute ${item.position} hidden lg:block animate-float`}
-          style={{ animationDelay: item.delay }}
-        >
-          <div className="bg-accent/10 backdrop-blur-sm rounded-2xl p-4">
-            <item.icon className="h-8 w-8 text-accent/60" />
-          </div>
-        </div>
-      ))}
+      {/* Gradient Overlays */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[hsl(220,70%,4%)] z-10" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_hsl(217_91%_60%/0.15),_transparent_70%)] z-10" />
       
-      {/* Grid Pattern Overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
-      
-      <div className="container px-4 md:px-6 relative">
+      {/* Content */}
+      <div className="container px-4 md:px-6 relative z-20">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Animated Badge */}
-          <div className="inline-flex items-center gap-2 bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-full px-4 py-2 mb-8 animate-slide-up">
-            <div className="relative">
-              <img src={logo} alt="" className="h-5 w-5" aria-hidden="true" />
-              <span className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-accent rounded-full animate-ping" />
-            </div>
-            <span className="text-sm font-medium text-primary-foreground">
-              Boutique SEO Agency
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-[hsl(217,91%,60%/0.15)] backdrop-blur-sm border border-[hsl(217,91%,60%/0.3)] rounded-full px-5 py-2.5 mb-8 animate-fade-in">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[hsl(217,91%,60%)] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[hsl(217,91%,60%)]"></span>
+            </span>
+            <span className="text-sm font-medium text-[hsl(0,0%,95%)]">
+              Consultoria de SEO & Marketing Digital
             </span>
           </div>
           
-          {/* Headline with Animated Text */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
-            <span className="animate-fade-in inline-block">High-Impact SEO</span>
-            <span className="block text-accent animate-slide-up" style={{ animationDelay: "0.2s" }}>
-              That Drives Growth
+          {/* Simplified H1 */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-[hsl(0,0%,100%)] mb-6 leading-tight tracking-tight">
+            <span className="block animate-fade-in">Estratégias que</span>
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[hsl(217,91%,60%)] to-[hsl(200,90%,70%)] animate-slide-up" style={{ animationDelay: "0.2s" }}>
+              Impulsionam Resultados
             </span>
           </h1>
           
-          <p className="text-lg md:text-xl text-primary-foreground/80 mb-10 max-w-2xl mx-auto animate-slide-up" style={{ animationDelay: "0.4s" }}>
-            Goody SEO is a boutique agency specializing in cost-efficient strategies 
-            that enhance your online presence and drive measurable business results.
+          <p className="text-lg md:text-xl text-[hsl(220,20%,75%)] mb-10 max-w-2xl mx-auto animate-slide-up" style={{ animationDelay: "0.4s" }}>
+            Consultoria especializada em SEO, GEO e automação com IA. 
+            Transformamos sua presença digital em crescimento mensurável.
           </p>
           
-          {/* CTA Buttons with Hover Effects */}
+          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: "0.6s" }}>
-            <Button variant="hero" size="xl" asChild className="group">
+            <Button 
+              size="xl" 
+              asChild 
+              className="group bg-[hsl(217,91%,60%)] hover:bg-[hsl(217,91%,55%)] text-[hsl(0,0%,100%)] border-0 shadow-[0_0_30px_hsl(217,91%,60%/0.4)]"
+            >
               <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
-                Book a Free Consultation
+                Agende uma Consulta
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
-            <Button variant="heroOutline" size="xl" asChild className="group">
+            <Button 
+              variant="outline" 
+              size="xl" 
+              asChild 
+              className="group border-[hsl(217,91%,60%/0.5)] text-[hsl(0,0%,100%)] hover:bg-[hsl(217,91%,60%/0.1)] hover:border-[hsl(217,91%,60%)]"
+            >
               <Link to="/services/seo">
-                Explore Services
+                Nossos Serviços
                 <ArrowRight className="ml-2 h-5 w-5 opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0" />
               </Link>
             </Button>
           </div>
           
-          {/* Trust Indicators */}
-          <div className="mt-12 pt-8 border-t border-primary-foreground/10 animate-fade-in" style={{ animationDelay: "0.8s" }}>
-            <p className="text-sm text-primary-foreground/50 mb-4">Trusted by growing businesses worldwide</p>
-            <div className="flex flex-wrap justify-center gap-8 text-primary-foreground/40">
-              <span className="text-2xl font-bold">150+</span>
-              <span className="text-primary-foreground/20">|</span>
-              <span className="text-sm font-medium self-center">Clients Served</span>
-              <span className="text-primary-foreground/20">|</span>
-              <span className="text-2xl font-bold">3x</span>
-              <span className="text-primary-foreground/20">|</span>
-              <span className="text-sm font-medium self-center">Avg. Traffic Growth</span>
+          {/* Trust Stats */}
+          <div className="mt-16 pt-8 border-t border-[hsl(217,91%,60%/0.2)] animate-fade-in" style={{ animationDelay: "0.8s" }}>
+            <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto">
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-[hsl(217,91%,60%)]">150+</div>
+                <div className="text-sm text-[hsl(220,20%,60%)]">Clientes</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-[hsl(217,91%,60%)]">3x</div>
+                <div className="text-sm text-[hsl(220,20%,60%)]">Crescimento</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-[hsl(217,91%,60%)]">5+</div>
+                <div className="text-sm text-[hsl(220,20%,60%)]">Anos</div>
+              </div>
             </div>
           </div>
         </div>
