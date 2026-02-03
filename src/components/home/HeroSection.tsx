@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import { ArrowRight, Sparkles, TrendingUp, Zap, Database, Bot, BarChart3 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getWhatsAppUrl, getWhatsAppUrlPt } from "@/lib/whatsapp";
+import { EntropyBackground } from "@/components/effects/EntropyBackground";
 
 const floatingIcons = [
   { icon: Sparkles, delay: "0s", position: "top-20 left-[10%]" },
@@ -18,9 +18,12 @@ export function HeroSection() {
   const whatsappUrl = language === "pt" ? getWhatsAppUrlPt() : getWhatsAppUrl();
 
   return (
-    <section className="relative bg-gradient-hero py-20 md:py-32 lg:py-40 overflow-hidden">
-      {/* Animated Grid Background */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:64px_64px]" />
+    <section className="relative bg-primary py-20 md:py-32 lg:py-40 overflow-hidden">
+      {/* Entropy Particle Animation */}
+      <EntropyBackground className="opacity-60" />
+      
+      {/* Subtle Grid Overlay */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
       
       {/* Glowing Orbs */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse-slow" />

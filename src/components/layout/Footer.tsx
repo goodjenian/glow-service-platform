@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
-import logo from "@/assets/logo.png";
+import logoWhite from "@/assets/logo.png";
 
 export function Footer() {
   const { t } = useLanguage();
@@ -21,7 +21,7 @@ export function Footer() {
           {/* Brand */}
           <div className="max-w-xs">
             <Link to="/" className="flex items-center gap-3 mb-3" aria-label="Goody SEO Home">
-              <img src={logo} alt="" className="h-8 w-8" aria-hidden="true" />
+              <img src={logoWhite} alt="" className="h-8 w-8" aria-hidden="true" />
               <span className="text-lg font-bold">Goody SEO</span>
             </Link>
             <p className="text-primary-foreground/70 text-sm">

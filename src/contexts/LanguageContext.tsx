@@ -66,6 +66,13 @@ const translations: Record<Language, Record<string, string>> = {
     "cta.desc": "Let's discuss your goals and create an automation strategy that delivers real results.",
     "cta.button": "Schedule Your Free Consultation",
 
+    // Testimonial
+    "testimonial.title": "What Our Clients Say",
+    "testimonial.subtitle": "Real results from businesses like yours",
+    "testimonial.quote": "The results have been phenomenal. We've seen significant growth in organic traffic and our automation workflows have saved countless hours every week.",
+    "testimonial.watchVideo": "Watch the full testimonial",
+    "testimonial.more": "More success stories coming soon",
+
     // Footer
     "footer.desc": "Boutique agency specializing in high-impact, data-driven automation strategies that enhance your online presence and drive business growth.",
     "footer.services": "Services",
@@ -285,6 +292,13 @@ const translations: Record<Language, Record<string, string>> = {
     "cta.title": "Pronto para Crescer seu Negócio?",
     "cta.desc": "Vamos discutir seus objetivos e criar uma estratégia de automação que entrega resultados reais.",
     "cta.button": "Agende Sua Consulta Gratuita",
+
+    // Testimonial
+    "testimonial.title": "O Que Nossos Clientes Dizem",
+    "testimonial.subtitle": "Resultados reais de empresas como a sua",
+    "testimonial.quote": "Os resultados foram fenomenais. Vimos um crescimento significativo no tráfego orgânico e nossos workflows de automação economizaram incontáveis horas toda semana.",
+    "testimonial.watchVideo": "Assista ao depoimento completo",
+    "testimonial.more": "Mais histórias de sucesso em breve",
 
     // Footer
     "footer.desc": "Agência boutique especializada em estratégias de automação de alto impacto e baseadas em dados que melhoram sua presença online e impulsionam o crescimento do negócio.",
