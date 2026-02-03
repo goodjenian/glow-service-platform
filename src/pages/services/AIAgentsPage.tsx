@@ -1,55 +1,42 @@
 import { ServicePageLayout } from "@/components/ServicePageLayout";
 import { Bot } from "lucide-react";
-
-const features = [
-  {
-    title: "SEO Task Automation",
-    description: "Automate repetitive SEO workflows like reporting, monitoring, and data collection with intelligent n8n integrations.",
-  },
-  {
-    title: "AI Sales Agents",
-    description: "Deploy conversational AI agents that qualify leads, answer questions, and guide prospects through your sales funnel 24/7.",
-  },
-  {
-    title: "Custom Workflows",
-    description: "Build tailored automation workflows that connect your tools and streamline your marketing operations.",
-  },
-  {
-    title: "Lead Enrichment",
-    description: "Automatically enrich and score leads using AI to prioritize high-value opportunities for your sales team.",
-  },
-  {
-    title: "Content Automation",
-    description: "Streamline content creation, distribution, and repurposing with AI-powered workflows.",
-  },
-  {
-    title: "Analytics & Reporting",
-    description: "Automated dashboards and reports that deliver insights directly to your inbox or Slack.",
-  },
-];
-
-const benefits = [
-  "Save hours on repetitive marketing tasks",
-  "24/7 lead qualification and engagement",
-  "Seamless integration with your existing tools",
-  "Scalable automation that grows with you",
-  "Custom solutions built for your needs",
-  "Ongoing optimization and support",
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function AIAgentsPage() {
+  const { t } = useLanguage();
+
+  const features = [
+    { title: t("aiAgents.feature1.title"), description: t("aiAgents.feature1.desc") },
+    { title: t("aiAgents.feature2.title"), description: t("aiAgents.feature2.desc") },
+    { title: t("aiAgents.feature3.title"), description: t("aiAgents.feature3.desc") },
+    { title: t("aiAgents.feature4.title"), description: t("aiAgents.feature4.desc") },
+    { title: t("aiAgents.feature5.title"), description: t("aiAgents.feature5.desc") },
+    { title: t("aiAgents.feature6.title"), description: t("aiAgents.feature6.desc") },
+  ];
+
+  const benefits = [
+    t("aiAgents.benefit1"),
+    t("aiAgents.benefit2"),
+    t("aiAgents.benefit3"),
+    t("aiAgents.benefit4"),
+    t("aiAgents.benefit5"),
+    t("aiAgents.benefit6"),
+  ];
+
   return (
     <ServicePageLayout
-      title="AI Agents & Automation"
-      subtitle="Intelligent Automation with n8n"
-      description="Automate SEO tasks and deploy AI agents for sales and marketing with custom n8n workflows. Work smarter, not harder."
+      title={t("aiAgents.title")}
+      subtitle={t("aiAgents.subtitle")}
+      description={t("aiAgents.desc")}
       icon={Bot}
       features={features}
       benefits={benefits}
-      ctaText="Automate Your Marketing"
+      ctaText={t("aiAgents.cta")}
+      serviceColor="green"
+      serviceName="AI Agents"
       relatedServices={[
-        { name: "App Creation", href: "/services/app-creation", description: "Full-stack apps with Base44" },
-        { name: "SEO Services", href: "/services/seo", description: "Optimize your organic presence" },
+        { name: t("nav.appCreation"), href: "/services/app-creation", description: "Full-stack apps with Base44" },
+        { name: t("nav.seo"), href: "/services/seo", description: "Optimize your organic presence" },
       ]}
     />
   );

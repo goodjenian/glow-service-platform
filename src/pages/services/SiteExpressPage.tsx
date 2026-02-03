@@ -1,55 +1,42 @@
 import { ServicePageLayout } from "@/components/ServicePageLayout";
 import { Zap } from "lucide-react";
-
-const features = [
-  {
-    title: "Rapid Development",
-    description: "Get your professional website live in days, not months. We use cutting-edge tools like Lovable for accelerated delivery.",
-  },
-  {
-    title: "Modern Design",
-    description: "Clean, professional aesthetics that reflect your brand identity and convert visitors into customers.",
-  },
-  {
-    title: "Responsive Layouts",
-    description: "Perfect display across all devices—desktop, tablet, and mobile—with no compromises on user experience.",
-  },
-  {
-    title: "SEO-Ready Structure",
-    description: "Built with search engines in mind from day one. Proper semantic HTML, meta tags, and performance optimization.",
-  },
-  {
-    title: "Performance Focused",
-    description: "Lightning-fast load times with optimized assets, lazy loading, and modern web technologies.",
-  },
-  {
-    title: "Easy Maintenance",
-    description: "Clean, well-documented code that's easy to update and maintain as your business grows.",
-  },
-];
-
-const benefits = [
-  "Go live in days instead of months",
-  "No coding knowledge required from your side",
-  "Built-in SEO best practices",
-  "Modern, conversion-focused design",
-  "Mobile-first responsive layouts",
-  "Ongoing support and updates available",
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function SiteExpressPage() {
+  const { t } = useLanguage();
+
+  const features = [
+    { title: t("siteExpress.feature1.title"), description: t("siteExpress.feature1.desc") },
+    { title: t("siteExpress.feature2.title"), description: t("siteExpress.feature2.desc") },
+    { title: t("siteExpress.feature3.title"), description: t("siteExpress.feature3.desc") },
+    { title: t("siteExpress.feature4.title"), description: t("siteExpress.feature4.desc") },
+    { title: t("siteExpress.feature5.title"), description: t("siteExpress.feature5.desc") },
+    { title: t("siteExpress.feature6.title"), description: t("siteExpress.feature6.desc") },
+  ];
+
+  const benefits = [
+    t("siteExpress.benefit1"),
+    t("siteExpress.benefit2"),
+    t("siteExpress.benefit3"),
+    t("siteExpress.benefit4"),
+    t("siteExpress.benefit5"),
+    t("siteExpress.benefit6"),
+  ];
+
   return (
     <ServicePageLayout
-      title="Site Express"
-      subtitle="Rapid Frontend Development with Lovable"
-      description="Professional website development at lightning speed. We create beautiful, responsive sites using Lovable to get you online faster—perfect for landing pages, portfolios, and business websites."
+      title={t("siteExpress.title")}
+      subtitle={t("siteExpress.subtitle")}
+      description={t("siteExpress.desc")}
       icon={Zap}
       features={features}
       benefits={benefits}
-      ctaText="Launch Your Site Fast"
+      ctaText={t("siteExpress.cta")}
+      serviceColor="beige"
+      serviceName="Site Express"
       relatedServices={[
-        { name: "App Creation", href: "/services/app-creation", description: "Full-stack apps with Base44" },
-        { name: "SEO Services", href: "/services/seo", description: "Optimize your new site for search" },
+        { name: t("nav.appCreation"), href: "/services/app-creation", description: "Full-stack apps with Base44" },
+        { name: t("nav.seo"), href: "/services/seo", description: "Optimize your new site for search" },
       ]}
     />
   );

@@ -1,55 +1,42 @@
 import { ServicePageLayout } from "@/components/ServicePageLayout";
 import { Share2 } from "lucide-react";
-
-const features = [
-  {
-    title: "Video Content Creation",
-    description: "Engaging short-form and long-form video content optimized for each platform—Instagram Reels, TikTok, YouTube, and more.",
-  },
-  {
-    title: "Visual Graphics",
-    description: "Eye-catching images, infographics, and carousel posts that stop the scroll and drive engagement.",
-  },
-  {
-    title: "Brand Consistency",
-    description: "Cohesive visual identity across all platforms that reinforces your brand and builds recognition.",
-  },
-  {
-    title: "Content Calendar",
-    description: "Strategic planning and scheduling to maintain consistent presence and maximize reach.",
-  },
-  {
-    title: "Platform Optimization",
-    description: "Content tailored to each platform's unique requirements, algorithms, and audience expectations.",
-  },
-  {
-    title: "Trend Integration",
-    description: "Stay relevant with timely content that leverages trending topics and formats for maximum visibility.",
-  },
-];
-
-const benefits = [
-  "Professional-quality content without the overhead",
-  "Consistent posting schedule maintained",
-  "Content optimized for each platform",
-  "Increased engagement and follower growth",
-  "Time savings on content creation",
-  "Analytics-driven content optimization",
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function SocialMediaPage() {
+  const { t } = useLanguage();
+
+  const features = [
+    { title: t("socialMedia.feature1.title"), description: t("socialMedia.feature1.desc") },
+    { title: t("socialMedia.feature2.title"), description: t("socialMedia.feature2.desc") },
+    { title: t("socialMedia.feature3.title"), description: t("socialMedia.feature3.desc") },
+    { title: t("socialMedia.feature4.title"), description: t("socialMedia.feature4.desc") },
+    { title: t("socialMedia.feature5.title"), description: t("socialMedia.feature5.desc") },
+    { title: t("socialMedia.feature6.title"), description: t("socialMedia.feature6.desc") },
+  ];
+
+  const benefits = [
+    t("socialMedia.benefit1"),
+    t("socialMedia.benefit2"),
+    t("socialMedia.benefit3"),
+    t("socialMedia.benefit4"),
+    t("socialMedia.benefit5"),
+    t("socialMedia.benefit6"),
+  ];
+
   return (
     <ServicePageLayout
-      title="Social Media Content"
-      subtitle="Visual Content Creation"
-      description="Engaging videos and images that capture attention and convert followers into customers. Professional content creation for all your social channels."
+      title={t("socialMedia.title")}
+      subtitle={t("socialMedia.subtitle")}
+      description={t("socialMedia.desc")}
       icon={Share2}
       features={features}
       benefits={benefits}
-      ctaText="Elevate Your Social Presence"
+      ctaText={t("socialMedia.cta")}
+      serviceColor="rose"
+      serviceName="Social Media"
       relatedServices={[
-        { name: "Site Express", href: "/services/site-express", description: "Fast frontend development with Lovable" },
-        { name: "SEO Services", href: "/services/seo", description: "Optimize your organic presence" },
+        { name: t("nav.siteExpress"), href: "/services/site-express", description: "Fast frontend development" },
+        { name: t("nav.seo"), href: "/services/seo", description: "Optimize your organic presence" },
       ]}
     />
   );
