@@ -249,52 +249,52 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.bookCall": "Agendar Chamada",
 
     // Hero
-    "hero.badge": "Agência Boutique de Marketing",
-    "hero.title1": "Alto Impacto",
-    "hero.title2": "Automações Que Impulsionam o Crescimento",
+    "hero.badge": "Agência boutique de marketing",
+    "hero.title1": "Alto impacto",
+    "hero.title2": "Automações que impulsionam o crescimento",
     "hero.description": "A Goody SEO é uma agência boutique especializada em estratégias de automação baseadas em dados que melhoram sua presença online e geram resultados mensuráveis.",
-    "hero.cta": "Agende uma Consulta Gratuita",
-    "hero.whatsapp": "Entre em Contato",
+    "hero.cta": "Agende uma consulta gratuita",
+    "hero.whatsapp": "Entre em contato",
     "hero.trust": "Confiada por empresas em crescimento no mundo todo",
-    "hero.clients": "Clientes Atendidos",
-    "hero.growth": "Crescimento Médio de Tráfego",
+    "hero.clients": "Clientes atendidos",
+    "hero.growth": "Crescimento médio de tráfego",
 
     // Services
-    "services.title": "Nossos Serviços",
+    "services.title": "Nossos serviços",
     "services.subtitle": "Soluções digitais completas adaptadas aos seus objetivos de negócio",
     "services.seo.title": "Serviços SEO",
-    "services.seo.desc": "Otimização Técnica, On-Page e de Conteúdo para aumentar sua visibilidade orgânica e atrair tráfego qualificado.",
+    "services.seo.desc": "Otimização técnica, on-page e de conteúdo para aumentar sua visibilidade orgânica e atrair tráfego qualificado.",
     "services.geo.title": "Otimização GEO",
     "services.geo.desc": "Prepare-se para o futuro com visibilidade em motores de busca IA e LLMs através de enriquecimento de entidades e estratégias de schema.",
     "services.siteExpress.title": "Site Express",
     "services.siteExpress.desc": "Desenvolvimento frontend rápido com Lovable. Coloque seu site profissional no ar em dias, não meses.",
-    "services.appCreation.title": "Criação de Apps",
+    "services.appCreation.title": "Criação de apps",
     "services.appCreation.desc": "Aplicações web full-stack com Base44. Banco de dados, autenticação e recursos de IA incluídos.",
     "services.aiAgents.title": "Agentes IA",
     "services.aiAgents.desc": "Automatize tarefas de SEO e implante agentes de vendas inteligentes com workflows n8n e soluções de IA personalizadas.",
-    "services.socialMedia.title": "Redes Sociais",
+    "services.socialMedia.title": "Redes sociais",
     "services.socialMedia.desc": "Criação de conteúdo visual envolvente para seus canais sociais. Vídeos, imagens e gráficos que convertem.",
     "services.learnMore": "Saiba mais",
 
     // Why Partner
-    "partner.title": "Por que ser Parceiro da Goody SEO?",
+    "partner.title": "Por que ser parceiro da Goody SEO?",
     "partner.desc": "Utilizamos automação de ponta e workflows de IA para acelerar seu crescimento. Nossos sistemas com n8n lidam com tarefas repetitivas enquanto nossa equipe foca na otimização estratégica que entrega resultados mensuráveis.",
-    "partner.tailored": "Estratégias Personalizadas",
+    "partner.tailored": "Estratégias personalizadas",
     "partner.tailoredDesc": "Soluções de automação customizadas para seus objetivos específicos de negócio",
-    "partner.datadriven": "Resultados Baseados em Dados",
+    "partner.datadriven": "Resultados baseados em dados",
     "partner.datadrivenDesc": "Cada decisão alimentada por análises de IA e insights em tempo real",
-    "partner.boutique": "Atenção Boutique",
+    "partner.boutique": "Atenção boutique",
     "partner.boutiqueDesc": "Atendimento pessoal com automação de nível empresarial",
-    "partner.proven": "Histórico Comprovado",
+    "partner.proven": "Histórico comprovado",
     "partner.provenDesc": "Resultados consistentes alimentados por workflows inteligentes",
 
     // CTA
-    "cta.title": "Pronto para Crescer seu Negócio?",
+    "cta.title": "Pronto para crescer seu negócio?",
     "cta.desc": "Vamos discutir seus objetivos e criar uma estratégia de automação que entrega resultados reais.",
-    "cta.button": "Agende Sua Consulta Gratuita",
+    "cta.button": "Agende sua consulta gratuita",
 
     // Testimonial
-    "testimonial.title": "O Que Nossos Clientes Dizem",
+    "testimonial.title": "O que nossos clientes dizem",
     "testimonial.subtitle": "Resultados reais de empresas como a sua",
     "testimonial.quote": "Os resultados foram fenomenais. Vimos um crescimento significativo no tráfego orgânico e nossos workflows de automação economizaram incontáveis horas toda semana.",
     "testimonial.watchVideo": "Assista ao depoimento completo",
@@ -305,23 +305,23 @@ const translations: Record<Language, Record<string, string>> = {
     "footer.services": "Serviços",
     "footer.contact": "Contato",
     "footer.rights": "Todos os direitos reservados.",
-    "footer.privacy": "Política de Privacidade",
-    "footer.terms": "Termos de Serviço",
+    "footer.privacy": "Política de privacidade",
+    "footer.terms": "Termos de serviço",
 
     // Service Pages
-    "service.whatWeDeliver": "O Que Entregamos",
+    "service.whatWeDeliver": "O que entregamos",
     "service.whatWeDeliverDesc": "Soluções completas adaptadas às necessidades do seu negócio",
-    "service.whyChoose": "Por que Escolher a Goody SEO?",
+    "service.whyChoose": "Por que escolher a Goody SEO?",
     "service.whyChooseDesc": "Somos uma agência boutique que trata cada cliente como prioridade, não apenas mais uma conta. Nossa abordagem personalizada entrega resultados mensuráveis.",
-    "service.related": "Serviços Relacionados",
+    "service.related": "Serviços relacionados",
     "service.relatedDesc": "Explore nossos outros serviços que complementam esta oferta",
-    "service.ctaTitle": "Pronto para Transformar sua Presença Digital?",
+    "service.ctaTitle": "Pronto para transformar sua presença digital?",
     "service.ctaDesc": "Vamos discutir como podemos ajudar seu negócio a crescer com nossas estratégias comprovadas.",
-    "service.ctaButton": "Agende Sua Consulta Gratuita",
+    "service.ctaButton": "Agende sua consulta gratuita",
 
     // SEO Page
     "seo.title": "Serviços SEO",
-    "seo.subtitle": "Otimização para Motores de Busca",
+    "seo.subtitle": "Otimização para motores de busca",
     "seo.desc": "Maximize sua visibilidade orgânica com estratégias abrangentes de SEO Técnico, On-Page e de Conteúdo que geram tráfego qualificado e crescimento de negócios.",
     "seo.cta": "Solicite Sua Auditoria SEO",
     "seo.feature1.title": "Auditoria SEO Técnica",
@@ -345,7 +345,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // GEO Page
     "geo.title": "Otimização GEO",
-    "geo.subtitle": "Otimização para Engines Generativas",
+    "geo.subtitle": "Otimização para engines generativas",
     "geo.desc": "Prepare seu SEO para o futuro com estratégias projetadas para visibilidade em buscas com IA. Schema, LLM.txt, enriquecimento de entidades e rastreamento para aumentar sua participação em resultados gerados por IA.",
     "geo.cta": "Inicie Sua Auditoria GEO",
     "geo.feature1.title": "Auditoria de Visibilidade LLM",
@@ -369,7 +369,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Site Express Page
     "siteExpress.title": "Site Express",
-    "siteExpress.subtitle": "Desenvolvimento Frontend Rápido com Lovable",
+    "siteExpress.subtitle": "Desenvolvimento frontend rápido com Lovable",
     "siteExpress.desc": "Desenvolvimento profissional de sites na velocidade da luz. Criamos sites bonitos e responsivos usando Lovable para colocá-lo online mais rápido—perfeito para landing pages, portfólios e sites empresariais.",
     "siteExpress.cta": "Lance Seu Site Rápido",
     "siteExpress.feature1.title": "Desenvolvimento Rápido",
@@ -392,8 +392,8 @@ const translations: Record<Language, Record<string, string>> = {
     "siteExpress.benefit6": "Suporte e atualizações contínuas disponíveis",
 
     // App Creation Page
-    "appCreation.title": "Criação de Apps",
-    "appCreation.subtitle": "Desenvolvimento Full-Stack com Base44",
+    "appCreation.title": "Criação de apps",
+    "appCreation.subtitle": "Desenvolvimento full-stack com Base44",
     "appCreation.desc": "Aplicações web completas com banco de dados, autenticação e recursos de IA. Alimentado por Base44 para desenvolvimento full-stack rápido.",
     "appCreation.cta": "Construa Seu App",
     "appCreation.feature1.title": "Integração de Banco de Dados",
@@ -416,8 +416,8 @@ const translations: Record<Language, Record<string, string>> = {
     "appCreation.benefit6": "Manutenção e suporte contínuos",
 
     // AI Agents Page
-    "aiAgents.title": "Agentes IA & Automação",
-    "aiAgents.subtitle": "Automação Inteligente com n8n",
+    "aiAgents.title": "Agentes IA & automação",
+    "aiAgents.subtitle": "Automação inteligente com n8n",
     "aiAgents.desc": "Automatize tarefas de SEO e implante agentes IA para vendas e marketing com workflows n8n personalizados. Trabalhe de forma mais inteligente, não mais difícil.",
     "aiAgents.cta": "Automatize Seu Marketing",
     "aiAgents.feature1.title": "Automação de Tarefas SEO",
@@ -440,8 +440,8 @@ const translations: Record<Language, Record<string, string>> = {
     "aiAgents.benefit6": "Otimização e suporte contínuos",
 
     // Social Media Page
-    "socialMedia.title": "Conteúdo para Redes Sociais",
-    "socialMedia.subtitle": "Criação de Conteúdo Visual",
+    "socialMedia.title": "Conteúdo para redes sociais",
+    "socialMedia.subtitle": "Criação de conteúdo visual",
     "socialMedia.desc": "Vídeos e imagens envolventes que capturam atenção e convertem seguidores em clientes. Criação de conteúdo profissional para todos os seus canais sociais.",
     "socialMedia.cta": "Eleve Sua Presença Social",
     "socialMedia.feature1.title": "Criação de Vídeo",

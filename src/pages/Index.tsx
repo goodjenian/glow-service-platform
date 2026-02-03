@@ -193,7 +193,7 @@ const Index = () => {
 
           {/* WhatsApp CTA */}
           <div className="mt-16 text-center">
-            <Button variant="accent" size="xl" asChild className="group">
+            <Button variant="contact" size="xl" asChild className="group">
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                 {t("hero.whatsapp")}
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -220,13 +220,13 @@ const Index = () => {
                 {t("cta.desc")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="hero" size="xl" asChild>
+                <Button variant="heroOutline" size="xl" asChild>
                   <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
                     {t("cta.button")}
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </a>
                 </Button>
-                <Button variant="heroOutline" size="xl" asChild>
+                <Button variant="contact" size="xl" asChild>
                   <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                     {t("hero.whatsapp")}
                     <ArrowRight className="ml-2 h-5 w-5" />

@@ -20,6 +20,8 @@ const buttonVariants = cva(
         heroOutline: "border-2 border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground/20 hover:border-primary-foreground/50 backdrop-blur-sm",
         // Accent variant for CTAs
         accent: "bg-accent text-accent-foreground hover:bg-accent/90 shadow-md hover:shadow-lg",
+        // Vivid purple contact variant
+        contact: "bg-[hsl(270,70%,60%)] text-white hover:bg-[hsl(270,70%,55%)] shadow-lg hover:shadow-xl hover:-translate-y-0.5",
       },
       size: {
         default: "h-10 px-4 py-2",

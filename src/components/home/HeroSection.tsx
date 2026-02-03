@@ -84,9 +84,9 @@ export function HeroSection() {
           </div>
           
           {/* Headline with Animated Text */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
-            <span className="animate-fade-in inline-block">{t("hero.title1")}</span>
-            <span className="block text-accent animate-slide-up" style={{ animationDelay: "0.2s" }}>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight">
+            <span className="animate-fade-in inline-block bg-gradient-to-r from-white via-[hsl(270,80%,75%)] to-[hsl(217,91%,70%)] bg-clip-text text-transparent">{t("hero.title1")}</span>
+            <span className="block bg-gradient-to-r from-[hsl(270,70%,65%)] to-[hsl(217,91%,60%)] bg-clip-text text-transparent animate-slide-up" style={{ animationDelay: "0.2s" }}>
               {t("hero.title2")}
             </span>
           </h1>
@@ -97,13 +97,13 @@ export function HeroSection() {
           
           {/* CTA Buttons with Hover Effects */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: "0.6s" }}>
-            <Button variant="hero" size="xl" asChild className="group">
+            <Button variant="heroOutline" size="xl" asChild className="group">
               <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
                 {t("hero.cta")}
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
-            <Button variant="heroOutline" size="xl" asChild className="group">
+            <Button variant="contact" size="xl" asChild className="group">
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                 {t("hero.whatsapp")}
                 <ArrowRight className="ml-2 h-5 w-5 opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0" />
