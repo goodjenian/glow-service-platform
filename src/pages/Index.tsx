@@ -1,5 +1,6 @@
 import { Layout } from "@/components/layout/Layout";
 import { HeroSection } from "@/components/home/HeroSection";
+import { TestimonialSection } from "@/components/home/TestimonialSection";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -19,6 +20,7 @@ import {
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getWhatsAppUrl, getWhatsAppUrlPt } from "@/lib/whatsapp";
 import n8nWorkflow from "@/assets/n8n-workflow.jpg";
+import { EntropyBackground } from "@/components/effects/EntropyBackground";
 
 const Index = () => {
   const { language, t } = useLanguage();
@@ -201,10 +203,14 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Testimonial Section */}
+      <TestimonialSection />
+
       {/* CTA Section */}
       <section className="py-16 md:py-24">
         <div className="container px-4 md:px-6">
-          <div className="bg-gradient-hero rounded-3xl p-8 md:p-12 lg:p-16 text-center relative overflow-hidden">
+          <div className="bg-primary rounded-3xl p-8 md:p-12 lg:p-16 text-center relative overflow-hidden">
+            <EntropyBackground className="opacity-30" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_hsl(217_91%_60%/0.1),_transparent_60%)]" />
             <div className="relative">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-4">
