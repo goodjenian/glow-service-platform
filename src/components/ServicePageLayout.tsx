@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { getWhatsAppUrl, getWhatsAppUrlPt } from "@/lib/whatsapp";
 import type { LucideIcon } from "lucide-react";
 
 interface Feature {
@@ -16,6 +18,8 @@ interface RelatedService {
   description: string;
 }
 
+type ServiceColor = "blue" | "purple" | "beige" | "teal" | "green" | "rose";
+
 interface ServicePageLayoutProps {
   title: string;
   subtitle: string;
@@ -25,7 +29,42 @@ interface ServicePageLayoutProps {
   benefits: string[];
   ctaText?: string;
   relatedServices?: RelatedService[];
+  serviceColor?: ServiceColor;
+  serviceName?: string;
 }
+
+const colorClasses: Record<ServiceColor, { gradient: string; accent: string; iconBg: string }> = {
+  blue: {
+    gradient: "bg-gradient-to-br from-[hsl(217,91%,20%)] via-[hsl(217,80%,30%)] to-[hsl(220,70%,25%)]",
+    accent: "text-blue-400",
+    iconBg: "bg-blue-500/20",
+  },
+  purple: {
+    gradient: "bg-gradient-to-br from-[hsl(280,70%,20%)] via-[hsl(280,60%,30%)] to-[hsl(290,50%,25%)]",
+    accent: "text-purple-400",
+    iconBg: "bg-purple-500/20",
+  },
+  beige: {
+    gradient: "bg-gradient-to-br from-[hsl(35,30%,20%)] via-[hsl(35,40%,30%)] to-[hsl(40,35%,25%)]",
+    accent: "text-amber-300",
+    iconBg: "bg-amber-500/20",
+  },
+  teal: {
+    gradient: "bg-gradient-to-br from-[hsl(175,70%,15%)] via-[hsl(175,60%,25%)] to-[hsl(180,50%,20%)]",
+    accent: "text-teal-400",
+    iconBg: "bg-teal-500/20",
+  },
+  green: {
+    gradient: "bg-gradient-to-br from-[hsl(145,70%,15%)] via-[hsl(145,60%,25%)] to-[hsl(150,50%,20%)]",
+    accent: "text-emerald-400",
+    iconBg: "bg-emerald-500/20",
+  },
+  rose: {
+    gradient: "bg-gradient-to-br from-[hsl(350,70%,20%)] via-[hsl(350,60%,30%)] to-[hsl(355,50%,25%)]",
+    accent: "text-rose-400",
+    iconBg: "bg-rose-500/20",
+  },
+};
 
 export function ServicePageLayout({
   title,
@@ -36,30 +75,50 @@ export function ServicePageLayout({
   benefits,
   ctaText = "Get Started Today",
   relatedServices,
+  serviceColor = "blue",
+  serviceName,
 }: ServicePageLayoutProps) {
+  const { language, t } = useLanguage();
+  const whatsappUrl = language === "pt" 
+    ? getWhatsAppUrlPt(serviceName || title) 
+    : getWhatsAppUrl(serviceName || title);
+  
+  const colors = colorClasses[serviceColor];
+
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative bg-gradient-hero py-20 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_hsl(217_91%_60%/0.1),_transparent_50%)]" />
+      <section className={`relative ${colors.gradient} py-20 md:py-32 overflow-hidden`}>
+        {/* Grid Pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:64px_64px]" />
+        
+        {/* Glowing Orb */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
+        
         <div className="container px-4 md:px-6 relative">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-accent/20 mb-6">
-              <Icon className="w-8 h-8 text-accent" />
+            <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl ${colors.iconBg} mb-6`}>
+              <Icon className={`w-8 h-8 ${colors.accent}`} />
             </div>
-            <p className="text-accent font-medium mb-4 tracking-wide uppercase">
+            <p className={`${colors.accent} font-medium mb-4 tracking-wide uppercase`}>
               {subtitle}
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 animate-fade-in">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fade-in">
               {title}
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 animate-slide-up">
+            <p className="text-lg md:text-xl text-white/70 mb-8 animate-slide-up">
               {description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="xl" asChild>
                 <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
                   {ctaText}
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+              </Button>
+              <Button variant="heroOutline" size="xl" asChild>
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                  {t("hero.whatsapp")}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>
@@ -72,9 +131,9 @@ export function ServicePageLayout({
       <section className="py-16 md:py-24">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">What We Deliver</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("service.whatWeDeliver")}</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive solutions tailored to your business needs
+              {t("service.whatWeDeliverDesc")}
             </p>
           </div>
           
@@ -97,11 +156,10 @@ export function ServicePageLayout({
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Why Choose Goody SEO?
+                {t("service.whyChoose")}
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                We're a boutique agency that treats every client like a priority, 
-                not just another account. Our personalized approach delivers measurable results.
+                {t("service.whyChooseDesc")}
               </p>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -115,8 +173,8 @@ export function ServicePageLayout({
               </ul>
             </div>
             <div className="relative">
-              <div className="aspect-square rounded-2xl bg-gradient-hero flex items-center justify-center">
-                <Icon className="w-32 h-32 text-primary-foreground/30" />
+              <div className={`aspect-square rounded-2xl ${colors.gradient} flex items-center justify-center`}>
+                <Icon className="w-32 h-32 text-white/30" />
               </div>
             </div>
           </div>
@@ -128,9 +186,9 @@ export function ServicePageLayout({
         <section className="py-16 md:py-24">
           <div className="container px-4 md:px-6">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Related Services</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("service.related")}</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Explore our other services that complement this offering
+                {t("service.relatedDesc")}
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -143,7 +201,7 @@ export function ServicePageLayout({
                       </h3>
                       <p className="text-muted-foreground">{service.description}</p>
                       <div className="mt-4 flex items-center text-accent font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                        Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                        {t("services.learnMore")} <ArrowRight className="ml-2 h-4 w-4" />
                       </div>
                     </CardContent>
                   </Card>
@@ -159,17 +217,25 @@ export function ServicePageLayout({
         <div className="container px-4 md:px-6">
           <div className="bg-gradient-hero rounded-3xl p-8 md:p-12 lg:p-16 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-              Ready to Transform Your Digital Presence?
+              {t("service.ctaTitle")}
             </h2>
             <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-              Let's discuss how we can help your business grow with our proven strategies.
+              {t("service.ctaDesc")}
             </p>
-            <Button variant="hero" size="xl" asChild>
-              <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
-                Book Your Free Consultation
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="hero" size="xl" asChild>
+                <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
+                  {t("service.ctaButton")}
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+              </Button>
+              <Button variant="heroOutline" size="xl" asChild>
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                  {t("hero.whatsapp")}
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

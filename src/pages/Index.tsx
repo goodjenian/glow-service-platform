@@ -16,54 +16,59 @@ import {
   Users,
   Smartphone
 } from "lucide-react";
-import logo from "@/assets/logo.png";
-
-const services = [
-  {
-    title: "SEO Services",
-    description: "Technical, On-Page & Content optimization to boost your organic visibility and drive qualified traffic.",
-    icon: Search,
-    href: "/services/seo",
-    color: "bg-blue-500/10 text-blue-600",
-  },
-  {
-    title: "GEO Optimization",
-    description: "Future-proof your visibility for AI search engines and LLMs with entity enrichment and schema strategies.",
-    icon: Sparkles,
-    href: "/services/geo",
-    color: "bg-purple-500/10 text-purple-600",
-  },
-  {
-    title: "Site Express",
-    description: "Rapid frontend development with Lovable. Get your professional site live in days, not months.",
-    icon: Zap,
-    href: "/services/site-express",
-    color: "bg-amber-500/10 text-amber-600",
-  },
-  {
-    title: "App Creation",
-    description: "Full-stack web applications with Base44. Databases, auth, and AI features included.",
-    icon: Smartphone,
-    href: "/services/app-creation",
-    color: "bg-cyan-500/10 text-cyan-600",
-  },
-  {
-    title: "AI Agents",
-    description: "Automate SEO tasks and deploy intelligent sales agents with n8n workflows and custom AI solutions.",
-    icon: Bot,
-    href: "/services/ai-agents",
-    color: "bg-emerald-500/10 text-emerald-600",
-  },
-  {
-    title: "Social Media",
-    description: "Engaging visual content creation for your social channels. Videos, images, and graphics that convert.",
-    icon: Share2,
-    href: "/services/social-media",
-    color: "bg-rose-500/10 text-rose-600",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
+import { getWhatsAppUrl, getWhatsAppUrlPt } from "@/lib/whatsapp";
+import n8nWorkflow from "@/assets/n8n-workflow.jpg";
 
 const Index = () => {
+  const { language, t } = useLanguage();
+  const whatsappUrl = language === "pt" ? getWhatsAppUrlPt() : getWhatsAppUrl();
+
+  const services = [
+    {
+      title: t("services.seo.title"),
+      description: t("services.seo.desc"),
+      icon: Search,
+      href: "/services/seo",
+      color: "bg-blue-500/10 text-blue-500",
+    },
+    {
+      title: t("services.geo.title"),
+      description: t("services.geo.desc"),
+      icon: Sparkles,
+      href: "/services/geo",
+      color: "bg-purple-500/10 text-purple-500",
+    },
+    {
+      title: t("services.siteExpress.title"),
+      description: t("services.siteExpress.desc"),
+      icon: Zap,
+      href: "/services/site-express",
+      color: "bg-amber-500/10 text-amber-500",
+    },
+    {
+      title: t("services.appCreation.title"),
+      description: t("services.appCreation.desc"),
+      icon: Smartphone,
+      href: "/services/app-creation",
+      color: "bg-teal-500/10 text-teal-500",
+    },
+    {
+      title: t("services.aiAgents.title"),
+      description: t("services.aiAgents.desc"),
+      icon: Bot,
+      href: "/services/ai-agents",
+      color: "bg-emerald-500/10 text-emerald-500",
+    },
+    {
+      title: t("services.socialMedia.title"),
+      description: t("services.socialMedia.desc"),
+      icon: Share2,
+      href: "/services/social-media",
+      color: "bg-rose-500/10 text-rose-500",
+    },
+  ];
+
   return (
     <Layout>
       <HeroSection />
@@ -72,9 +77,9 @@ const Index = () => {
       <section className="py-16 md:py-24">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("services.title")}</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive digital solutions tailored to your business goals
+              {t("services.subtitle")}
             </p>
           </div>
           
@@ -95,7 +100,7 @@ const Index = () => {
                       {service.description}
                     </CardDescription>
                     <div className="mt-4 flex items-center text-accent font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                      Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                      {t("services.learnMore")} <ArrowRight className="ml-2 h-4 w-4" />
                     </div>
                   </CardContent>
                 </Card>
@@ -111,11 +116,10 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Why Partner with Goody SEO?
+                {t("partner.title")}
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                We're not just another SEO agency. We're your dedicated growth partners, 
-                combining technical expertise with strategic thinking to deliver results that matter.
+                {t("partner.desc")}
               </p>
               
               <div className="grid sm:grid-cols-2 gap-6">
@@ -124,9 +128,9 @@ const Index = () => {
                     <Target className="h-5 w-5 text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Tailored Strategies</h3>
+                    <h3 className="font-semibold mb-1">{t("partner.tailored")}</h3>
                     <p className="text-sm text-muted-foreground">
-                      Custom solutions built for your specific business goals
+                      {t("partner.tailoredDesc")}
                     </p>
                   </div>
                 </div>
@@ -136,9 +140,9 @@ const Index = () => {
                     <TrendingUp className="h-5 w-5 text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Data-Driven Results</h3>
+                    <h3 className="font-semibold mb-1">{t("partner.datadriven")}</h3>
                     <p className="text-sm text-muted-foreground">
-                      Every decision backed by analytics and insights
+                      {t("partner.datadrivenDesc")}
                     </p>
                   </div>
                 </div>
@@ -148,9 +152,9 @@ const Index = () => {
                     <Users className="h-5 w-5 text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Boutique Attention</h3>
+                    <h3 className="font-semibold mb-1">{t("partner.boutique")}</h3>
                     <p className="text-sm text-muted-foreground">
-                      Personal service, not an assembly line approach
+                      {t("partner.boutiqueDesc")}
                     </p>
                   </div>
                 </div>
@@ -160,9 +164,9 @@ const Index = () => {
                     <CheckCircle2 className="h-5 w-5 text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Proven Track Record</h3>
+                    <h3 className="font-semibold mb-1">{t("partner.proven")}</h3>
                     <p className="text-sm text-muted-foreground">
-                      Consistent results across diverse industries
+                      {t("partner.provenDesc")}
                     </p>
                   </div>
                 </div>
@@ -170,14 +174,29 @@ const Index = () => {
             </div>
             
             <div className="relative">
-              <div className="aspect-square rounded-3xl bg-gradient-hero flex items-center justify-center overflow-hidden">
-                <img src={logo} alt="Goody SEO" className="w-48 h-48 opacity-80 animate-float" />
+              <div className="aspect-video rounded-3xl overflow-hidden shadow-2xl">
+                <img 
+                  src={n8nWorkflow} 
+                  alt="n8n workflow automation dashboard" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-card rounded-2xl p-6 shadow-xl border border-border">
                 <div className="text-3xl font-bold text-foreground mb-1">3x</div>
-                <div className="text-sm text-muted-foreground">Average traffic growth</div>
+                <div className="text-sm text-muted-foreground">{t("hero.growth")}</div>
               </div>
             </div>
+          </div>
+
+          {/* WhatsApp CTA */}
+          <div className="mt-16 text-center">
+            <Button variant="accent" size="xl" asChild className="group">
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                {t("hero.whatsapp")}
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </a>
+            </Button>
           </div>
         </div>
       </section>
@@ -186,20 +205,28 @@ const Index = () => {
       <section className="py-16 md:py-24">
         <div className="container px-4 md:px-6">
           <div className="bg-gradient-hero rounded-3xl p-8 md:p-12 lg:p-16 text-center relative overflow-hidden">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_hsl(217_91%_60%/0.2),_transparent_60%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_hsl(217_91%_60%/0.1),_transparent_60%)]" />
             <div className="relative">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-4">
-                Ready to Grow Your Business?
+                {t("cta.title")}
               </h2>
               <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-                Let's discuss your goals and create a strategy that delivers real results.
+                {t("cta.desc")}
               </p>
-              <Button variant="hero" size="xl" asChild>
-                <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
-                  Schedule Your Free Consultation
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button variant="hero" size="xl" asChild>
+                  <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
+                    {t("cta.button")}
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </a>
+                </Button>
+                <Button variant="heroOutline" size="xl" asChild>
+                  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                    {t("hero.whatsapp")}
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
