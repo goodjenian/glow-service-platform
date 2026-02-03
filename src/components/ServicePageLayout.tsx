@@ -103,20 +103,20 @@ export function ServicePageLayout({
             <p className={`${colors.accent} font-medium mb-4 tracking-wide uppercase`}>
               {subtitle}
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fade-in">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in bg-gradient-to-r from-white via-[hsl(270,80%,80%)] to-white bg-clip-text text-transparent">
               {title}
             </h1>
             <p className="text-lg md:text-xl text-white/70 mb-8 animate-slide-up">
               {description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="xl" asChild>
+              <Button variant="heroOutline" size="xl" asChild>
                 <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
                   {ctaText}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>
-              <Button variant="heroOutline" size="xl" asChild>
+              <Button variant="contact" size="xl" asChild>
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                   {t("hero.whatsapp")}
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -223,13 +223,13 @@ export function ServicePageLayout({
               {t("service.ctaDesc")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="xl" asChild>
+              <Button variant="heroOutline" size="xl" asChild>
                 <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
                   {t("service.ctaButton")}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>
-              <Button variant="heroOutline" size="xl" asChild>
+              <Button variant="contact" size="xl" asChild>
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                   {t("hero.whatsapp")}
                   <ArrowRight className="ml-2 h-5 w-5" />
