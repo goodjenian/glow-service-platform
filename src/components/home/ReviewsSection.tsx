@@ -1,0 +1,82 @@
+import { useLanguage } from "@/contexts/LanguageContext";
+import { Star } from "lucide-react";
+
+interface Review {
+  quote: string;
+  quotePt: string;
+  company: string;
+  website: string;
+  logo: string;
+}
+
+export function ReviewsSection() {
+  const { language, t } = useLanguage();
+
+  const reviews: Review[] = [
+    {
+      quote: "The strategies provided by Goody SEO when launching our website were both effective and cost-efficient, exceeding our expectations in terms of indexability and traffic generation.",
+      quotePt: "As estratégias fornecidas pela Goody SEO ao lançar nosso site foram eficazes e econômicas, superando nossas expectativas em termos de indexabilidade e geração de tráfego.",
+      company: "CityCost",
+      website: "citycost.org",
+      logo: "🏙️",
+    },
+    {
+      quote: "Goody SEO found an effective way to gain market share in our highly competitive niche and helped us target new organic sales.",
+      quotePt: "A Goody SEO encontrou uma forma eficaz de ganhar participação de mercado em nosso nicho altamente competitivo e nos ajudou a conquistar novas vendas orgânicas.",
+      company: "Karta",
+      website: "karta.com",
+      logo: "🗺️",
+    },
+  ];
+
+  return (
+    <section className="py-16 md:py-24 bg-primary">
+      <div className="container px-4 md:px-6">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+            {t("reviews.title")}
+          </h2>
+          <p className="text-lg text-primary-foreground/70">
+            {t("reviews.subtitle")}
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {reviews.map((review, index) => (
+            <div
+              key={index}
+              className="bg-card rounded-2xl p-8 shadow-xl border border-border/20"
+            >
+              {/* Stars */}
+              <div className="flex gap-1 mb-6 justify-center">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-5 w-5 fill-amber-400 text-amber-400" />
+                ))}
+              </div>
+
+              {/* Quote */}
+              <p className="text-foreground text-center mb-8 leading-relaxed">
+                {language === "pt" ? review.quotePt : review.quote}
+              </p>
+
+              {/* Company */}
+              <div className="flex flex-col items-center">
+                <div className="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-3 text-2xl">
+                  {review.logo}
+                </div>
+                <a
+                  href={`https://${review.website}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent font-semibold hover:underline"
+                >
+                  {review.website}
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -66,12 +66,41 @@ const translations: Record<Language, Record<string, string>> = {
     "cta.desc": "Let's discuss your goals and create an automation strategy that delivers real results.",
     "cta.button": "Schedule Your Free Consultation",
 
+    // Reviews
+    "reviews.title": "Reviews",
+    "reviews.subtitle": "What clients say",
+
     // Testimonial
     "testimonial.title": "What Our Clients Say",
     "testimonial.subtitle": "Real results from businesses like yours",
     "testimonial.quote": "The results have been phenomenal. We've seen significant growth in organic traffic and our automation workflows have saved countless hours every week.",
     "testimonial.watchVideo": "Watch the full testimonial",
-    "testimonial.more": "More success stories coming soon",
+
+    // About Page
+    "about.founderRole": "Founder & SEO Strategist",
+    "about.yearsExp": "Years Experience",
+    "about.bio": "Economist with a data science background acting in the digital marketing world. Experienced with executive SEO for SaaS and E-commerce companies across Portugal, Armenia, United States, and Brazil.",
+    "about.expTitle": "International Experience",
+    "about.expSubtitle": "Building SEO strategies for companies across 4 continents",
+    "about.exp1Location": "United Kingdom",
+    "about.exp2Location": "United States",
+    "about.exp3Location": "Portugal",
+    "about.exp4Location": "Armenia",
+    "about.education": "Education",
+    "about.masters": "Master's in MKT Analytics & Data Science",
+    "about.bachelors": "Bachelor's in Economic Science",
+    "about.skills": "Technical Skills",
+    "about.languages": "Languages",
+    "about.teamTitle": "Our Team",
+    "about.teamDesc": "A network of experienced professionals in digital marketing, technology, and creative design.",
+    "about.team1Role": "SEO Specialists",
+    "about.team1Desc": "Technical and content optimization experts",
+    "about.team2Role": "Automation Engineers",
+    "about.team2Desc": "n8n and AI workflow architects",
+    "about.team3Role": "Creative Designers",
+    "about.team3Desc": "Visual content and UX professionals",
+    "about.ctaTitle": "Ready to Work Together?",
+    "about.ctaDesc": "Let's discuss how our expertise can accelerate your business growth.",
 
     // Footer
     "footer.desc": "Boutique agency specializing in high-impact, data-driven automation strategies that enhance your online presence and drive business growth.",
@@ -293,12 +322,41 @@ const translations: Record<Language, Record<string, string>> = {
     "cta.desc": "Vamos discutir seus objetivos e criar uma estratégia de automação que entrega resultados reais.",
     "cta.button": "Agende sua consulta gratuita",
 
+    // Reviews
+    "reviews.title": "Avaliações",
+    "reviews.subtitle": "O que nossos clientes dizem",
+
     // Testimonial
     "testimonial.title": "O que nossos clientes dizem",
     "testimonial.subtitle": "Resultados reais de empresas como a sua",
     "testimonial.quote": "Os resultados foram fenomenais. Vimos um crescimento significativo no tráfego orgânico e nossos workflows de automação economizaram incontáveis horas toda semana.",
     "testimonial.watchVideo": "Assista ao depoimento completo",
-    "testimonial.more": "Mais histórias de sucesso em breve",
+
+    // About Page
+    "about.founderRole": "Fundador e estrategista SEO",
+    "about.yearsExp": "Anos de experiência",
+    "about.bio": "Economista com formação em ciência de dados atuando no mundo do marketing digital. Experiente com SEO executivo para empresas SaaS e E-commerce em Portugal, Armênia, Estados Unidos e Brasil.",
+    "about.expTitle": "Experiência internacional",
+    "about.expSubtitle": "Construindo estratégias SEO para empresas em 4 continentes",
+    "about.exp1Location": "Reino Unido",
+    "about.exp2Location": "Estados Unidos",
+    "about.exp3Location": "Portugal",
+    "about.exp4Location": "Armênia",
+    "about.education": "Formação",
+    "about.masters": "Mestrado em MKT Analytics & Data Science",
+    "about.bachelors": "Bacharelado em Ciências Econômicas",
+    "about.skills": "Habilidades técnicas",
+    "about.languages": "Idiomas",
+    "about.teamTitle": "Nossa equipe",
+    "about.teamDesc": "Uma rede de profissionais experientes em marketing digital, tecnologia e design criativo.",
+    "about.team1Role": "Especialistas SEO",
+    "about.team1Desc": "Experts em otimização técnica e de conteúdo",
+    "about.team2Role": "Engenheiros de automação",
+    "about.team2Desc": "Arquitetos de workflows n8n e IA",
+    "about.team3Role": "Designers criativos",
+    "about.team3Desc": "Profissionais de conteúdo visual e UX",
+    "about.ctaTitle": "Pronto para trabalhar conosco?",
+    "about.ctaDesc": "Vamos discutir como nossa expertise pode acelerar o crescimento do seu negócio.",
 
     // Footer
     "footer.desc": "Agência boutique especializada em estratégias de automação de alto impacto e baseadas em dados que melhoram sua presença online e impulsionam o crescimento do negócio.",

@@ -66,7 +66,7 @@ export function Header() {
           </NavigationMenu>
           
           <Link 
-            to="/#about" 
+            to="/about" 
             className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
             {t("nav.about")}
@@ -111,6 +111,14 @@ export function Header() {
                     </Link>
                   ))}
                 </div>
+
+                <Link
+                  to="/about"
+                  onClick={() => setIsOpen(false)}
+                  className="font-medium py-2 px-3 rounded-md hover:bg-muted transition-colors"
+                >
+                  {t("nav.about")}
+                </Link>
                 
                 <Button variant="accent" className="mt-4" asChild>
                   <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">

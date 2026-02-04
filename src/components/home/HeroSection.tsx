@@ -18,7 +18,7 @@ export function HeroSection() {
   const whatsappUrl = language === "pt" ? getWhatsAppUrlPt() : getWhatsAppUrl();
 
   return (
-    <section className="relative bg-primary py-20 md:py-32 lg:py-40 overflow-hidden">
+    <section className="relative bg-primary py-16 md:py-24 lg:py-32 overflow-hidden">
       {/* Entropy Particle Animation */}
       <EntropyBackground className="opacity-60" />
       

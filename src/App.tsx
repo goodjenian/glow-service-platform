@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import AboutPage from "./pages/AboutPage";
 import SEOPage from "./pages/services/SEOPage";
 import GEOPage from "./pages/services/GEOPage";
 import SiteExpressPage from "./pages/services/SiteExpressPage";
@@ -24,6 +25,7 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/about" element={<AboutPage />} />
             <Route path="/services/seo" element={<SEOPage />} />
             <Route path="/services/geo" element={<GEOPage />} />
             <Route path="/services/site-express" element={<SiteExpressPage />} />
