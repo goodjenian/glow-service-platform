@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "5511954369536";
+const WHATSAPP_NUMBER = "5511936206291";
 
 export function getWhatsAppUrl(service?: string): string {
   const message = service

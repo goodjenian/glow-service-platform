@@ -119,12 +119,6 @@ export function TestimonialSection() {
           </div>
         </div>
 
-        {/* Optional: Additional testimonials as smaller cards */}
-        <div className="mt-12 text-center">
-          <p className="text-sm text-muted-foreground">
-            {t("testimonial.more")}
-          </p>
-        </div>
       </div>
     </section>
   );

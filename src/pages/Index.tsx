@@ -1,6 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { HeroSection } from "@/components/home/HeroSection";
 import { TestimonialSection } from "@/components/home/TestimonialSection";
+import { ReviewsSection } from "@/components/home/ReviewsSection";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -22,6 +23,40 @@ import { getWhatsAppUrl, getWhatsAppUrlPt } from "@/lib/whatsapp";
 import n8nWorkflow from "@/assets/n8n-workflow.jpg";
 import { EntropyBackground } from "@/components/effects/EntropyBackground";
 
+// Service color configs matching brand identity
+const serviceColors = {
+  seo: {
+    bg: "bg-blue-500/15",
+    icon: "text-blue-500",
+    border: "group-hover:border-blue-500/30",
+  },
+  geo: {
+    bg: "bg-purple-500/15",
+    icon: "text-purple-500",
+    border: "group-hover:border-purple-500/30",
+  },
+  siteExpress: {
+    bg: "bg-amber-500/15",
+    icon: "text-amber-500",
+    border: "group-hover:border-amber-500/30",
+  },
+  appCreation: {
+    bg: "bg-teal-500/15",
+    icon: "text-teal-500",
+    border: "group-hover:border-teal-500/30",
+  },
+  aiAgents: {
+    bg: "bg-emerald-500/15",
+    icon: "text-emerald-500",
+    border: "group-hover:border-emerald-500/30",
+  },
+  socialMedia: {
+    bg: "bg-rose-500/15",
+    icon: "text-rose-500",
+    border: "group-hover:border-rose-500/30",
+  },
+};
+
 const Index = () => {
   const { language, t } = useLanguage();
   const whatsappUrl = language === "pt" ? getWhatsAppUrlPt() : getWhatsAppUrl();
@@ -32,42 +67,42 @@ const Index = () => {
       description: t("services.seo.desc"),
       icon: Search,
       href: "/services/seo",
-      color: "bg-blue-500/10 text-blue-500",
+      colors: serviceColors.seo,
     },
     {
       title: t("services.geo.title"),
       description: t("services.geo.desc"),
       icon: Sparkles,
       href: "/services/geo",
-      color: "bg-purple-500/10 text-purple-500",
+      colors: serviceColors.geo,
     },
     {
       title: t("services.siteExpress.title"),
       description: t("services.siteExpress.desc"),
       icon: Zap,
       href: "/services/site-express",
-      color: "bg-amber-500/10 text-amber-500",
+      colors: serviceColors.siteExpress,
     },
     {
       title: t("services.appCreation.title"),
       description: t("services.appCreation.desc"),
       icon: Smartphone,
       href: "/services/app-creation",
-      color: "bg-teal-500/10 text-teal-500",
+      colors: serviceColors.appCreation,
     },
     {
       title: t("services.aiAgents.title"),
       description: t("services.aiAgents.desc"),
       icon: Bot,
       href: "/services/ai-agents",
-      color: "bg-emerald-500/10 text-emerald-500",
+      colors: serviceColors.aiAgents,
     },
     {
       title: t("services.socialMedia.title"),
       description: t("services.socialMedia.desc"),
       icon: Share2,
       href: "/services/social-media",
-      color: "bg-rose-500/10 text-rose-500",
+      colors: serviceColors.socialMedia,
     },
   ];
 
@@ -88,10 +123,10 @@ const Index = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <Link key={index} to={service.href} className="group">
-                <Card className="h-full hover-lift border-border/50 bg-gradient-card transition-all duration-300 group-hover:border-accent/30">
+                <Card className={`h-full hover-lift border-border/50 bg-gradient-card transition-all duration-300 ${service.colors.border}`}>
                   <CardHeader>
-                    <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl ${service.color} mb-4`}>
-                      <service.icon className="h-6 w-6" />
+                    <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl ${service.colors.bg} mb-4`}>
+                      <service.icon className={`h-6 w-6 ${service.colors.icon}`} />
                     </div>
                     <CardTitle className="group-hover:text-accent transition-colors">
                       {service.title}
@@ -205,6 +240,9 @@ const Index = () => {
 
       {/* Testimonial Section */}
       <TestimonialSection />
+
+      {/* Reviews Section */}
+      <ReviewsSection />
 
       {/* CTA Section */}
       <section className="py-16 md:py-24">
