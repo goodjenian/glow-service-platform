@@ -26,11 +26,16 @@ export function TestimonialSection() {
   };
 
    return (
-     <section className="pt-16 md:pt-24 pb-6 md:pb-8 bg-gradient-to-br from-[hsl(270,40%,12%)] via-[hsl(270,30%,8%)] to-primary">
-      <div className="container px-4 md:px-6">
+     <section className="pt-16 md:pt-24 pb-6 md:pb-8 bg-background relative overflow-hidden">
+       {/* Decorative gradient blobs */}
+       <div className="absolute top-0 left-1/4 w-96 h-96 bg-[hsl(270,60%,90%)] rounded-full blur-3xl opacity-40 -translate-y-1/2" />
+       <div className="absolute top-1/2 right-0 w-80 h-80 bg-[hsl(217,60%,90%)] rounded-full blur-3xl opacity-40 translate-x-1/2" />
+       <div className="absolute bottom-0 left-0 w-72 h-72 bg-[hsl(330,60%,92%)] rounded-full blur-3xl opacity-30 -translate-x-1/2 translate-y-1/2" />
+       
+       <div className="container px-4 md:px-6 relative z-10">
          <div className="text-center mb-10">
-           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary-foreground">{t("testimonial.title")}</h2>
-           <p className="text-lg text-primary-foreground/70 max-w-2xl mx-auto">
+           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">{t("testimonial.title")}</h2>
+           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             {t("testimonial.subtitle")}
           </p>
         </div>
