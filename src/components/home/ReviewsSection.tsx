@@ -35,13 +35,17 @@ export function ReviewsSection() {
   ];
 
    return (
-     <section className="pt-8 md:pt-12 pb-16 md:pb-24 bg-gradient-to-b from-[hsl(270,30%,8%)] to-primary">
-      <div className="container px-4 md:px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+     <section className="pt-8 md:pt-12 pb-16 md:pb-24 bg-background relative overflow-hidden">
+       {/* Decorative gradient blobs */}
+       <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-[hsl(270,60%,92%)] rounded-full blur-3xl opacity-40" />
+       <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-[hsl(217,60%,92%)] rounded-full blur-3xl opacity-30 translate-y-1/2" />
+       
+       <div className="container px-4 md:px-6 relative z-10">
+         <div className="text-center mb-12">
+           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             {t("reviews.title")}
           </h2>
-          <p className="text-lg text-primary-foreground/70">
+           <p className="text-lg text-muted-foreground">
             {t("reviews.subtitle")}
           </p>
         </div>
