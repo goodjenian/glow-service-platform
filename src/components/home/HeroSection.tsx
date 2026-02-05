@@ -103,10 +103,10 @@ export function HeroSection() {
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
-            <Button variant="contact" size="xl" asChild className="group">
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                {t("hero.whatsapp")}
-                <ArrowRight className="ml-2 h-5 w-5 opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0" />
+             <Button variant="contact" size="xl" asChild className="group">
+               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                 {t("hero.whatsapp")}
+                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
           </div>
