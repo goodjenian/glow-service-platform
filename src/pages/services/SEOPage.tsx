@@ -23,6 +23,20 @@ export default function SEOServicesPage() {
     t("seo.benefit6"),
   ];
 
+  const strategies = [
+    { title: t("seo.strategy1.title"), description: t("seo.strategy1.desc") },
+    { title: t("seo.strategy2.title"), description: t("seo.strategy2.desc") },
+    { title: t("seo.strategy3.title"), description: t("seo.strategy3.desc") },
+    { title: t("seo.strategy4.title"), description: t("seo.strategy4.desc") },
+  ];
+
+  const results = [
+    { metric: t("seo.result1.metric"), description: t("seo.result1.desc") },
+    { metric: t("seo.result2.metric"), description: t("seo.result2.desc") },
+    { metric: t("seo.result3.metric"), description: t("seo.result3.desc") },
+    { metric: t("seo.result4.metric"), description: t("seo.result4.desc") },
+  ];
+
   return (
     <ServicePageLayout
       title={t("seo.title")}
@@ -34,6 +48,9 @@ export default function SEOServicesPage() {
       ctaText={t("seo.cta")}
       serviceColor="blue"
       serviceName="SEO Services"
+      importance={t("seo.importance")}
+      strategies={strategies}
+      results={results}
       relatedServices={[
         { name: t("nav.geo"), href: "/services/geo", description: "AI search visibility for LLMs" },
         { name: t("nav.aiAgents"), href: "/services/ai-agents", description: "Automate SEO tasks with n8n" },

@@ -23,6 +23,20 @@ export default function SiteExpressPage() {
     t("siteExpress.benefit6"),
   ];
 
+  const strategies = [
+    { title: t("siteExpress.strategy1.title"), description: t("siteExpress.strategy1.desc") },
+    { title: t("siteExpress.strategy2.title"), description: t("siteExpress.strategy2.desc") },
+    { title: t("siteExpress.strategy3.title"), description: t("siteExpress.strategy3.desc") },
+    { title: t("siteExpress.strategy4.title"), description: t("siteExpress.strategy4.desc") },
+  ];
+
+  const results = [
+    { metric: t("siteExpress.result1.metric"), description: t("siteExpress.result1.desc") },
+    { metric: t("siteExpress.result2.metric"), description: t("siteExpress.result2.desc") },
+    { metric: t("siteExpress.result3.metric"), description: t("siteExpress.result3.desc") },
+    { metric: t("siteExpress.result4.metric"), description: t("siteExpress.result4.desc") },
+  ];
+
   return (
     <ServicePageLayout
       title={t("siteExpress.title")}
@@ -34,6 +48,9 @@ export default function SiteExpressPage() {
       ctaText={t("siteExpress.cta")}
       serviceColor="beige"
       serviceName="Site Express"
+      importance={t("siteExpress.importance")}
+      strategies={strategies}
+      results={results}
       relatedServices={[
         { name: t("nav.appCreation"), href: "/services/app-creation", description: "Full-stack apps with Base44" },
         { name: t("nav.seo"), href: "/services/seo", description: "Optimize your new site for search" },
