@@ -1,12 +1,15 @@
-import { useLanguage } from "@/contexts/LanguageContext";
-import { Star } from "lucide-react";
+ import { useLanguage } from "@/contexts/LanguageContext";
+ import { Star } from "lucide-react";
+ import citycostLogo from "@/assets/citycost-logo.png";
+ import kartaLogo from "@/assets/karta-logo.png";
 
 interface Review {
   quote: string;
   quotePt: string;
   company: string;
   website: string;
-  logo: string;
+   logo: string;
+   logoImage: string;
 }
 
 export function ReviewsSection() {
@@ -18,19 +21,21 @@ export function ReviewsSection() {
       quotePt: "As estratégias fornecidas pela Goody SEO ao lançar nosso site foram eficazes e econômicas, superando nossas expectativas em termos de indexabilidade e geração de tráfego.",
       company: "CityCost",
       website: "citycost.org",
-      logo: "🏙️",
+       logo: "🏙️",
+       logoImage: citycostLogo,
     },
     {
       quote: "Goody SEO found an effective way to gain market share in our highly competitive niche and helped us target new organic sales.",
       quotePt: "A Goody SEO encontrou uma forma eficaz de ganhar participação de mercado em nosso nicho altamente competitivo e nos ajudou a conquistar novas vendas orgânicas.",
       company: "Karta",
       website: "karta.com",
-      logo: "🗺️",
+       logo: "🗺️",
+       logoImage: kartaLogo,
     },
   ];
 
-  return (
-    <section className="py-16 md:py-24 bg-primary">
+   return (
+     <section className="pt-8 md:pt-12 pb-16 md:pb-24 bg-primary">
       <div className="container px-4 md:px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
@@ -61,8 +66,12 @@ export function ReviewsSection() {
 
               {/* Company */}
               <div className="flex flex-col items-center">
-                <div className="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-3 text-2xl">
-                  {review.logo}
+               <div className="w-14 h-14 bg-background rounded-full flex items-center justify-center mb-3 overflow-hidden shadow-md">
+                   <img 
+                     src={review.logoImage} 
+                     alt={`${review.company} logo`}
+                     className="w-10 h-10 object-contain"
+                   />
                 </div>
                 <a
                   href={`https://${review.website}`}

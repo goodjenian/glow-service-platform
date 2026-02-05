@@ -25,12 +25,12 @@ export function TestimonialSection() {
     videoThumbnail: "", // Add thumbnail URL
   };
 
-  return (
-    <section className="py-16 md:py-24 bg-card/30">
+   return (
+     <section className="pt-16 md:pt-24 pb-6 md:pb-8 bg-primary">
       <div className="container px-4 md:px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("testimonial.title")}</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+         <div className="text-center mb-10">
+           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary-foreground">{t("testimonial.title")}</h2>
+           <p className="text-lg text-primary-foreground/70 max-w-2xl mx-auto">
             {t("testimonial.subtitle")}
           </p>
         </div>
