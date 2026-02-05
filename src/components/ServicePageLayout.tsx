@@ -1,7 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Check, ArrowRight } from "lucide-react";
+import { Check, ArrowRight, TrendingUp, Target, Lightbulb, BarChart3 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getWhatsAppUrl, getWhatsAppUrlPt } from "@/lib/whatsapp";
@@ -18,6 +18,16 @@ interface RelatedService {
   description: string;
 }
 
+interface Strategy {
+  title: string;
+  description: string;
+}
+
+interface Result {
+  metric: string;
+  description: string;
+}
+
 type ServiceColor = "blue" | "purple" | "beige" | "teal" | "green" | "rose";
 
 interface ServicePageLayoutProps {
@@ -31,38 +41,47 @@ interface ServicePageLayoutProps {
   relatedServices?: RelatedService[];
   serviceColor?: ServiceColor;
   serviceName?: string;
+  importance?: string;
+  strategies?: Strategy[];
+  results?: Result[];
 }
 
-const colorClasses: Record<ServiceColor, { gradient: string; accent: string; iconBg: string }> = {
+const colorClasses: Record<ServiceColor, { gradient: string; accent: string; iconBg: string; accentBg: string }> = {
   blue: {
     gradient: "bg-gradient-to-br from-[hsl(217,91%,20%)] via-[hsl(217,80%,30%)] to-[hsl(220,70%,25%)]",
     accent: "text-blue-400",
     iconBg: "bg-blue-500/20",
+    accentBg: "bg-blue-500/10",
   },
   purple: {
     gradient: "bg-gradient-to-br from-[hsl(280,70%,20%)] via-[hsl(280,60%,30%)] to-[hsl(290,50%,25%)]",
     accent: "text-purple-400",
     iconBg: "bg-purple-500/20",
+    accentBg: "bg-purple-500/10",
   },
   beige: {
     gradient: "bg-gradient-to-br from-[hsl(35,30%,20%)] via-[hsl(35,40%,30%)] to-[hsl(40,35%,25%)]",
     accent: "text-amber-300",
     iconBg: "bg-amber-500/20",
+    accentBg: "bg-amber-500/10",
   },
   teal: {
     gradient: "bg-gradient-to-br from-[hsl(175,70%,15%)] via-[hsl(175,60%,25%)] to-[hsl(180,50%,20%)]",
     accent: "text-teal-400",
     iconBg: "bg-teal-500/20",
+    accentBg: "bg-teal-500/10",
   },
   green: {
     gradient: "bg-gradient-to-br from-[hsl(145,70%,15%)] via-[hsl(145,60%,25%)] to-[hsl(150,50%,20%)]",
     accent: "text-emerald-400",
     iconBg: "bg-emerald-500/20",
+    accentBg: "bg-emerald-500/10",
   },
   rose: {
     gradient: "bg-gradient-to-br from-[hsl(350,70%,20%)] via-[hsl(350,60%,30%)] to-[hsl(355,50%,25%)]",
     accent: "text-rose-400",
     iconBg: "bg-rose-500/20",
+    accentBg: "bg-rose-500/10",
   },
 };
 
@@ -77,6 +96,9 @@ export function ServicePageLayout({
   relatedServices,
   serviceColor = "blue",
   serviceName,
+  importance,
+  strategies,
+  results,
 }: ServicePageLayoutProps) {
   const { language, t } = useLanguage();
   const whatsappUrl = language === "pt" 
@@ -127,6 +149,25 @@ export function ServicePageLayout({
         </div>
       </section>
 
+      {/* Importance Section */}
+      {importance && (
+        <section className="py-16 md:py-24 border-b border-border/30">
+          <div className="container px-4 md:px-6">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex items-center gap-3 mb-6">
+                <div className={`p-2 rounded-lg ${colors.accentBg}`}>
+                  <Lightbulb className={`w-6 h-6 ${colors.accent}`} />
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold">{t("service.importanceTitle")}</h2>
+              </div>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                {importance}
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Features Section */}
       <section className="py-16 md:py-24">
         <div className="container px-4 md:px-6">
@@ -149,6 +190,72 @@ export function ServicePageLayout({
           </div>
         </div>
       </section>
+
+      {/* Strategies Section */}
+      {strategies && strategies.length > 0 && (
+        <section className="py-16 md:py-24 bg-muted/30">
+          <div className="container px-4 md:px-6">
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <div className={`p-2 rounded-lg ${colors.accentBg}`}>
+                  <Target className={`w-6 h-6 ${colors.accent}`} />
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold">{t("service.strategiesTitle")}</h2>
+              </div>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                {t("service.strategiesDesc")}
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              {strategies.map((strategy, index) => (
+                <div key={index} className="flex gap-4">
+                  <div className={`flex-shrink-0 w-10 h-10 rounded-full ${colors.accentBg} flex items-center justify-center`}>
+                    <span className={`font-bold ${colors.accent}`}>{index + 1}</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">{strategy.title}</h3>
+                    <p className="text-muted-foreground">{strategy.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Results Section */}
+      {results && results.length > 0 && (
+        <section className="py-16 md:py-24">
+          <div className="container px-4 md:px-6">
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <div className={`p-2 rounded-lg ${colors.accentBg}`}>
+                  <BarChart3 className={`w-6 h-6 ${colors.accent}`} />
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold">{t("service.resultsTitle")}</h2>
+              </div>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                {t("service.resultsDesc")}
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+              {results.map((result, index) => (
+                <Card key={index} className={`text-center border-border/50 ${colors.accentBg}`}>
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-center mb-3">
+                      <TrendingUp className={`w-8 h-8 ${colors.accent}`} />
+                    </div>
+                    <p className={`text-2xl md:text-3xl font-bold ${colors.accent} mb-2`}>{result.metric}</p>
+                    <p className="text-sm text-muted-foreground">{result.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Benefits Section */}
       <section className="py-16 md:py-24 bg-muted/50">

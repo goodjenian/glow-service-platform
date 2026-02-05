@@ -23,6 +23,20 @@ export default function AIAgentsPage() {
     t("aiAgents.benefit6"),
   ];
 
+  const strategies = [
+    { title: t("aiAgents.strategy1.title"), description: t("aiAgents.strategy1.desc") },
+    { title: t("aiAgents.strategy2.title"), description: t("aiAgents.strategy2.desc") },
+    { title: t("aiAgents.strategy3.title"), description: t("aiAgents.strategy3.desc") },
+    { title: t("aiAgents.strategy4.title"), description: t("aiAgents.strategy4.desc") },
+  ];
+
+  const results = [
+    { metric: t("aiAgents.result1.metric"), description: t("aiAgents.result1.desc") },
+    { metric: t("aiAgents.result2.metric"), description: t("aiAgents.result2.desc") },
+    { metric: t("aiAgents.result3.metric"), description: t("aiAgents.result3.desc") },
+    { metric: t("aiAgents.result4.metric"), description: t("aiAgents.result4.desc") },
+  ];
+
   return (
     <ServicePageLayout
       title={t("aiAgents.title")}
@@ -34,6 +48,9 @@ export default function AIAgentsPage() {
       ctaText={t("aiAgents.cta")}
       serviceColor="green"
       serviceName="AI Agents"
+      importance={t("aiAgents.importance")}
+      strategies={strategies}
+      results={results}
       relatedServices={[
         { name: t("nav.appCreation"), href: "/services/app-creation", description: "Full-stack apps with Base44" },
         { name: t("nav.seo"), href: "/services/seo", description: "Optimize your organic presence" },

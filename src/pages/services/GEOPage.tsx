@@ -23,6 +23,20 @@ export default function GEOPage() {
     t("geo.benefit6"),
   ];
 
+  const strategies = [
+    { title: t("geo.strategy1.title"), description: t("geo.strategy1.desc") },
+    { title: t("geo.strategy2.title"), description: t("geo.strategy2.desc") },
+    { title: t("geo.strategy3.title"), description: t("geo.strategy3.desc") },
+    { title: t("geo.strategy4.title"), description: t("geo.strategy4.desc") },
+  ];
+
+  const results = [
+    { metric: t("geo.result1.metric"), description: t("geo.result1.desc") },
+    { metric: t("geo.result2.metric"), description: t("geo.result2.desc") },
+    { metric: t("geo.result3.metric"), description: t("geo.result3.desc") },
+    { metric: t("geo.result4.metric"), description: t("geo.result4.desc") },
+  ];
+
   return (
     <ServicePageLayout
       title={t("geo.title")}
@@ -34,6 +48,9 @@ export default function GEOPage() {
       ctaText={t("geo.cta")}
       serviceColor="purple"
       serviceName="GEO Optimization"
+      importance={t("geo.importance")}
+      strategies={strategies}
+      results={results}
       relatedServices={[
         { name: t("nav.seo"), href: "/services/seo", description: "Traditional search optimization" },
         { name: t("nav.appCreation"), href: "/services/app-creation", description: "Full-stack apps with Base44" },

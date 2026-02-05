@@ -1,17 +1,21 @@
- import { Button } from "@/components/ui/button";
- import { ArrowRight } from "lucide-react";
- import { useLanguage } from "@/contexts/LanguageContext";
- import { getWhatsAppUrl, getWhatsAppUrlPt } from "@/lib/whatsapp";
- import { DottedSurface } from "@/components/effects/DottedSurface";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { getWhatsAppUrl, getWhatsAppUrlPt } from "@/lib/whatsapp";
+import { DottedSurface } from "@/components/effects/DottedSurface";
+import { HeroFloatingIcons } from "@/components/home/HeroFloatingIcons";
 
 export function HeroSection() {
   const { language, t } = useLanguage();
   const whatsappUrl = language === "pt" ? getWhatsAppUrlPt() : getWhatsAppUrl();
 
   return (
-     <section className="relative bg-primary py-16 md:py-24 lg:py-32 overflow-hidden min-h-[80vh] flex items-center">
-       {/* Dotted Surface Background */}
-       <DottedSurface />
+    <section className="relative bg-primary py-16 md:py-24 lg:py-32 overflow-hidden min-h-[80vh] flex items-center">
+      {/* Dotted Surface Background */}
+      <DottedSurface />
+      
+      {/* Floating Service Icons */}
+      <HeroFloatingIcons />
        
        {/* Gradient fade at top */}
        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-primary to-transparent z-10" />
