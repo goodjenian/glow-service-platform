@@ -66,7 +66,7 @@ export default function AboutPage() {
                   />
                 </div>
                 <div className="absolute -bottom-4 -right-4 bg-card rounded-2xl p-4 shadow-xl border border-border">
-                  <div className="text-2xl font-bold text-accent">5+</div>
+                   <div className="text-2xl font-bold text-accent">7+</div>
                   <div className="text-xs text-muted-foreground">{t("about.yearsExp")}</div>
                 </div>
               </div>
