@@ -26,7 +26,7 @@ export function TestimonialSection() {
   };
 
    return (
-     <section className="pt-16 md:pt-24 pb-6 md:pb-8 bg-primary">
+     <section className="pt-16 md:pt-24 pb-6 md:pb-8 bg-gradient-to-br from-[hsl(270,40%,12%)] via-[hsl(270,30%,8%)] to-primary">
       <div className="container px-4 md:px-6">
          <div className="text-center mb-10">
            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary-foreground">{t("testimonial.title")}</h2>

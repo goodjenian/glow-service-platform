@@ -35,7 +35,7 @@ export function ReviewsSection() {
   ];
 
    return (
-     <section className="pt-8 md:pt-12 pb-16 md:pb-24 bg-primary">
+     <section className="pt-8 md:pt-12 pb-16 md:pb-24 bg-gradient-to-b from-[hsl(270,30%,8%)] to-primary">
       <div className="container px-4 md:px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
