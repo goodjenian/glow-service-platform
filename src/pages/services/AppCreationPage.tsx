@@ -37,6 +37,12 @@ export default function AppCreationPage() {
     { metric: t("appCreation.result4.metric"), description: t("appCreation.result4.desc") },
   ];
 
+  const faqs = [
+    { question: t("appCreation.faq.q1"), answer: t("appCreation.faq.a1") },
+    { question: t("appCreation.faq.q2"), answer: t("appCreation.faq.a2") },
+    { question: t("appCreation.faq.q3"), answer: t("appCreation.faq.a3") },
+  ];
+
   return (
     <ServicePageLayout
       title={t("appCreation.title")}
@@ -51,9 +57,10 @@ export default function AppCreationPage() {
       importance={t("appCreation.importance")}
       strategies={strategies}
       results={results}
+      faqs={faqs}
       relatedServices={[
         { name: t("nav.siteExpress"), href: "/services/site-express", description: "Fast frontend development" },
-        { name: t("nav.aiAgents"), href: "/services/ai-agents", description: "Intelligent automation with n8n" },
+        { name: t("nav.aiAgents"), href: "/services/ai-agents", description: "Intelligent automation" },
       ]}
     />
   );

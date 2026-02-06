@@ -37,6 +37,12 @@ export default function SocialMediaPage() {
     { metric: t("socialMedia.result4.metric"), description: t("socialMedia.result4.desc") },
   ];
 
+  const faqs = [
+    { question: t("socialMedia.faq.q1"), answer: t("socialMedia.faq.a1") },
+    { question: t("socialMedia.faq.q2"), answer: t("socialMedia.faq.a2") },
+    { question: t("socialMedia.faq.q3"), answer: t("socialMedia.faq.a3") },
+  ];
+
   return (
     <ServicePageLayout
       title={t("socialMedia.title")}
@@ -51,6 +57,7 @@ export default function SocialMediaPage() {
       importance={t("socialMedia.importance")}
       strategies={strategies}
       results={results}
+      faqs={faqs}
       relatedServices={[
         { name: t("nav.siteExpress"), href: "/services/site-express", description: "Fast frontend development" },
         { name: t("nav.seo"), href: "/services/seo", description: "Optimize your organic presence" },

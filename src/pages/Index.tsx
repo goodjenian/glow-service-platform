@@ -2,6 +2,7 @@ import { Layout } from "@/components/layout/Layout";
 import { HeroSection } from "@/components/home/HeroSection";
 import { TestimonialSection } from "@/components/home/TestimonialSection";
 import { ReviewsSection } from "@/components/home/ReviewsSection";
+import { FAQSection } from "@/components/home/FAQSection";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -243,6 +244,9 @@ const Index = () => {
 
       {/* Reviews Section */}
       <ReviewsSection />
+
+      {/* FAQ Section */}
+      <FAQSection />
 
       {/* CTA Section */}
       <section className="py-16 md:py-24">

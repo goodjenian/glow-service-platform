@@ -1,10 +1,12 @@
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Check, ArrowRight, TrendingUp, Target, Lightbulb, BarChart3 } from "lucide-react";
+import { Check, ArrowRight, TrendingUp, Target, Lightbulb, BarChart3, Award, Coins, Users, FlaskConical } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getWhatsAppUrl, getWhatsAppUrlPt } from "@/lib/whatsapp";
+import { ServiceFloatingIcons } from "@/components/services/ServiceFloatingIcons";
+import { ServiceFAQSection } from "@/components/services/ServiceFAQSection";
 import type { LucideIcon } from "lucide-react";
 
 interface Feature {
@@ -28,6 +30,11 @@ interface Result {
   description: string;
 }
 
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
 type ServiceColor = "blue" | "purple" | "beige" | "teal" | "green" | "rose";
 
 interface ServicePageLayoutProps {
@@ -44,44 +51,51 @@ interface ServicePageLayoutProps {
   importance?: string;
   strategies?: Strategy[];
   results?: Result[];
+  faqs?: FAQ[];
 }
 
-const colorClasses: Record<ServiceColor, { gradient: string; accent: string; iconBg: string; accentBg: string }> = {
+const colorClasses: Record<ServiceColor, { gradient: string; accent: string; iconBg: string; accentBg: string; textAccent: string }> = {
   blue: {
     gradient: "bg-gradient-to-br from-[hsl(217,91%,20%)] via-[hsl(217,80%,30%)] to-[hsl(220,70%,25%)]",
     accent: "text-blue-400",
     iconBg: "bg-blue-500/20",
     accentBg: "bg-blue-500/10",
+    textAccent: "text-blue-400",
   },
   purple: {
     gradient: "bg-gradient-to-br from-[hsl(280,70%,20%)] via-[hsl(280,60%,30%)] to-[hsl(290,50%,25%)]",
     accent: "text-purple-400",
     iconBg: "bg-purple-500/20",
     accentBg: "bg-purple-500/10",
+    textAccent: "text-purple-400",
   },
   beige: {
     gradient: "bg-gradient-to-br from-[hsl(35,30%,20%)] via-[hsl(35,40%,30%)] to-[hsl(40,35%,25%)]",
     accent: "text-amber-300",
     iconBg: "bg-amber-500/20",
     accentBg: "bg-amber-500/10",
+    textAccent: "text-amber-400",
   },
   teal: {
     gradient: "bg-gradient-to-br from-[hsl(175,70%,15%)] via-[hsl(175,60%,25%)] to-[hsl(180,50%,20%)]",
     accent: "text-teal-400",
     iconBg: "bg-teal-500/20",
     accentBg: "bg-teal-500/10",
+    textAccent: "text-teal-400",
   },
   green: {
     gradient: "bg-gradient-to-br from-[hsl(145,70%,15%)] via-[hsl(145,60%,25%)] to-[hsl(150,50%,20%)]",
     accent: "text-emerald-400",
     iconBg: "bg-emerald-500/20",
     accentBg: "bg-emerald-500/10",
+    textAccent: "text-emerald-400",
   },
   rose: {
     gradient: "bg-gradient-to-br from-[hsl(350,70%,20%)] via-[hsl(350,60%,30%)] to-[hsl(355,50%,25%)]",
     accent: "text-rose-400",
     iconBg: "bg-rose-500/20",
     accentBg: "bg-rose-500/10",
+    textAccent: "text-rose-400",
   },
 };
 
@@ -99,6 +113,7 @@ export function ServicePageLayout({
   importance,
   strategies,
   results,
+  faqs,
 }: ServicePageLayoutProps) {
   const { language, t } = useLanguage();
   const whatsappUrl = language === "pt" 
@@ -106,6 +121,53 @@ export function ServicePageLayout({
     : getWhatsAppUrl(serviceName || title);
   
   const colors = colorClasses[serviceColor];
+
+  const whyChooseCards = [
+    {
+      icon: Award,
+      iconColor: "text-blue-500",
+      iconBg: "bg-blue-500/10",
+      title: t("whyChoose.proven.title"),
+      points: [
+        t("whyChoose.proven.point1"),
+        t("whyChoose.proven.point2"),
+        t("whyChoose.proven.point3"),
+      ],
+    },
+    {
+      icon: Coins,
+      iconColor: "text-amber-500",
+      iconBg: "bg-amber-500/10",
+      title: t("whyChoose.pricing.title"),
+      points: [
+        t("whyChoose.pricing.point1"),
+        t("whyChoose.pricing.point2"),
+        t("whyChoose.pricing.point3"),
+      ],
+    },
+    {
+      icon: Users,
+      iconColor: "text-purple-500",
+      iconBg: "bg-purple-500/10",
+      title: t("whyChoose.team.title"),
+      points: [
+        t("whyChoose.team.point1"),
+        t("whyChoose.team.point2"),
+        t("whyChoose.team.point3"),
+      ],
+    },
+    {
+      icon: FlaskConical,
+      iconColor: "text-rose-500",
+      iconBg: "bg-rose-500/10",
+      title: t("whyChoose.approach.title"),
+      points: [
+        t("whyChoose.approach.point1"),
+        t("whyChoose.approach.point2"),
+        t("whyChoose.approach.point3"),
+      ],
+    },
+  ];
 
   return (
     <Layout>
@@ -116,6 +178,9 @@ export function ServicePageLayout({
         
         {/* Glowing Orb */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
+        
+        {/* Service-specific floating icons */}
+        <ServiceFloatingIcons icon={Icon} accentColor={colors.accent} />
         
         <div className="container px-4 md:px-6 relative">
           <div className="max-w-3xl mx-auto text-center">
@@ -257,36 +322,55 @@ export function ServicePageLayout({
         </section>
       )}
 
-      {/* Benefits Section */}
-      <section className="py-16 md:py-24 bg-muted/50">
+      {/* Why Choose Section - Galactic Fed Style */}
+      <section className="py-16 md:py-24 bg-background">
         <div className="container px-4 md:px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                {t("service.whyChoose")}
+          {/* Header */}
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 mb-12">
+            <div className="max-w-xl">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                {t("whyChoose.title")}
               </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                {t("service.whyChooseDesc")}
+              <p className="text-lg text-muted-foreground">
+                {t("whyChoose.subtitle")}
               </p>
-              <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <div className="rounded-full bg-accent/20 p-1 mt-0.5">
-                      <Check className="h-4 w-4 text-accent" />
-                    </div>
-                    <span className="text-foreground">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
             </div>
-            <div className="relative">
-              <div className={`aspect-square rounded-2xl ${colors.gradient} flex items-center justify-center`}>
-                <Icon className="w-32 h-32 text-white/30" />
-              </div>
-            </div>
+            <Button variant="accent" size="xl" asChild className="group shrink-0">
+              <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
+                {t("whyChoose.cta")}
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </a>
+            </Button>
+          </div>
+
+          {/* Cards Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {whyChooseCards.map((card, index) => (
+              <Card key={index} className="border-border/50 bg-muted/30 hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl ${card.iconBg} mb-6`}>
+                    <card.icon className={`h-6 w-6 ${card.iconColor}`} />
+                  </div>
+                  <h3 className="text-xl font-bold mb-4">{card.title}</h3>
+                  <ul className="space-y-3">
+                    {card.points.map((point, pointIndex) => (
+                      <li key={pointIndex} className="flex items-start gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-2 shrink-0" />
+                        <span className="text-muted-foreground text-sm">{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      {faqs && faqs.length > 0 && (
+        <ServiceFAQSection faqs={faqs} accentColor={colors.textAccent} />
+      )}
 
       {/* Related Services Section */}
       {relatedServices && relatedServices.length > 0 && (

@@ -37,6 +37,12 @@ export default function SEOServicesPage() {
     { metric: t("seo.result4.metric"), description: t("seo.result4.desc") },
   ];
 
+  const faqs = [
+    { question: t("seo.faq.q1"), answer: t("seo.faq.a1") },
+    { question: t("seo.faq.q2"), answer: t("seo.faq.a2") },
+    { question: t("seo.faq.q3"), answer: t("seo.faq.a3") },
+  ];
+
   return (
     <ServicePageLayout
       title={t("seo.title")}
@@ -51,9 +57,10 @@ export default function SEOServicesPage() {
       importance={t("seo.importance")}
       strategies={strategies}
       results={results}
+      faqs={faqs}
       relatedServices={[
         { name: t("nav.geo"), href: "/services/geo", description: "AI search visibility for LLMs" },
-        { name: t("nav.aiAgents"), href: "/services/ai-agents", description: "Automate SEO tasks with n8n" },
+        { name: t("nav.aiAgents"), href: "/services/ai-agents", description: "Automate SEO tasks" },
       ]}
     />
   );

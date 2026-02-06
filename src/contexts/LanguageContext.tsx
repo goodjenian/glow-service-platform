@@ -40,18 +40,18 @@ const translations: Record<Language, Record<string, string>> = {
     "services.geo.title": "GEO Optimization",
     "services.geo.desc": "Future-proof your visibility for AI search engines and LLMs with entity enrichment and schema strategies.",
     "services.siteExpress.title": "Site Express",
-    "services.siteExpress.desc": "Rapid frontend development with Lovable. Get your professional site live in days, not months.",
+    "services.siteExpress.desc": "Rapid frontend development with modern tools. Get your professional site live in days, not months.",
     "services.appCreation.title": "App Creation",
-    "services.appCreation.desc": "Full-stack web applications with Base44. Databases, auth, and AI features included.",
+    "services.appCreation.desc": "Full-stack web applications with databases, authentication, and AI features included.",
     "services.aiAgents.title": "AI Agents",
-    "services.aiAgents.desc": "Automate SEO tasks and deploy intelligent sales agents with n8n workflows and custom AI solutions.",
+    "services.aiAgents.desc": "Automate SEO tasks and deploy intelligent sales agents with custom workflows and AI solutions.",
     "services.socialMedia.title": "Social Media",
     "services.socialMedia.desc": "Engaging visual content creation for your social channels. Videos, images, and graphics that convert.",
     "services.learnMore": "Learn more",
 
     // Why Partner
     "partner.title": "Why Partner with Goody SEO?",
-    "partner.desc": "We leverage cutting-edge automation and AI workflows to accelerate your growth. Our n8n-powered systems handle repetitive tasks while our team focuses on strategic optimization that delivers measurable results.",
+    "partner.desc": "We leverage cutting-edge automation and AI workflows to accelerate your growth. Our systems handle repetitive tasks while our team focuses on strategic optimization that delivers measurable results.",
     "partner.tailored": "Tailored Strategies",
     "partner.tailoredDesc": "Custom automation solutions built for your specific business goals",
     "partner.datadriven": "Data-Driven Results",
@@ -60,6 +60,27 @@ const translations: Record<Language, Record<string, string>> = {
     "partner.boutiqueDesc": "Personal service with enterprise-level automation",
     "partner.proven": "Proven Track Record",
     "partner.provenDesc": "Consistent results powered by intelligent workflows",
+
+    // Why Choose (Galactic Fed style)
+    "whyChoose.title": "Why Choose Goody SEO?",
+    "whyChoose.subtitle": "Get 5x the value of a traditional agency for half the cost. Your one-stop-shop for affordable marketing growth.",
+    "whyChoose.cta": "Talk to an Expert",
+    "whyChoose.proven.title": "Proven Expertise",
+    "whyChoose.proven.point1": "150+ clients served globally",
+    "whyChoose.proven.point2": "Specialists in SEO & automation",
+    "whyChoose.proven.point3": "Data science background",
+    "whyChoose.pricing.title": "Flexible Pricing",
+    "whyChoose.pricing.point1": "Monthly contracts available",
+    "whyChoose.pricing.point2": "Transparent pricing",
+    "whyChoose.pricing.point3": "Lower cost than agencies",
+    "whyChoose.team.title": "Advanced Team",
+    "whyChoose.team.point1": "Senior marketing experts",
+    "whyChoose.team.point2": "Industry-specific experience",
+    "whyChoose.team.point3": "Cutting-edge methodology",
+    "whyChoose.approach.title": "Scientific Approach",
+    "whyChoose.approach.point1": "Focused on your revenue",
+    "whyChoose.approach.point2": "Data and experimentation",
+    "whyChoose.approach.point3": "Automation-first mindset",
 
     // CTA
     "cta.title": "Ready to Grow Your Business?",
@@ -75,6 +96,20 @@ const translations: Record<Language, Record<string, string>> = {
     "testimonial.subtitle": "Real results from businesses like yours",
     "testimonial.quote": "The results have been phenomenal. We've seen significant growth in organic traffic and our automation workflows have saved countless hours every week.",
     "testimonial.watchVideo": "Watch the full testimonial",
+
+    // FAQ
+    "faq.title": "Questions?",
+    "faq.titleHighlight": "Answers.",
+    "faq.home.q1": "How is Goody SEO different from other marketing agencies?",
+    "faq.home.a1": "Unlike traditional agencies, we combine deep SEO expertise with cutting-edge automation. Our workflows handle repetitive tasks 24/7, delivering faster results at lower costs. We focus on measurable ROI, not vanity metrics.",
+    "faq.home.q2": "Why should I hire an agency instead of an in-house marketing team?",
+    "faq.home.a2": "An agency gives you access to specialized expertise across SEO, automation, and AI without the overhead of full-time salaries. Our automation systems work around the clock, and you only pay for results—not office space and benefits.",
+    "faq.home.q3": "I've worked with agencies who over-promised and under-delivered. Why should I trust you?",
+    "faq.home.a3": "We believe in transparency and data. Every strategy is backed by analytics, and we provide detailed monthly reports showing exactly what's working. Our automation systems also give you real-time visibility into performance.",
+    "faq.home.q4": "What results can I expect, and how fast?",
+    "faq.home.a4": "SEO is a long-term investment—expect meaningful traffic increases within 3-6 months. However, our automation workflows start saving time and generating leads from day one. We set clear KPIs upfront so you always know what to expect.",
+    "faq.home.q5": "How do modern SEO and GEO strategies differ from traditional approaches?",
+    "faq.home.a5": "Traditional SEO focused on keywords and backlinks. Modern SEO/GEO incorporates AI search engines, entity optimization, and structured data to appear in AI-generated responses. We future-proof your visibility for both traditional and AI search.",
 
     // About Page
     "about.founderRole": "Founder & SEO Strategist",
@@ -96,7 +131,7 @@ const translations: Record<Language, Record<string, string>> = {
     "about.team1Role": "SEO Specialists",
     "about.team1Desc": "Technical and content optimization experts",
     "about.team2Role": "Automation Engineers",
-    "about.team2Desc": "n8n and AI workflow architects",
+    "about.team2Desc": "Workflow and AI solution architects",
     "about.team3Role": "Creative Designers",
     "about.team3Desc": "Visual content and UX professionals",
     "about.ctaTitle": "Ready to Work Together?",
@@ -166,6 +201,12 @@ const translations: Record<Language, Record<string, string>> = {
     "seo.benefit4": "Competitor analysis and benchmarking",
     "seo.benefit5": "Keyword research and opportunity mapping",
     "seo.benefit6": "Regular strategy reviews and optimization",
+    "seo.faq.q1": "How long does it take to see SEO results?",
+    "seo.faq.a1": "Most clients see measurable improvements within 3-6 months. However, with our automation-powered monitoring and optimization, we can identify quick wins much faster. Our AI-driven tools continuously analyze performance and suggest optimizations, accelerating your path to results.",
+    "seo.faq.q2": "What's the difference between SEO and GEO?",
+    "seo.faq.a2": "SEO optimizes for traditional search engines like Google, while GEO (Generative Engine Optimization) prepares your content for AI-powered search like ChatGPT and Perplexity. We recommend combining both for complete visibility coverage.",
+    "seo.faq.q3": "Can automation really improve my SEO performance?",
+    "seo.faq.a3": "Absolutely. Our automated workflows handle technical audits, rank tracking, competitor monitoring, and reporting 24/7. This means faster issue detection, more consistent optimization, and significant time savings—all translating to better rankings and lower costs.",
 
     // GEO Page
     "geo.title": "GEO Optimization",
@@ -207,15 +248,21 @@ const translations: Record<Language, Record<string, string>> = {
     "geo.benefit4": "Stay ahead of competitors in generative search",
     "geo.benefit5": "Detailed visibility reports for AI systems",
     "geo.benefit6": "Ongoing optimization as AI search evolves",
+    "geo.faq.q1": "Is GEO really necessary if I'm already doing SEO?",
+    "geo.faq.a1": "Yes. AI search is growing exponentially—by 2026, 25% of traditional search traffic will shift to AI. GEO ensures you capture this new audience. Our automation tools monitor both traditional and AI search performance, giving you complete visibility.",
+    "geo.faq.q2": "How do you measure AI search visibility?",
+    "geo.faq.a2": "We use specialized tools to track how often your brand is mentioned in AI responses, the accuracy of those mentions, and referral traffic from AI platforms. Our automated monitoring provides real-time insights you can't get elsewhere.",
+    "geo.faq.q3": "Can you help my brand appear in ChatGPT and Perplexity answers?",
+    "geo.faq.a3": "Absolutely. Through entity enrichment, structured data optimization, and strategic content placement, we increase your chances of being cited by AI systems. Our expertise in knowledge graph optimization directly impacts how AI perceives your brand.",
 
     // Site Express Page
     "siteExpress.title": "Site Express",
-    "siteExpress.subtitle": "Rapid Frontend Development with Lovable",
-    "siteExpress.desc": "Professional website development at lightning speed. We create beautiful, responsive sites using Lovable to get you online faster—perfect for landing pages, portfolios, and business websites.",
+    "siteExpress.subtitle": "Rapid Frontend Development",
+    "siteExpress.desc": "Professional website development at lightning speed. We create beautiful, responsive sites to get you online faster—perfect for landing pages, portfolios, and business websites.",
     "siteExpress.cta": "Launch Your Site Fast",
     "siteExpress.importance": "Your website is your digital storefront—75% of users judge a company's credibility based on web design. In the era of instant gratification, slow-loading, outdated sites hemorrhage leads. Site Express delivers professional, conversion-optimized websites in days, not months, using AI-powered development tools. Stop losing customers to competitors with better web presence while you wait for traditional agencies to deliver.",
     "siteExpress.feature1.title": "Rapid Development",
-    "siteExpress.feature1.desc": "Get your professional website live in days, not months. We use cutting-edge tools like Lovable for accelerated delivery.",
+    "siteExpress.feature1.desc": "Get your professional website live in days, not months. We use cutting-edge AI-assisted tools for accelerated delivery.",
     "siteExpress.feature2.title": "Modern Design",
     "siteExpress.feature2.desc": "Clean, professional aesthetics that reflect your brand identity and convert visitors into customers.",
     "siteExpress.feature3.title": "Responsive Layouts",
@@ -229,12 +276,12 @@ const translations: Record<Language, Record<string, string>> = {
     "siteExpress.strategy1.title": "Discovery & Planning",
     "siteExpress.strategy1.desc": "Quick intake process to understand your brand, goals, and target audience for focused development.",
     "siteExpress.strategy2.title": "AI-Assisted Design",
-    "siteExpress.strategy2.desc": "Leverage Lovable's AI capabilities to rapidly prototype and iterate on designs.",
+    "siteExpress.strategy2.desc": "Leverage AI capabilities to rapidly prototype and iterate on designs for faster delivery.",
     "siteExpress.strategy3.title": "Conversion Optimization",
     "siteExpress.strategy3.desc": "Strategic CTA placement, clear value propositions, and frictionless user journeys.",
     "siteExpress.strategy4.title": "Launch & Iterate",
     "siteExpress.strategy4.desc": "Get live fast, then optimize based on real user data and feedback.",
-    "siteExpress.result1.metric": "5 Days",
+    "siteExpress.result1.metric": "10 Days",
     "siteExpress.result1.desc": "Average time to launch",
     "siteExpress.result2.metric": "98+",
     "siteExpress.result2.desc": "PageSpeed score achieved",
@@ -248,13 +295,19 @@ const translations: Record<Language, Record<string, string>> = {
     "siteExpress.benefit4": "Modern, conversion-focused design",
     "siteExpress.benefit5": "Mobile-first responsive layouts",
     "siteExpress.benefit6": "Ongoing support and updates available",
+    "siteExpress.faq.q1": "How can you build a website so quickly?",
+    "siteExpress.faq.a1": "We use modern AI-assisted development tools that dramatically accelerate the build process without sacrificing quality. Our expertise combined with automation allows us to deliver in 10 days what traditional agencies take months to complete.",
+    "siteExpress.faq.q2": "Will my site be optimized for search engines?",
+    "siteExpress.faq.a2": "Absolutely. Every Site Express project includes SEO best practices: proper HTML structure, optimized meta tags, fast loading speeds, and mobile responsiveness. We also offer ongoing SEO services to help you rank higher.",
+    "siteExpress.faq.q3": "Can I update the website myself after launch?",
+    "siteExpress.faq.a3": "Yes! We provide documentation and training for basic updates. For more complex changes, our ongoing support packages ensure your site stays current and optimized.",
 
     // App Creation Page
     "appCreation.title": "App Creation",
-    "appCreation.subtitle": "Full-Stack Development with Base44",
-    "appCreation.desc": "Complete web applications with databases, authentication, and AI capabilities. Powered by Base44 for rapid full-stack development.",
+    "appCreation.subtitle": "Full-Stack Development",
+    "appCreation.desc": "Complete web applications with databases, authentication, and AI capabilities. Rapid full-stack development for modern businesses.",
     "appCreation.cta": "Build Your App",
-    "appCreation.importance": "Custom web applications are the engines of modern business operations—from internal tools to customer portals. Traditional development takes 6-12 months and costs $50K-$500K. Base44's no-code platform with AI acceleration delivers production-ready apps in weeks at a fraction of the cost. Whether you need a CRM, booking system, or data dashboard, we build scalable solutions that grow with your business.",
+    "appCreation.importance": "Custom web applications are the engines of modern business operations—from internal tools to customer portals. Traditional development takes 6-12 months and costs $50K-$500K. Our AI-accelerated approach delivers production-ready apps in weeks at a fraction of the cost. Whether you need a CRM, booking system, or data dashboard, we build scalable solutions that grow with your business.",
     "appCreation.feature1.title": "Database Integration",
     "appCreation.feature1.desc": "Built-in database management with automatic API generation. Store and manage your data effortlessly.",
     "appCreation.feature2.title": "User Authentication",
@@ -289,15 +342,21 @@ const translations: Record<Language, Record<string, string>> = {
     "appCreation.benefit4": "Rapid development and deployment",
     "appCreation.benefit5": "Scalable cloud infrastructure",
     "appCreation.benefit6": "Ongoing maintenance and support",
+    "appCreation.faq.q1": "How is this different from hiring a development team?",
+    "appCreation.faq.a1": "We combine AI-accelerated development with senior expertise to deliver apps 5x faster at a fraction of the cost. You get enterprise-quality results without the overhead of managing a development team.",
+    "appCreation.faq.q2": "Can you integrate with my existing tools and systems?",
+    "appCreation.faq.a2": "Yes! We build apps with API integration in mind. Whether you need to connect to your CRM, payment processor, or custom internal systems, we ensure seamless integration.",
+    "appCreation.faq.q3": "Will I own the code and be able to modify it later?",
+    "appCreation.faq.a3": "Absolutely. You receive full ownership of all code and assets. We provide clean, documented code that any developer can extend. Plus, our AI-powered tools make future modifications faster and more cost-effective.",
 
     // AI Agents Page
     "aiAgents.title": "AI Agents & Automation",
-    "aiAgents.subtitle": "Intelligent Automation with n8n",
-    "aiAgents.desc": "Automate SEO tasks and deploy AI agents for sales and marketing with custom n8n workflows. Work smarter, not harder.",
+    "aiAgents.subtitle": "Intelligent Workflow Automation",
+    "aiAgents.desc": "Automate SEO tasks and deploy AI agents for sales and marketing with custom workflows. Work smarter, not harder.",
     "aiAgents.cta": "Automate Your Marketing",
-    "aiAgents.importance": "Marketing teams waste 40% of their time on repetitive tasks that could be automated. AI agents powered by n8n can handle lead qualification, content distribution, data enrichment, and reporting 24/7 without human intervention. From chatbots that convert visitors to workflows that sync your entire MarTech stack, intelligent automation is no longer a luxury—it's a competitive necessity.",
+    "aiAgents.importance": "Marketing teams waste 40% of their time on repetitive tasks that could be automated. AI agents can handle lead qualification, content distribution, data enrichment, and reporting 24/7 without human intervention. From chatbots that convert visitors to workflows that sync your entire MarTech stack, intelligent automation is no longer a luxury—it's a competitive necessity.",
     "aiAgents.feature1.title": "SEO Task Automation",
-    "aiAgents.feature1.desc": "Automate repetitive SEO workflows like reporting, monitoring, and data collection with intelligent n8n integrations.",
+    "aiAgents.feature1.desc": "Automate repetitive SEO workflows like reporting, monitoring, and data collection with intelligent integrations.",
     "aiAgents.feature2.title": "AI Sales Agents",
     "aiAgents.feature2.desc": "Deploy conversational AI agents that qualify leads, answer questions, and guide prospects through your sales funnel 24/7.",
     "aiAgents.feature3.title": "Custom Workflows",
@@ -311,7 +370,7 @@ const translations: Record<Language, Record<string, string>> = {
     "aiAgents.strategy1.title": "Process Mapping",
     "aiAgents.strategy1.desc": "Identify repetitive tasks and bottlenecks that are prime candidates for automation.",
     "aiAgents.strategy2.title": "Workflow Design",
-    "aiAgents.strategy2.desc": "Architect n8n workflows that connect your tools and automate multi-step processes.",
+    "aiAgents.strategy2.desc": "Architect intelligent workflows that connect your tools and automate multi-step processes.",
     "aiAgents.strategy3.title": "AI Agent Training",
     "aiAgents.strategy3.desc": "Configure and train AI agents with your brand voice, FAQs, and qualification criteria.",
     "aiAgents.strategy4.title": "Monitoring & Optimization",
@@ -330,6 +389,12 @@ const translations: Record<Language, Record<string, string>> = {
     "aiAgents.benefit4": "Scalable automation that grows with you",
     "aiAgents.benefit5": "Custom solutions built for your needs",
     "aiAgents.benefit6": "Ongoing optimization and support",
+    "aiAgents.faq.q1": "What kind of tasks can be automated?",
+    "aiAgents.faq.a1": "Almost any repetitive marketing task: lead scoring, email sequences, social media posting, SEO monitoring, report generation, data syncing between tools, and customer support. Our AI expertise helps identify the highest-impact automation opportunities for your business.",
+    "aiAgents.faq.q2": "How do AI sales agents work?",
+    "aiAgents.faq.a2": "AI sales agents are conversational bots trained on your products, FAQs, and brand voice. They engage website visitors 24/7, qualify leads based on your criteria, answer questions, and hand off hot leads to your sales team—all automatically.",
+    "aiAgents.faq.q3": "Is automation cost-effective for small businesses?",
+    "aiAgents.faq.a3": "Absolutely. Our AI expertise means we build efficient automations that provide ROI from day one. Most clients save 20+ hours per week—that's like hiring a part-time employee at a fraction of the cost.",
 
     // Social Media Page
     "socialMedia.title": "Social Media Content",
@@ -371,6 +436,12 @@ const translations: Record<Language, Record<string, string>> = {
     "socialMedia.benefit4": "Increased engagement and follower growth",
     "socialMedia.benefit5": "Time savings on content creation",
     "socialMedia.benefit6": "Analytics-driven content optimization",
+    "socialMedia.faq.q1": "How does automation help with social media content?",
+    "socialMedia.faq.a1": "Our automation workflows handle scheduling, cross-platform posting, analytics collection, and performance reporting. This means consistent presence across channels without manual effort, plus data-driven insights to improve your content strategy.",
+    "socialMedia.faq.q2": "Can you manage all my social media platforms?",
+    "socialMedia.faq.a2": "Yes! We create and optimize content for all major platforms: Instagram, TikTok, LinkedIn, Facebook, X (Twitter), and YouTube. Each piece is tailored to the specific platform's format and audience expectations.",
+    "socialMedia.faq.q3": "How do you ensure brand consistency across platforms?",
+    "socialMedia.faq.a3": "We start with a brand guidelines document and create templates that ensure visual and messaging consistency. Our AI-powered tools help maintain brand voice across all content while our design team ensures visual cohesion.",
   },
   pt: {
     // Navigation
@@ -403,18 +474,18 @@ const translations: Record<Language, Record<string, string>> = {
     "services.geo.title": "Otimização GEO",
     "services.geo.desc": "Prepare-se para o futuro com visibilidade em motores de busca IA e LLMs através de enriquecimento de entidades e estratégias de schema.",
     "services.siteExpress.title": "Site Express",
-    "services.siteExpress.desc": "Desenvolvimento frontend rápido com Lovable. Coloque seu site profissional no ar em dias, não meses.",
+    "services.siteExpress.desc": "Desenvolvimento frontend rápido com ferramentas modernas. Coloque seu site profissional no ar em dias, não meses.",
     "services.appCreation.title": "Criação de apps",
-    "services.appCreation.desc": "Aplicações web full-stack com Base44. Banco de dados, autenticação e recursos de IA incluídos.",
+    "services.appCreation.desc": "Aplicações web full-stack com banco de dados, autenticação e recursos de IA incluídos.",
     "services.aiAgents.title": "Agentes IA",
-    "services.aiAgents.desc": "Automatize tarefas de SEO e implante agentes de vendas inteligentes com workflows n8n e soluções de IA personalizadas.",
+    "services.aiAgents.desc": "Automatize tarefas de SEO e implante agentes de vendas inteligentes com workflows personalizados e soluções de IA.",
     "services.socialMedia.title": "Redes sociais",
     "services.socialMedia.desc": "Criação de conteúdo visual envolvente para seus canais sociais. Vídeos, imagens e gráficos que convertem.",
     "services.learnMore": "Saiba mais",
 
     // Why Partner
     "partner.title": "Por que ser parceiro da Goody SEO?",
-    "partner.desc": "Utilizamos automação de ponta e workflows de IA para acelerar seu crescimento. Nossos sistemas com n8n lidam com tarefas repetitivas enquanto nossa equipe foca na otimização estratégica que entrega resultados mensuráveis.",
+    "partner.desc": "Utilizamos automação de ponta e workflows de IA para acelerar seu crescimento. Nossos sistemas lidam com tarefas repetitivas enquanto nossa equipe foca na otimização estratégica que entrega resultados mensuráveis.",
     "partner.tailored": "Estratégias personalizadas",
     "partner.tailoredDesc": "Soluções de automação customizadas para seus objetivos específicos de negócio",
     "partner.datadriven": "Resultados baseados em dados",
@@ -423,6 +494,27 @@ const translations: Record<Language, Record<string, string>> = {
     "partner.boutiqueDesc": "Atendimento pessoal com automação de nível empresarial",
     "partner.proven": "Histórico comprovado",
     "partner.provenDesc": "Resultados consistentes alimentados por workflows inteligentes",
+
+    // Why Choose (Galactic Fed style)
+    "whyChoose.title": "Por que escolher a Goody SEO?",
+    "whyChoose.subtitle": "Obtenha 5x o valor de uma agência tradicional pela metade do custo. Sua solução completa para crescimento de marketing acessível.",
+    "whyChoose.cta": "Fale com um Especialista",
+    "whyChoose.proven.title": "Expertise Comprovada",
+    "whyChoose.proven.point1": "150+ clientes atendidos globalmente",
+    "whyChoose.proven.point2": "Especialistas em SEO e automação",
+    "whyChoose.proven.point3": "Background em ciência de dados",
+    "whyChoose.pricing.title": "Preços Flexíveis",
+    "whyChoose.pricing.point1": "Contratos mensais disponíveis",
+    "whyChoose.pricing.point2": "Preços transparentes",
+    "whyChoose.pricing.point3": "Menor custo que agências",
+    "whyChoose.team.title": "Equipe Avançada",
+    "whyChoose.team.point1": "Especialistas sênior em marketing",
+    "whyChoose.team.point2": "Experiência específica por setor",
+    "whyChoose.team.point3": "Metodologia de ponta",
+    "whyChoose.approach.title": "Abordagem Científica",
+    "whyChoose.approach.point1": "Focado no seu faturamento",
+    "whyChoose.approach.point2": "Dados e experimentação",
+    "whyChoose.approach.point3": "Mentalidade automation-first",
 
     // CTA
     "cta.title": "Pronto para crescer seu negócio?",
@@ -438,6 +530,20 @@ const translations: Record<Language, Record<string, string>> = {
     "testimonial.subtitle": "Resultados reais de empresas como a sua",
     "testimonial.quote": "Os resultados foram fenomenais. Vimos um crescimento significativo no tráfego orgânico e nossos workflows de automação economizaram incontáveis horas toda semana.",
     "testimonial.watchVideo": "Assista ao depoimento completo",
+
+    // FAQ
+    "faq.title": "Perguntas?",
+    "faq.titleHighlight": "Respostas.",
+    "faq.home.q1": "Como a Goody SEO é diferente de outras agências de marketing?",
+    "faq.home.a1": "Diferente de agências tradicionais, combinamos expertise profunda em SEO com automação de ponta. Nossos workflows lidam com tarefas repetitivas 24/7, entregando resultados mais rápidos a custos menores. Focamos em ROI mensurável, não métricas de vaidade.",
+    "faq.home.q2": "Por que devo contratar uma agência ao invés de um time de marketing interno?",
+    "faq.home.a2": "Uma agência dá acesso a expertise especializada em SEO, automação e IA sem o custo de salários em tempo integral. Nossos sistemas de automação trabalham 24 horas, e você paga apenas por resultados—não por espaço de escritório e benefícios.",
+    "faq.home.q3": "Já trabalhei com agências que prometeram demais e entregaram de menos. Por que devo confiar em vocês?",
+    "faq.home.a3": "Acreditamos em transparência e dados. Cada estratégia é respaldada por análises, e fornecemos relatórios mensais detalhados mostrando exatamente o que está funcionando. Nossos sistemas de automação também dão visibilidade em tempo real do desempenho.",
+    "faq.home.q4": "Que resultados posso esperar e em quanto tempo?",
+    "faq.home.a4": "SEO é um investimento de longo prazo—espere aumentos significativos de tráfego em 3-6 meses. Porém, nossos workflows de automação começam a economizar tempo e gerar leads desde o primeiro dia. Definimos KPIs claros para você sempre saber o que esperar.",
+    "faq.home.q5": "Como estratégias modernas de SEO e GEO diferem de abordagens tradicionais?",
+    "faq.home.a5": "SEO tradicional focava em palavras-chave e backlinks. SEO/GEO moderno incorpora motores de busca com IA, otimização de entidades e dados estruturados para aparecer em respostas geradas por IA. Preparamos sua visibilidade para busca tradicional e IA.",
 
     // About Page
     "about.founderRole": "Fundador e estrategista SEO",
@@ -459,7 +565,7 @@ const translations: Record<Language, Record<string, string>> = {
     "about.team1Role": "Especialistas SEO",
     "about.team1Desc": "Experts em otimização técnica e de conteúdo",
     "about.team2Role": "Engenheiros de automação",
-    "about.team2Desc": "Arquitetos de workflows n8n e IA",
+    "about.team2Desc": "Arquitetos de workflows e soluções de IA",
     "about.team3Role": "Designers criativos",
     "about.team3Desc": "Profissionais de conteúdo visual e UX",
     "about.ctaTitle": "Pronto para trabalhar conosco?",
@@ -529,6 +635,12 @@ const translations: Record<Language, Record<string, string>> = {
     "seo.benefit4": "Análise de concorrentes e benchmarking",
     "seo.benefit5": "Pesquisa de palavras-chave e mapeamento de oportunidades",
     "seo.benefit6": "Revisões regulares de estratégia e otimização",
+    "seo.faq.q1": "Quanto tempo leva para ver resultados de SEO?",
+    "seo.faq.a1": "A maioria dos clientes vê melhorias mensuráveis em 3-6 meses. Porém, com nosso monitoramento e otimização automatizados, identificamos ganhos rápidos muito mais cedo. Nossas ferramentas de IA analisam continuamente o desempenho e sugerem otimizações, acelerando seu caminho para resultados.",
+    "seo.faq.q2": "Qual é a diferença entre SEO e GEO?",
+    "seo.faq.a2": "SEO otimiza para motores de busca tradicionais como o Google, enquanto GEO (Generative Engine Optimization) prepara seu conteúdo para busca com IA como ChatGPT e Perplexity. Recomendamos combinar ambos para cobertura completa de visibilidade.",
+    "seo.faq.q3": "A automação pode realmente melhorar meu desempenho de SEO?",
+    "seo.faq.a3": "Com certeza. Nossos workflows automatizados lidam com auditorias técnicas, rastreamento de ranking, monitoramento de concorrentes e relatórios 24/7. Isso significa detecção mais rápida de problemas, otimização mais consistente e economia significativa de tempo—tudo se traduzindo em melhores rankings e custos menores.",
 
     // GEO Page
     "geo.title": "Otimização GEO",
@@ -570,15 +682,21 @@ const translations: Record<Language, Record<string, string>> = {
     "geo.benefit4": "Fique à frente dos concorrentes em busca generativa",
     "geo.benefit5": "Relatórios detalhados de visibilidade para sistemas de IA",
     "geo.benefit6": "Otimização contínua conforme a busca IA evolui",
+    "geo.faq.q1": "GEO é realmente necessário se já estou fazendo SEO?",
+    "geo.faq.a1": "Sim. Busca com IA está crescendo exponencialmente—até 2026, 25% do tráfego de busca tradicional migrará para IA. GEO garante que você capture essa nova audiência. Nossas ferramentas de automação monitoram tanto busca tradicional quanto IA, dando visibilidade completa.",
+    "geo.faq.q2": "Como vocês medem visibilidade em busca com IA?",
+    "geo.faq.a2": "Usamos ferramentas especializadas para rastrear com que frequência sua marca é mencionada em respostas de IA, a precisão dessas menções e tráfego de referência de plataformas de IA. Nosso monitoramento automatizado fornece insights em tempo real que você não consegue em outro lugar.",
+    "geo.faq.q3": "Vocês podem ajudar minha marca a aparecer em respostas do ChatGPT e Perplexity?",
+    "geo.faq.a3": "Com certeza. Através de enriquecimento de entidades, otimização de dados estruturados e posicionamento estratégico de conteúdo, aumentamos suas chances de ser citado por sistemas de IA. Nossa expertise em otimização de knowledge graph impacta diretamente como a IA percebe sua marca.",
 
     // Site Express Page
     "siteExpress.title": "Site Express",
-    "siteExpress.subtitle": "Desenvolvimento frontend rápido com Lovable",
-    "siteExpress.desc": "Desenvolvimento profissional de sites na velocidade da luz. Criamos sites bonitos e responsivos usando Lovable para colocá-lo online mais rápido—perfeito para landing pages, portfólios e sites empresariais.",
+    "siteExpress.subtitle": "Desenvolvimento Frontend Rápido",
+    "siteExpress.desc": "Desenvolvimento profissional de sites na velocidade da luz. Criamos sites bonitos e responsivos para colocá-lo online mais rápido—perfeito para landing pages, portfólios e sites empresariais.",
     "siteExpress.cta": "Lance Seu Site Rápido",
     "siteExpress.importance": "Seu website é sua vitrine digital—75% dos usuários julgam a credibilidade de uma empresa com base no design web. Na era da gratificação instantânea, sites lentos e desatualizados sangram leads. Site Express entrega websites profissionais e otimizados para conversão em dias, não meses, usando ferramentas de desenvolvimento com IA. Pare de perder clientes para concorrentes com melhor presença web enquanto espera agências tradicionais entregarem.",
     "siteExpress.feature1.title": "Desenvolvimento Rápido",
-    "siteExpress.feature1.desc": "Coloque seu site profissional no ar em dias, não meses. Usamos ferramentas de ponta como Lovable para entrega acelerada.",
+    "siteExpress.feature1.desc": "Coloque seu site profissional no ar em dias, não meses. Usamos ferramentas de IA de ponta para entrega acelerada.",
     "siteExpress.feature2.title": "Design Moderno",
     "siteExpress.feature2.desc": "Estética limpa e profissional que reflete a identidade da sua marca e converte visitantes em clientes.",
     "siteExpress.feature3.title": "Layouts Responsivos",
@@ -592,12 +710,12 @@ const translations: Record<Language, Record<string, string>> = {
     "siteExpress.strategy1.title": "Descoberta e Planejamento",
     "siteExpress.strategy1.desc": "Processo de intake rápido para entender sua marca, objetivos e público-alvo para desenvolvimento focado.",
     "siteExpress.strategy2.title": "Design Assistido por IA",
-    "siteExpress.strategy2.desc": "Aproveite as capacidades de IA do Lovable para prototipar e iterar rapidamente em designs.",
+    "siteExpress.strategy2.desc": "Aproveite capacidades de IA para prototipar e iterar rapidamente em designs para entrega mais rápida.",
     "siteExpress.strategy3.title": "Otimização de Conversão",
     "siteExpress.strategy3.desc": "Posicionamento estratégico de CTAs, propostas de valor claras e jornadas de usuário sem atrito.",
     "siteExpress.strategy4.title": "Lançamento e Iteração",
     "siteExpress.strategy4.desc": "Entre no ar rápido, depois otimize com base em dados reais de usuários e feedback.",
-    "siteExpress.result1.metric": "5 Dias",
+    "siteExpress.result1.metric": "10 Dias",
     "siteExpress.result1.desc": "Tempo médio para lançamento",
     "siteExpress.result2.metric": "98+",
     "siteExpress.result2.desc": "Score PageSpeed alcançado",
@@ -611,13 +729,19 @@ const translations: Record<Language, Record<string, string>> = {
     "siteExpress.benefit4": "Design moderno focado em conversão",
     "siteExpress.benefit5": "Layouts responsivos mobile-first",
     "siteExpress.benefit6": "Suporte e atualizações contínuas disponíveis",
+    "siteExpress.faq.q1": "Como vocês conseguem construir um site tão rápido?",
+    "siteExpress.faq.a1": "Usamos ferramentas de desenvolvimento modernas assistidas por IA que aceleram dramaticamente o processo de construção sem sacrificar qualidade. Nossa expertise combinada com automação permite entregar em 10 dias o que agências tradicionais levam meses para completar.",
+    "siteExpress.faq.q2": "Meu site será otimizado para motores de busca?",
+    "siteExpress.faq.a2": "Com certeza. Todo projeto Site Express inclui melhores práticas de SEO: estrutura HTML adequada, meta tags otimizadas, velocidade de carregamento rápida e responsividade mobile. Também oferecemos serviços contínuos de SEO para ajudá-lo a rankear melhor.",
+    "siteExpress.faq.q3": "Posso atualizar o site sozinho após o lançamento?",
+    "siteExpress.faq.a3": "Sim! Fornecemos documentação e treinamento para atualizações básicas. Para mudanças mais complexas, nossos pacotes de suporte contínuo garantem que seu site permaneça atual e otimizado.",
 
     // App Creation Page
     "appCreation.title": "Criação de apps",
-    "appCreation.subtitle": "Desenvolvimento full-stack com Base44",
-    "appCreation.desc": "Aplicações web completas com banco de dados, autenticação e recursos de IA. Alimentado por Base44 para desenvolvimento full-stack rápido.",
+    "appCreation.subtitle": "Desenvolvimento Full-Stack",
+    "appCreation.desc": "Aplicações web completas com banco de dados, autenticação e recursos de IA. Desenvolvimento full-stack rápido para negócios modernos.",
     "appCreation.cta": "Construa Seu App",
-    "appCreation.importance": "Aplicações web customizadas são os motores das operações de negócios modernos—de ferramentas internas a portais de clientes. Desenvolvimento tradicional leva 6-12 meses e custa $50K-$500K. A plataforma no-code da Base44 com aceleração de IA entrega apps prontos para produção em semanas por uma fração do custo. Seja um CRM, sistema de agendamento ou dashboard de dados, construímos soluções escaláveis que crescem com seu negócio.",
+    "appCreation.importance": "Aplicações web customizadas são os motores das operações de negócios modernos—de ferramentas internas a portais de clientes. Desenvolvimento tradicional leva 6-12 meses e custa $50K-$500K. Nossa abordagem acelerada por IA entrega apps prontos para produção em semanas por uma fração do custo. Seja um CRM, sistema de agendamento ou dashboard de dados, construímos soluções escaláveis que crescem com seu negócio.",
     "appCreation.feature1.title": "Integração de Banco de Dados",
     "appCreation.feature1.desc": "Gerenciamento de banco de dados integrado com geração automática de API. Armazene e gerencie seus dados sem esforço.",
     "appCreation.feature2.title": "Autenticação de Usuários",
@@ -652,15 +776,21 @@ const translations: Record<Language, Record<string, string>> = {
     "appCreation.benefit4": "Desenvolvimento e deploy rápidos",
     "appCreation.benefit5": "Infraestrutura em nuvem escalável",
     "appCreation.benefit6": "Manutenção e suporte contínuos",
+    "appCreation.faq.q1": "Como isso é diferente de contratar um time de desenvolvimento?",
+    "appCreation.faq.a1": "Combinamos desenvolvimento acelerado por IA com expertise sênior para entregar apps 5x mais rápido por uma fração do custo. Você obtém resultados de qualidade empresarial sem o overhead de gerenciar um time de desenvolvimento.",
+    "appCreation.faq.q2": "Vocês podem integrar com minhas ferramentas e sistemas existentes?",
+    "appCreation.faq.a2": "Sim! Construímos apps com integração de APIs em mente. Se você precisa conectar ao seu CRM, processador de pagamentos ou sistemas internos personalizados, garantimos integração perfeita.",
+    "appCreation.faq.q3": "Vou ter propriedade do código e poderei modificá-lo depois?",
+    "appCreation.faq.a3": "Com certeza. Você recebe propriedade total de todo código e assets. Fornecemos código limpo e documentado que qualquer desenvolvedor pode estender. Além disso, nossas ferramentas com IA tornam modificações futuras mais rápidas e econômicas.",
 
     // AI Agents Page
     "aiAgents.title": "Agentes IA & automação",
-    "aiAgents.subtitle": "Automação inteligente com n8n",
-    "aiAgents.desc": "Automatize tarefas de SEO e implante agentes IA para vendas e marketing com workflows n8n personalizados. Trabalhe de forma mais inteligente, não mais difícil.",
+    "aiAgents.subtitle": "Automação Inteligente de Workflows",
+    "aiAgents.desc": "Automatize tarefas de SEO e implante agentes IA para vendas e marketing com workflows personalizados. Trabalhe de forma mais inteligente, não mais difícil.",
     "aiAgents.cta": "Automatize Seu Marketing",
-    "aiAgents.importance": "Equipes de marketing desperdiçam 40% do tempo em tarefas repetitivas que poderiam ser automatizadas. Agentes de IA alimentados por n8n podem lidar com qualificação de leads, distribuição de conteúdo, enriquecimento de dados e relatórios 24/7 sem intervenção humana. De chatbots que convertem visitantes a workflows que sincronizam toda sua stack de MarTech, automação inteligente não é mais um luxo—é uma necessidade competitiva.",
+    "aiAgents.importance": "Equipes de marketing desperdiçam 40% do tempo em tarefas repetitivas que poderiam ser automatizadas. Agentes de IA podem lidar com qualificação de leads, distribuição de conteúdo, enriquecimento de dados e relatórios 24/7 sem intervenção humana. De chatbots que convertem visitantes a workflows que sincronizam toda sua stack de MarTech, automação inteligente não é mais um luxo—é uma necessidade competitiva.",
     "aiAgents.feature1.title": "Automação de Tarefas SEO",
-    "aiAgents.feature1.desc": "Automatize workflows de SEO repetitivos como relatórios, monitoramento e coleta de dados com integrações n8n inteligentes.",
+    "aiAgents.feature1.desc": "Automatize workflows de SEO repetitivos como relatórios, monitoramento e coleta de dados com integrações inteligentes.",
     "aiAgents.feature2.title": "Agentes de Vendas IA",
     "aiAgents.feature2.desc": "Implante agentes IA conversacionais que qualificam leads, respondem perguntas e guiam prospects pelo seu funil de vendas 24/7.",
     "aiAgents.feature3.title": "Workflows Personalizados",
@@ -674,7 +804,7 @@ const translations: Record<Language, Record<string, string>> = {
     "aiAgents.strategy1.title": "Mapeamento de Processos",
     "aiAgents.strategy1.desc": "Identifique tarefas repetitivas e gargalos que são candidatos ideais para automação.",
     "aiAgents.strategy2.title": "Design de Workflows",
-    "aiAgents.strategy2.desc": "Arquitete workflows n8n que conectam suas ferramentas e automatizam processos de múltiplas etapas.",
+    "aiAgents.strategy2.desc": "Arquitete workflows inteligentes que conectam suas ferramentas e automatizam processos de múltiplas etapas.",
     "aiAgents.strategy3.title": "Treinamento de Agentes IA",
     "aiAgents.strategy3.desc": "Configure e treine agentes de IA com sua voz de marca, FAQs e critérios de qualificação.",
     "aiAgents.strategy4.title": "Monitoramento e Otimização",
@@ -693,6 +823,12 @@ const translations: Record<Language, Record<string, string>> = {
     "aiAgents.benefit4": "Automação escalável que cresce com você",
     "aiAgents.benefit5": "Soluções personalizadas construídas para suas necessidades",
     "aiAgents.benefit6": "Otimização e suporte contínuos",
+    "aiAgents.faq.q1": "Que tipo de tarefas podem ser automatizadas?",
+    "aiAgents.faq.a1": "Quase qualquer tarefa de marketing repetitiva: pontuação de leads, sequências de email, postagem em redes sociais, monitoramento de SEO, geração de relatórios, sincronização de dados entre ferramentas e suporte ao cliente. Nossa expertise em IA ajuda a identificar as oportunidades de automação de maior impacto para seu negócio.",
+    "aiAgents.faq.q2": "Como funcionam os agentes de vendas com IA?",
+    "aiAgents.faq.a2": "Agentes de vendas com IA são bots conversacionais treinados nos seus produtos, FAQs e voz de marca. Eles engajam visitantes do site 24/7, qualificam leads com base nos seus critérios, respondem perguntas e entregam leads quentes para sua equipe de vendas—tudo automaticamente.",
+    "aiAgents.faq.q3": "Automação é custo-efetiva para pequenas empresas?",
+    "aiAgents.faq.a3": "Com certeza. Nossa expertise em IA significa que construímos automações eficientes que fornecem ROI desde o primeiro dia. A maioria dos clientes economiza 20+ horas por semana—é como contratar um funcionário de meio período por uma fração do custo.",
 
     // Social Media Page
     "socialMedia.title": "Conteúdo para redes sociais",
@@ -723,26 +859,35 @@ const translations: Record<Language, Record<string, string>> = {
     "socialMedia.result1.metric": "+300%",
     "socialMedia.result1.desc": "Aumento médio de engajamento",
     "socialMedia.result2.metric": "10M+",
-    "socialMedia.result2.desc": "Views geradas para clientes",
+    "socialMedia.result2.desc": "Visualizações geradas para clientes",
     "socialMedia.result3.metric": "+180%",
     "socialMedia.result3.desc": "Taxa de crescimento de seguidores",
     "socialMedia.result4.metric": "5x",
-    "socialMedia.result4.desc": "ROI em redes sociais",
+    "socialMedia.result4.desc": "ROI de redes sociais",
     "socialMedia.benefit1": "Conteúdo de qualidade profissional sem overhead",
     "socialMedia.benefit2": "Cronograma de postagem consistente mantido",
     "socialMedia.benefit3": "Conteúdo otimizado para cada plataforma",
-    "socialMedia.benefit4": "Aumento de engajamento e crescimento de seguidores",
+    "socialMedia.benefit4": "Maior engajamento e crescimento de seguidores",
     "socialMedia.benefit5": "Economia de tempo na criação de conteúdo",
     "socialMedia.benefit6": "Otimização de conteúdo baseada em dados",
+    "socialMedia.faq.q1": "Como a automação ajuda com conteúdo de redes sociais?",
+    "socialMedia.faq.a1": "Nossos workflows de automação lidam com agendamento, postagem cross-platform, coleta de analytics e relatórios de performance. Isso significa presença consistente em todos os canais sem esforço manual, além de insights baseados em dados para melhorar sua estratégia de conteúdo.",
+    "socialMedia.faq.q2": "Vocês podem gerenciar todas as minhas plataformas de redes sociais?",
+    "socialMedia.faq.a2": "Sim! Criamos e otimizamos conteúdo para todas as principais plataformas: Instagram, TikTok, LinkedIn, Facebook, X (Twitter) e YouTube. Cada peça é adaptada ao formato específico da plataforma e expectativas da audiência.",
+    "socialMedia.faq.q3": "Como vocês garantem consistência de marca entre plataformas?",
+    "socialMedia.faq.a3": "Começamos com um documento de diretrizes de marca e criamos templates que garantem consistência visual e de mensagem. Nossas ferramentas com IA ajudam a manter a voz de marca em todo conteúdo enquanto nosso time de design garante coesão visual.",
   },
 };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguageState] = useState<Language>(() => {
-    const saved = localStorage.getItem("language");
-    if (saved === "en" || saved === "pt") return saved;
+  const [language, setLanguage] = useState<Language>(() => {
+    // Check localStorage first
+    const saved = localStorage.getItem("language") as Language;
+    if (saved && (saved === "en" || saved === "pt")) return saved;
+    
+    // Detect browser language
     const browserLang = navigator.language.toLowerCase();
     if (browserLang.startsWith("pt")) return "pt";
     return "en";
@@ -750,12 +895,8 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     localStorage.setItem("language", language);
-    document.documentElement.lang = language === "pt" ? "pt-BR" : "en";
+    document.documentElement.lang = language;
   }, [language]);
-
-  const setLanguage = (lang: Language) => {
-    setLanguageState(lang);
-  };
 
   const t = (key: string): string => {
     return translations[language][key] || key;
@@ -770,7 +911,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
 export function useLanguage() {
   const context = useContext(LanguageContext);
-  if (!context) {
+  if (context === undefined) {
     throw new Error("useLanguage must be used within a LanguageProvider");
   }
   return context;
