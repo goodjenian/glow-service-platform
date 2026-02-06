@@ -37,6 +37,12 @@ export default function AIAgentsPage() {
     { metric: t("aiAgents.result4.metric"), description: t("aiAgents.result4.desc") },
   ];
 
+  const faqs = [
+    { question: t("aiAgents.faq.q1"), answer: t("aiAgents.faq.a1") },
+    { question: t("aiAgents.faq.q2"), answer: t("aiAgents.faq.a2") },
+    { question: t("aiAgents.faq.q3"), answer: t("aiAgents.faq.a3") },
+  ];
+
   return (
     <ServicePageLayout
       title={t("aiAgents.title")}
@@ -51,8 +57,9 @@ export default function AIAgentsPage() {
       importance={t("aiAgents.importance")}
       strategies={strategies}
       results={results}
+      faqs={faqs}
       relatedServices={[
-        { name: t("nav.appCreation"), href: "/services/app-creation", description: "Full-stack apps with Base44" },
+        { name: t("nav.appCreation"), href: "/services/app-creation", description: "Full-stack apps" },
         { name: t("nav.seo"), href: "/services/seo", description: "Optimize your organic presence" },
       ]}
     />

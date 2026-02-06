@@ -37,6 +37,12 @@ export default function GEOPage() {
     { metric: t("geo.result4.metric"), description: t("geo.result4.desc") },
   ];
 
+  const faqs = [
+    { question: t("geo.faq.q1"), answer: t("geo.faq.a1") },
+    { question: t("geo.faq.q2"), answer: t("geo.faq.a2") },
+    { question: t("geo.faq.q3"), answer: t("geo.faq.a3") },
+  ];
+
   return (
     <ServicePageLayout
       title={t("geo.title")}
@@ -51,9 +57,10 @@ export default function GEOPage() {
       importance={t("geo.importance")}
       strategies={strategies}
       results={results}
+      faqs={faqs}
       relatedServices={[
         { name: t("nav.seo"), href: "/services/seo", description: "Traditional search optimization" },
-        { name: t("nav.appCreation"), href: "/services/app-creation", description: "Full-stack apps with Base44" },
+        { name: t("nav.appCreation"), href: "/services/app-creation", description: "Full-stack apps" },
       ]}
     />
   );
