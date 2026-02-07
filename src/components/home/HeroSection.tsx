@@ -48,7 +48,7 @@ export function HeroSection() {
           {/* CTA Buttons with Hover Effects */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: "0.6s" }}>
             <Button variant="heroOutline" size="xl" asChild className="group">
-              <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://calendly.com/business-goodyseo/30min" target="_blank" rel="noopener noreferrer">
                 {t("hero.cta")}
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </a>

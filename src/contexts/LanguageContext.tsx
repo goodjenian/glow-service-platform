@@ -26,7 +26,7 @@ const translations: Record<Language, Record<string, string>> = {
     "hero.badge": "Boutique Marketing Agency",
      "hero.title1": "Automations That",
      "hero.title2": "Drives Growth",
-    "hero.description": "Goody SEO is a digital marketing agency that adopts AI automation strategies to enhance your online presence and generate consistent results.",
+    "hero.description": "Goody SEO is a digital marketing agency focused on organic strategy and artificial intelligence to boost your online presence.",
     "hero.cta": "Book a Free Consultation",
     "hero.whatsapp": "Get in Touch",
     "hero.trust": "Trusted by growing businesses worldwide",
@@ -111,6 +111,12 @@ const translations: Record<Language, Record<string, string>> = {
     "faq.home.a4": "SEO is a long-term investment—expect meaningful traffic increases within 3-6 months. However, our automation workflows start saving time and generating leads from day one. We set clear KPIs upfront so you always know what to expect.",
     "faq.home.q5": "How do modern SEO and GEO strategies differ from traditional approaches?",
     "faq.home.a5": "Traditional SEO focused on keywords and backlinks. Modern SEO/GEO incorporates AI search engines, entity optimization, and structured data to appear in AI-generated responses. We future-proof your visibility for both traditional and AI search.",
+    "faq.home.q6": "Do I have to commit to a long-term contract?",
+    "faq.home.a6": "No. We offer flexible, dynamic monthly retainers that can change services based on your needs and growth. There's no long-term commitment unless it makes sense for you.",
+    "faq.home.q7": "What's the minimum budget you'll work with?",
+    "faq.home.a7": "We work with companies of all sizes to grow marketing revenue. We've helped tiny startups expand into massive fundraising rounds, and Fortune 50 companies penetrate new markets. As long as you are serious about growing your business, we are ready to work with you.",
+    "faq.home.q8": "I don't have a marketing team. How do I know where to focus?",
+    "faq.home.a8": "We've got you covered. We'll create a strategy based on your goals, along with our industry research and proprietary client data. From day one, we'll establish clear KPIs, weekly updates, and regular audits to ensure you know what's driving your success.",
 
     // Free Analysis CTA
     "freeAnalysis.title": "Try us for free",
@@ -468,7 +474,7 @@ const translations: Record<Language, Record<string, string>> = {
     "hero.badge": "Agência boutique de marketing",
      "hero.title1": "Automações que",
      "hero.title2": "impulsionam o crescimento",
-    "hero.description": "A Goody SEO é uma agência de marketing digital que adota estratégias de automação com IA para melhorar sua presença online e gerar resultados consistentes.",
+    "hero.description": "A Goody SEO é uma agência de marketing digital com foco em estratégia orgânica e inteligência artificial para impulsionar sua presença online.",
     "hero.cta": "Agende uma consulta gratuita",
     "hero.whatsapp": "Entre em contato",
     "hero.trust": "Confiada por empresas em crescimento no mundo todo",
@@ -553,6 +559,12 @@ const translations: Record<Language, Record<string, string>> = {
     "faq.home.a4": "SEO é um investimento de longo prazo—espere aumentos significativos de tráfego em 3-6 meses. Porém, nossos workflows de automação começam a economizar tempo e gerar leads desde o primeiro dia. Definimos KPIs claros para você sempre saber o que esperar.",
     "faq.home.q5": "Como estratégias modernas de SEO e GEO diferem de abordagens tradicionais?",
     "faq.home.a5": "SEO tradicional focava em palavras-chave e backlinks. SEO/GEO moderno incorpora motores de busca com IA, otimização de entidades e dados estruturados para aparecer em respostas geradas por IA. Preparamos sua visibilidade para busca tradicional e IA.",
+    "faq.home.q6": "Preciso me comprometer com um contrato de longo prazo?",
+    "faq.home.a6": "Não. Oferecemos retainers mensais flexíveis e dinâmicos que podem mudar de serviços com base nas suas necessidades e crescimento. Não há compromisso de longo prazo a menos que faça sentido para você.",
+    "faq.home.q7": "Qual é o orçamento mínimo para trabalhar com vocês?",
+    "faq.home.a7": "Trabalhamos com empresas de todos os tamanhos para crescer a receita de marketing. Já ajudamos pequenas startups a expandir para rodadas massivas de investimento, e empresas Fortune 50 a penetrar novos mercados. Desde que você leve a sério o crescimento do seu negócio, estamos prontos para trabalhar com você.",
+    "faq.home.q8": "Não tenho um time de marketing. Como sei onde focar?",
+    "faq.home.a8": "Nós cuidamos disso. Criaremos uma estratégia baseada nos seus objetivos, junto com nossa pesquisa de indústria e dados proprietários de clientes. Desde o primeiro dia, estabeleceremos KPIs claros, atualizações semanais e auditorias regulares para garantir que você saiba o que está impulsionando seu sucesso.",
 
     // Free Analysis CTA
     "freeAnalysis.title": "Experimente grátis",
