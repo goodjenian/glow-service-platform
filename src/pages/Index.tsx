@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/home/HeroSection";
 import { TestimonialSection } from "@/components/home/TestimonialSection";
 import { ReviewsSection } from "@/components/home/ReviewsSection";
 import { FAQSection } from "@/components/home/FAQSection";
+import { FreeAnalysisCTA } from "@/components/home/FreeAnalysisCTA";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -17,7 +18,7 @@ import {
   Target,
   TrendingUp,
   Users,
-  Smartphone
+  DollarSign
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getWhatsAppUrl, getWhatsAppUrlPt } from "@/lib/whatsapp";
@@ -41,7 +42,7 @@ const serviceColors = {
     icon: "text-amber-500",
     border: "group-hover:border-amber-500/30",
   },
-  appCreation: {
+  paidTraffic: {
     bg: "bg-teal-500/15",
     icon: "text-teal-500",
     border: "group-hover:border-teal-500/30",
@@ -85,11 +86,11 @@ const Index = () => {
       colors: serviceColors.siteExpress,
     },
     {
-      title: t("services.appCreation.title"),
-      description: t("services.appCreation.desc"),
-      icon: Smartphone,
-      href: "/services/app-creation",
-      colors: serviceColors.appCreation,
+      title: t("services.paidTraffic.title"),
+      description: t("services.paidTraffic.desc"),
+      icon: DollarSign,
+      href: "/services/paid-traffic",
+      colors: serviceColors.paidTraffic,
     },
     {
       title: t("services.aiAgents.title"),
@@ -244,6 +245,9 @@ const Index = () => {
 
       {/* Reviews Section */}
       <ReviewsSection />
+
+      {/* Free Analysis CTA */}
+      <FreeAnalysisCTA />
 
       {/* FAQ Section */}
       <FAQSection />

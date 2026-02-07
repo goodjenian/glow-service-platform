@@ -9,7 +9,7 @@ export function Footer() {
     { name: t("nav.seo"), href: "/services/seo" },
     { name: t("nav.geo"), href: "/services/geo" },
     { name: t("nav.siteExpress"), href: "/services/site-express" },
-    { name: t("nav.appCreation"), href: "/services/app-creation" },
+    { name: t("nav.paidTraffic"), href: "/services/paid-traffic" },
     { name: t("nav.aiAgents"), href: "/services/ai-agents" },
     { name: t("nav.socialMedia"), href: "/services/social-media" },
   ];

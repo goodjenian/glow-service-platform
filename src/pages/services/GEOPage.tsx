@@ -60,7 +60,7 @@ export default function GEOPage() {
       faqs={faqs}
       relatedServices={[
         { name: t("nav.seo"), href: "/services/seo", description: "Traditional search optimization" },
-        { name: t("nav.appCreation"), href: "/services/app-creation", description: "Full-stack apps" },
+        { name: t("nav.aiAgents"), href: "/services/ai-agents", description: "Intelligent automation" },
       ]}
     />
   );

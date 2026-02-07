@@ -14,17 +14,19 @@ import {
 } from "@/components/ui/navigation-menu";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { getWhatsAppUrl, getWhatsAppUrlPt } from "@/lib/whatsapp";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
+  const whatsappUrl = language === "pt" ? getWhatsAppUrlPt() : getWhatsAppUrl();
 
   const services = [
     { name: t("nav.seo"), href: "/services/seo", description: "Technical, On-Page & Content SEO" },
     { name: t("nav.geo"), href: "/services/geo", description: "AI Search Visibility for LLMs" },
     { name: t("nav.siteExpress"), href: "/services/site-express", description: "Fast Frontend Development" },
-    { name: t("nav.appCreation"), href: "/services/app-creation", description: "Full-Stack Apps with Base44" },
-    { name: t("nav.aiAgents"), href: "/services/ai-agents", description: "Automation & Sales AI with n8n" },
+    { name: t("nav.paidTraffic"), href: "/services/paid-traffic", description: "Strategic Paid Advertising" },
+    { name: t("nav.aiAgents"), href: "/services/ai-agents", description: "Automation & Sales AI" },
     { name: t("nav.socialMedia"), href: "/services/social-media", description: "Visual Content Creation" },
   ];
 
@@ -74,9 +76,9 @@ export function Header() {
 
           <LanguageSwitcher />
           
-          <Button variant="accent" asChild>
-            <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
-              {t("nav.bookCall")}
+          <Button variant="contact" asChild>
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+              {t("nav.getInTouch")}
             </a>
           </Button>
         </div>
@@ -120,9 +122,9 @@ export function Header() {
                   {t("nav.about")}
                 </Link>
                 
-                <Button variant="accent" className="mt-4" asChild>
-                  <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
-                    {t("nav.bookCall")}
+                <Button variant="contact" className="mt-4" asChild>
+                  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                    {t("nav.getInTouch")}
                   </a>
                 </Button>
               </div>
