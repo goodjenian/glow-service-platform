@@ -59,7 +59,7 @@ export default function AIAgentsPage() {
       results={results}
       faqs={faqs}
       relatedServices={[
-        { name: t("nav.appCreation"), href: "/services/app-creation", description: "Full-stack apps" },
+        { name: t("nav.paidTraffic"), href: "/services/paid-traffic", description: "Strategic paid advertising" },
         { name: t("nav.seo"), href: "/services/seo", description: "Optimize your organic presence" },
       ]}
     />
