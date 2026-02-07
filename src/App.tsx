@@ -14,6 +14,7 @@ import SiteExpressPage from "./pages/services/SiteExpressPage";
 import PaidTrafficPage from "./pages/services/PaidTrafficPage";
 import AIAgentsPage from "./pages/services/AIAgentsPage";
 import SocialMediaPage from "./pages/services/SocialMediaPage";
+import PrivacyPage from "./pages/PrivacyPage";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,7 @@ const App = () => (
             <Route path="/services/paid-traffic" element={<PaidTrafficPage />} />
             <Route path="/services/ai-agents" element={<AIAgentsPage />} />
             <Route path="/services/social-media" element={<SocialMediaPage />} />
+            <Route path="/privacy" element={<PrivacyPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

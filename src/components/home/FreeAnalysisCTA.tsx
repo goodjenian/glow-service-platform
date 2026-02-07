@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight, Mail, Sparkles, TrendingUp, Zap, Target } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import ctaIllustration from "@/assets/cta-illustration.png";
 
 export function FreeAnalysisCTA() {
   const { t } = useLanguage();
@@ -9,27 +10,70 @@ export function FreeAnalysisCTA() {
   const emailUrl = `mailto:business@goodyseo.com?subject=${emailSubject}&body=${emailBody}`;
 
   return (
-    <section className="py-16 md:py-24 bg-[hsl(270,60%,55%)]">
-      <div className="container px-4 md:px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-            {t("freeAnalysis.title")}
-          </h2>
-          <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-            {t("freeAnalysis.desc")}
-          </p>
-          <Button 
-            variant="outline" 
-            size="xl" 
-            asChild 
-            className="bg-white text-[hsl(270,60%,45%)] hover:bg-white/90 hover:text-[hsl(270,60%,35%)] border-0 shadow-lg"
-          >
-            <a href={emailUrl}>
-              <Mail className="mr-2 h-5 w-5" />
-              {t("freeAnalysis.cta")}
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
-          </Button>
+    <section className="py-16 md:py-24 relative overflow-hidden bg-gradient-to-br from-[hsl(270,70%,65%)] via-[hsl(270,60%,50%)] to-[hsl(270,50%,35%)]">
+      {/* Animated floating elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Stars/sparkles */}
+        <div className="absolute top-[10%] left-[5%] w-2 h-2 bg-white/60 rounded-full animate-pulse" />
+        <div className="absolute top-[20%] left-[15%] w-1 h-1 bg-white/40 rounded-full animate-pulse" style={{ animationDelay: "0.5s" }} />
+        <div className="absolute top-[15%] right-[20%] w-1.5 h-1.5 bg-white/50 rounded-full animate-pulse" style={{ animationDelay: "1s" }} />
+        <div className="absolute bottom-[30%] left-[10%] w-1 h-1 bg-white/30 rounded-full animate-pulse" style={{ animationDelay: "1.5s" }} />
+        <div className="absolute bottom-[20%] right-[30%] w-2 h-2 bg-white/40 rounded-full animate-pulse" style={{ animationDelay: "0.8s" }} />
+        
+        {/* Floating icons */}
+        <div className="absolute top-[25%] left-[8%] opacity-20 animate-bounce" style={{ animationDuration: "3s" }}>
+          <Sparkles className="h-8 w-8 text-white" />
+        </div>
+        <div className="absolute bottom-[35%] left-[20%] opacity-15 animate-bounce" style={{ animationDuration: "4s", animationDelay: "1s" }}>
+          <TrendingUp className="h-6 w-6 text-white" />
+        </div>
+        <div className="absolute top-[40%] left-[12%] opacity-10 animate-bounce" style={{ animationDuration: "3.5s", animationDelay: "0.5s" }}>
+          <Zap className="h-10 w-10 text-white" />
+        </div>
+        <div className="absolute bottom-[25%] left-[5%] opacity-15 animate-bounce" style={{ animationDuration: "4.5s", animationDelay: "2s" }}>
+          <Target className="h-7 w-7 text-white" />
+        </div>
+        
+        {/* Gradient overlay for depth */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(270,50%,25%)]/30 to-transparent" />
+      </div>
+      
+      <div className="container px-4 md:px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
+          {/* Text content */}
+          <div className="text-center lg:text-left">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+              {t("freeAnalysis.title")}
+            </h2>
+            <p className="text-lg text-white/80 mb-8 max-w-xl">
+              {t("freeAnalysis.desc")}
+            </p>
+            <Button 
+              variant="outline" 
+              size="xl" 
+              asChild 
+              className="bg-white text-[hsl(270,60%,45%)] hover:bg-white/90 hover:text-[hsl(270,60%,35%)] border-0 shadow-lg"
+            >
+              <a href={emailUrl}>
+                <Mail className="mr-2 h-5 w-5" />
+                {t("freeAnalysis.cta")}
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
+            </Button>
+          </div>
+          
+          {/* Illustration */}
+          <div className="hidden lg:flex justify-center items-center">
+            <div className="relative">
+              <img 
+                src={ctaIllustration} 
+                alt="Goody SEO illustration" 
+                className="w-80 h-auto drop-shadow-2xl animate-float"
+              />
+              {/* Glow effect behind illustration */}
+              <div className="absolute inset-0 bg-white/10 rounded-full blur-3xl -z-10 scale-75" />
+            </div>
+          </div>
         </div>
       </div>
     </section>

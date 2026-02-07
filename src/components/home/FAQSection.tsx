@@ -30,13 +30,25 @@ export function FAQSection() {
       question: t("faq.home.q5"),
       answer: t("faq.home.a5"),
     },
+    {
+      question: t("faq.home.q6"),
+      answer: t("faq.home.a6"),
+    },
+    {
+      question: t("faq.home.q7"),
+      answer: t("faq.home.a7"),
+    },
+    {
+      question: t("faq.home.q8"),
+      answer: t("faq.home.a8"),
+    },
   ];
 
   return (
     <section className="py-16 md:py-24 bg-muted/30">
       <div className="container px-4 md:px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
+          <h2 className="text-4xl md:text-5xl font-bold">
             <span className="text-foreground">{t("faq.title")}</span>{" "}
             <span className="text-accent">{t("faq.titleHighlight")}</span>
           </h2>

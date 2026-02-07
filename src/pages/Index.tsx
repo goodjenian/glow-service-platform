@@ -1,9 +1,9 @@
 import { Layout } from "@/components/layout/Layout";
 import { HeroSection } from "@/components/home/HeroSection";
 import { TestimonialSection } from "@/components/home/TestimonialSection";
-import { ReviewsSection } from "@/components/home/ReviewsSection";
 import { FAQSection } from "@/components/home/FAQSection";
 import { FreeAnalysisCTA } from "@/components/home/FreeAnalysisCTA";
+import { WhyPartnerSection } from "@/components/home/WhyPartnerSection";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -14,15 +14,10 @@ import {
   Bot, 
   Share2, 
   ArrowRight,
-  CheckCircle2,
-  Target,
-  TrendingUp,
-  Users,
   DollarSign
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getWhatsAppUrl, getWhatsAppUrlPt } from "@/lib/whatsapp";
-import n8nWorkflow from "@/assets/n8n-workflow.jpg";
 import { EntropyBackground } from "@/components/effects/EntropyBackground";
 
 // Service color configs matching brand identity
@@ -116,7 +111,7 @@ const Index = () => {
       <section className="py-16 md:py-24">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("services.title")}</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">{t("services.title")}</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               {t("services.subtitle")}
             </p>
@@ -149,102 +144,11 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section id="about" className="py-16 md:py-24 bg-muted/50">
-        <div className="container px-4 md:px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                {t("partner.title")}
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                {t("partner.desc")}
-              </p>
-              
-              <div className="grid sm:grid-cols-2 gap-6">
-                <div className="flex items-start gap-3">
-                  <div className="rounded-lg bg-accent/20 p-2 mt-1">
-                    <Target className="h-5 w-5 text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-1">{t("partner.tailored")}</h3>
-                    <p className="text-sm text-muted-foreground">
-                      {t("partner.tailoredDesc")}
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-3">
-                  <div className="rounded-lg bg-accent/20 p-2 mt-1">
-                    <TrendingUp className="h-5 w-5 text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-1">{t("partner.datadriven")}</h3>
-                    <p className="text-sm text-muted-foreground">
-                      {t("partner.datadrivenDesc")}
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-3">
-                  <div className="rounded-lg bg-accent/20 p-2 mt-1">
-                    <Users className="h-5 w-5 text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-1">{t("partner.boutique")}</h3>
-                    <p className="text-sm text-muted-foreground">
-                      {t("partner.boutiqueDesc")}
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-3">
-                  <div className="rounded-lg bg-accent/20 p-2 mt-1">
-                    <CheckCircle2 className="h-5 w-5 text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-1">{t("partner.proven")}</h3>
-                    <p className="text-sm text-muted-foreground">
-                      {t("partner.provenDesc")}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="relative">
-              <div className="aspect-video rounded-3xl overflow-hidden shadow-2xl">
-                <img 
-                  src={n8nWorkflow} 
-                  alt="n8n workflow automation dashboard" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-              </div>
-              <div className="absolute -bottom-6 -left-6 bg-card rounded-2xl p-6 shadow-xl border border-border">
-                <div className="text-3xl font-bold text-foreground mb-1">3x</div>
-                <div className="text-sm text-muted-foreground">{t("hero.growth")}</div>
-              </div>
-            </div>
-          </div>
-
-          {/* WhatsApp CTA */}
-          <div className="mt-16 text-center">
-            <Button variant="contact" size="xl" asChild className="group">
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                {t("hero.whatsapp")}
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </a>
-            </Button>
-          </div>
-        </div>
-      </section>
+      {/* Why Partner Section */}
+      <WhyPartnerSection />
 
       {/* Testimonial Section */}
       <TestimonialSection />
-
-      {/* Reviews Section */}
-      <ReviewsSection />
 
       {/* Free Analysis CTA */}
       <FreeAnalysisCTA />
@@ -267,7 +171,7 @@ const Index = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="heroOutline" size="xl" asChild>
-                  <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
+                  <a href="https://calendly.com/business-goodyseo/30min" target="_blank" rel="noopener noreferrer">
                     {t("cta.button")}
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </a>

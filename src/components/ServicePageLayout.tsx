@@ -198,7 +198,7 @@ export function ServicePageLayout({
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="heroOutline" size="xl" asChild>
-                <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://calendly.com/business-goodyseo/30min" target="_blank" rel="noopener noreferrer">
                   {ctaText}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
@@ -336,7 +336,7 @@ export function ServicePageLayout({
               </p>
             </div>
             <Button variant="accent" size="xl" asChild className="group shrink-0">
-              <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://calendly.com/business-goodyseo/30min" target="_blank" rel="noopener noreferrer">
                 {t("whyChoose.cta")}
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </a>
@@ -415,7 +415,7 @@ export function ServicePageLayout({
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="heroOutline" size="xl" asChild>
-                <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://calendly.com/business-goodyseo/30min" target="_blank" rel="noopener noreferrer">
                   {t("service.ctaButton")}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
