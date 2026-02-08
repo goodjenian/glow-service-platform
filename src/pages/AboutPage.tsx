@@ -9,13 +9,6 @@ export default function AboutPage() {
   const { language, t } = useLanguage();
   const whatsappUrl = language === "pt" ? getWhatsAppUrlPt() : getWhatsAppUrl();
 
-  const experiences = [
-    { company: "JRPASS.COM", location: t("about.exp1Location"), role: "Senior SEO Specialist" },
-    { company: "Galactic Fed", location: t("about.exp2Location"), role: "SEO Consultant" },
-    { company: "Unik SEO", location: t("about.exp3Location"), role: "Technical SEO Manager" },
-    { company: "Renderforest", location: t("about.exp4Location"), role: "SEO Team Lead" },
-  ];
-
   const timeline = [
     {
       year: "2019-2024",
@@ -70,110 +63,29 @@ export default function AboutPage() {
 
   return (
     <Layout>
-      {/* Hero Section */}
+      {/* About Us Hero Section */}
       <section className="py-16 md:py-24 bg-primary">
         <div className="container px-4 md:px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Photo */}
-            <div className="flex justify-center lg:justify-end order-1 lg:order-2">
-              <div className="relative">
-                <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-accent/30 shadow-2xl">
-                  <img
-                    src={caiquePhoto}
-                    alt="Caíque Gudjenian - Founder"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="absolute -bottom-4 -right-4 bg-card rounded-2xl p-4 shadow-xl border border-border">
-                  <div className="text-2xl font-bold text-accent">7+</div>
-                  <div className="text-xs text-muted-foreground">{t("about.yearsExp")}</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Content */}
-            <div className="order-2 lg:order-1 text-center lg:text-left">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-[hsl(270,80%,75%)] to-[hsl(217,91%,70%)] bg-clip-text text-transparent">
-                Caíque Gudjenian
-              </h1>
-              <p className="text-xl text-primary-foreground/80 mb-2">
-                {t("about.founderRole")}
-              </p>
-              <div className="flex items-center justify-center lg:justify-start gap-2 text-primary-foreground/60 mb-6">
-                <MapPin className="h-4 w-4" />
-                <span>São Paulo, Brazil</span>
-              </div>
-
-              <p className="text-lg text-primary-foreground/70 mb-8 max-w-xl">
-                {t("about.bio")}
-              </p>
-
-              <Button variant="contact" size="lg" asChild className="group">
-                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                  {t("hero.whatsapp")}
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Professional Experience Section */}
-      <section className="py-16 md:py-24 bg-muted/30">
-        <div className="container px-4 md:px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("about.expTitle")}</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              {t("about.expSubtitle")}
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-[hsl(270,80%,75%)] to-[hsl(217,91%,70%)] bg-clip-text text-transparent">
+              {language === "pt" ? "Sobre nós" : "About Us"}
+            </h1>
+            <p className="text-xl md:text-2xl text-primary-foreground/80 mb-8 leading-relaxed">
+              {language === "pt" 
+                ? "Somos uma agência boutique de marketing digital especializada em estratégias de crescimento orgânico e inteligência artificial. Atendemos clientes ao redor do mundo, com foco especial nos Estados Unidos, Brasil e Europa."
+                : "We are a boutique digital marketing agency specialized in organic growth strategies and artificial intelligence. We serve clients around the world, with a special focus on the United States, Brazil, and Europe."
+              }
             </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {experiences.map((exp, index) => (
-              <div
-                key={index}
-                className="bg-card rounded-2xl p-6 border border-border/50 hover:border-accent/30 transition-all hover:-translate-y-1 hover:shadow-lg animate-fade-in"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="bg-accent/10 rounded-xl p-3 w-fit mb-4">
-                  <Briefcase className="h-6 w-6 text-accent" />
-                </div>
-                <h3 className="font-semibold text-foreground">{exp.role}</h3>
-                <p className="text-accent font-medium">{exp.company}</p>
-                <div className="flex items-center gap-2 mt-3 text-sm text-muted-foreground">
-                  <Globe className="h-3 w-3" />
-                  <span>{exp.location}</span>
-                </div>
+            <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                <Globe className="h-5 w-5 text-accent" />
+                <span className="text-primary-foreground/90">
+                  {language === "pt" ? "Clientes globais" : "Global Clients"}
+                </span>
               </div>
-            ))}
-          </div>
-
-          {/* Education */}
-          <div className="mt-16 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold mb-6 text-center">{t("about.education")}</h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-card rounded-2xl p-6 border border-border/50 hover:border-purple-500/30 transition-all hover:-translate-y-1">
-                <div className="flex items-start gap-4">
-                  <div className="bg-purple-500/10 rounded-xl p-3">
-                    <GraduationCap className="h-6 w-6 text-purple-500" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">{t("about.masters")}</h4>
-                    <p className="text-accent">Nova IMS - Portugal</p>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-card rounded-2xl p-6 border border-border/50 hover:border-blue-500/30 transition-all hover:-translate-y-1">
-                <div className="flex items-start gap-4">
-                  <div className="bg-blue-500/10 rounded-xl p-3">
-                    <GraduationCap className="h-6 w-6 text-blue-500" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">{t("about.bachelors")}</h4>
-                    <p className="text-accent">Universidade Mackenzie - Brazil</p>
-                  </div>
-                </div>
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                <MapPin className="h-5 w-5 text-accent" />
+                <span className="text-primary-foreground/90">USA • Brazil • Europe</span>
               </div>
             </div>
           </div>
@@ -181,11 +93,11 @@ export default function AboutPage() {
       </section>
 
       {/* Company Timeline Section */}
-      <section className="py-16 md:py-24 overflow-hidden">
+      <section className="py-16 md:py-24 overflow-hidden bg-muted/30">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              {language === "pt" ? "Nossa Jornada" : "Our Journey"}
+              {language === "pt" ? "Nossa jornada" : "Our Journey"}
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               {language === "pt" 
@@ -245,7 +157,82 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section - Enhanced */}
+      {/* Founder Section */}
+      <section className="py-16 md:py-24">
+        <div className="container px-4 md:px-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Photo */}
+            <div className="flex justify-center lg:justify-end order-1 lg:order-2">
+              <div className="relative">
+                <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-accent/30 shadow-2xl">
+                  <img
+                    src={caiquePhoto}
+                    alt="Caíque Gudjenian - Founder"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="absolute -bottom-4 -right-4 bg-card rounded-2xl p-4 shadow-xl border border-border">
+                  <div className="text-2xl font-bold text-accent">7+</div>
+                  <div className="text-xs text-muted-foreground">{t("about.yearsExp")}</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="order-2 lg:order-1 text-center lg:text-left">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-foreground via-[hsl(270,80%,60%)] to-[hsl(217,91%,60%)] bg-clip-text text-transparent">
+                Caíque Gudjenian
+              </h2>
+              <p className="text-xl text-muted-foreground mb-2">
+                {t("about.founderRole")}
+              </p>
+              <div className="flex items-center justify-center lg:justify-start gap-2 text-muted-foreground mb-6">
+                <MapPin className="h-4 w-4" />
+                <span>São Paulo, Brazil</span>
+              </div>
+
+              <p className="text-lg text-muted-foreground mb-8 max-w-xl">
+                {t("about.bio")}
+              </p>
+
+              {/* Education */}
+              <div className="grid sm:grid-cols-2 gap-4 mb-8">
+                <div className="bg-card rounded-2xl p-4 border border-border/50 hover:border-purple-500/30 transition-all">
+                  <div className="flex items-start gap-3">
+                    <div className="bg-purple-500/10 rounded-xl p-2">
+                      <GraduationCap className="h-5 w-5 text-purple-500" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-sm">{t("about.masters")}</h4>
+                      <p className="text-accent text-sm">Nova IMS - Portugal</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-card rounded-2xl p-4 border border-border/50 hover:border-blue-500/30 transition-all">
+                  <div className="flex items-start gap-3">
+                    <div className="bg-blue-500/10 rounded-xl p-2">
+                      <GraduationCap className="h-5 w-5 text-blue-500" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-sm">{t("about.bachelors")}</h4>
+                      <p className="text-accent text-sm">Universidade Mackenzie - Brazil</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <Button variant="contact" size="lg" asChild className="group">
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                  {t("hero.whatsapp")}
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-primary via-primary to-[hsl(270,60%,25%)] relative overflow-hidden">
         {/* Background decorations */}
         <div className="absolute inset-0 overflow-hidden">
