@@ -4,6 +4,7 @@ import { TestimonialSection } from "@/components/home/TestimonialSection";
 import { FAQSection } from "@/components/home/FAQSection";
 import { FreeAnalysisCTA } from "@/components/home/FreeAnalysisCTA";
 import { WhyPartnerSection } from "@/components/home/WhyPartnerSection";
+import { ContactCTA } from "@/components/home/ContactCTA";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -146,6 +147,9 @@ const Index = () => {
 
       {/* Why Partner Section */}
       <WhyPartnerSection />
+
+      {/* Contact CTA - Entre em contato */}
+      <ContactCTA />
 
       {/* Free Analysis CTA */}
       <FreeAnalysisCTA />

@@ -68,10 +68,10 @@ export function FreeAnalysisCTA() {
               <img 
                 src={ctaIllustration} 
                 alt="Goody SEO illustration" 
-                className="w-80 h-auto drop-shadow-2xl animate-float"
+                className="w-80 h-auto drop-shadow-2xl animate-float brightness-0 invert"
               />
               {/* Glow effect behind illustration */}
-              <div className="absolute inset-0 bg-white/10 rounded-full blur-3xl -z-10 scale-75" />
+              <div className="absolute inset-0 bg-white/20 rounded-full blur-3xl -z-10 scale-75" />
             </div>
           </div>
         </div>
