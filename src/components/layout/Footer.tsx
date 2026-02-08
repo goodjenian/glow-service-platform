@@ -16,7 +16,7 @@ export function Footer() {
 
   return (
     <footer className="bg-primary text-primary-foreground" role="contentinfo">
-      <div className="container px-4 md:px-6 py-8 md:py-10">
+      <div className="container px-4 md:px-6 py-12 md:py-16">
         <div className="flex flex-col md:flex-row justify-between items-start gap-8">
           {/* Brand */}
           <div className="max-w-xs">
@@ -72,7 +72,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/10 mt-6 pt-4 flex flex-col md:flex-row justify-between items-center gap-3 text-xs">
+        <div className="border-t border-primary-foreground/10 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
           <p className="text-primary-foreground/50">
             © {new Date().getFullYear()} Goody SEO. {t("footer.rights")}
           </p>
