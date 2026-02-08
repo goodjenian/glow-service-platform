@@ -12,7 +12,7 @@ export default function AboutPage() {
   const timeline = [
     {
       year: "2019-2024",
-      title: language === "pt" ? "Jornada Profissional" : "Professional Journey",
+      title: language === "pt" ? "Jornada do Fundador" : "Founder's Journey",
       description: language === "pt" 
         ? "Anos de experiência construindo estratégias SEO para empresas SaaS e E-commerce em Portugal, Armênia, Estados Unidos e Reino Unido."
         : "Years of experience building SEO strategies for SaaS and E-commerce companies in Portugal, Armenia, United States and United Kingdom.",
@@ -180,11 +180,11 @@ export default function AboutPage() {
 
             {/* Content */}
             <div className="order-2 lg:order-1 text-center lg:text-left">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-foreground via-[hsl(270,80%,60%)] to-[hsl(217,91%,60%)] bg-clip-text text-transparent">
-                Caíque Gudjenian
-              </h2>
-              <p className="text-xl text-muted-foreground mb-2">
+            <h2 className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-foreground via-[hsl(270,80%,60%)] to-[hsl(217,91%,60%)] bg-clip-text text-transparent">
                 {t("about.founderRole")}
+              </h2>
+              <p className="text-2xl font-semibold text-foreground mb-2">
+                Caíque Gudjenian
               </p>
               <div className="flex items-center justify-center lg:justify-start gap-2 text-muted-foreground mb-6">
                 <MapPin className="h-4 w-4" />
@@ -233,7 +233,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-primary via-primary to-[hsl(270,60%,25%)] relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-[hsl(145,70%,30%)] via-[hsl(145,60%,25%)] to-[hsl(160,50%,20%)] relative overflow-hidden">
         {/* Background decorations */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-[10%] left-[5%] w-3 h-3 bg-white/20 rounded-full animate-pulse" />
