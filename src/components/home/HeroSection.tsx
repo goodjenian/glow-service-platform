@@ -10,7 +10,7 @@ export function HeroSection() {
   const whatsappUrl = language === "pt" ? getWhatsAppUrlPt() : getWhatsAppUrl();
 
   return (
-    <section className="relative bg-primary py-16 md:py-24 lg:py-32 overflow-hidden min-h-[80vh] flex items-center">
+    <section className="relative bg-[hsl(220,8%,12%)] py-16 md:py-24 lg:py-32 overflow-hidden min-h-[80vh] flex items-center">
       {/* Dotted Surface Background */}
       <DottedSurface />
       
@@ -18,7 +18,7 @@ export function HeroSection() {
       <HeroFloatingIcons />
        
        {/* Gradient fade at top */}
-       <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-primary to-transparent z-10" />
+       <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[hsl(220,8%,12%)] to-transparent z-10" />
        
       <div className="container px-4 md:px-6 relative">
         <div className="max-w-4xl mx-auto text-center">
@@ -65,7 +65,7 @@ export function HeroSection() {
            <div className="mt-12 pt-8 border-t border-primary-foreground/20 animate-fade-in" style={{ animationDelay: "0.8s" }}>
             <p className="text-sm text-primary-foreground/40 mb-4">{t("hero.trust")}</p>
             <div className="flex flex-wrap justify-center gap-8 text-primary-foreground/50">
-              <span className="text-2xl font-bold">150+</span>
+              <span className="text-2xl font-bold">50+</span>
               <span className="text-primary-foreground/20">|</span>
               <span className="text-sm font-medium self-center">{t("hero.clients")}</span>
               <span className="text-primary-foreground/20">|</span>
