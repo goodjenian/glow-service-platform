@@ -43,24 +43,6 @@ export default function SiteExpressPage() {
     { question: t("siteExpress.faq.q3"), answer: t("siteExpress.faq.a3") },
   ];
 
-  const pricing = [
-    {
-      name: t("siteExpress.pricing.tier1.name"),
-      description: t("siteExpress.pricing.tier1.desc"),
-      highlight: true,
-      items: [
-        { label: "Frontend", price: t("siteExpress.pricing.tier1.frontend") },
-        { label: "Backend", price: t("siteExpress.pricing.tier1.backend") },
-        { label: t("pricing.monthly"), price: t("siteExpress.pricing.tier1.maintenance") },
-      ],
-      includes: [
-        t("siteExpress.pricing.tier1.inc1"),
-        t("siteExpress.pricing.tier1.inc2"),
-        t("siteExpress.pricing.tier1.inc3"),
-      ],
-    },
-  ];
-
   return (
     <ServicePageLayout
       title={t("siteExpress.title")}
@@ -76,7 +58,6 @@ export default function SiteExpressPage() {
       strategies={strategies}
       results={results}
       faqs={faqs}
-      pricing={pricing}
       relatedServices={[
         { name: t("nav.paidTraffic"), href: "/services/paid-traffic", description: "Paid advertising" },
         { name: t("nav.seo"), href: "/services/seo", description: "Optimize your new site for search" },

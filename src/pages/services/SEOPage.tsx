@@ -43,38 +43,6 @@ export default function SEOServicesPage() {
     { question: t("seo.faq.q3"), answer: t("seo.faq.a3") },
   ];
 
-  const pricing = [
-    {
-      name: t("seo.pricing.tier1.name"),
-      description: t("seo.pricing.tier1.desc"),
-      highlight: true,
-      items: [
-        { label: t("pricing.setup"), price: t("seo.pricing.tier1.setup") },
-        { label: t("pricing.monthly"), price: t("seo.pricing.tier1.maintenance") },
-      ],
-      includes: [
-        t("seo.pricing.tier1.inc1"),
-        t("seo.pricing.tier1.inc2"),
-        t("seo.pricing.tier1.inc3"),
-        t("seo.pricing.tier1.inc4"),
-      ],
-    },
-    {
-      name: t("seo.pricing.tier2.name"),
-      description: t("seo.pricing.tier2.desc"),
-      items: [
-        { label: t("pricing.perArticle"), price: t("seo.pricing.tier2.price") },
-        { label: t("seo.pricing.tier2.pack"), price: "" },
-      ],
-      includes: [
-        t("seo.pricing.tier2.inc1"),
-        t("seo.pricing.tier2.inc2"),
-        t("seo.pricing.tier2.inc3"),
-        t("seo.pricing.tier2.inc4"),
-      ],
-    },
-  ];
-
   return (
     <ServicePageLayout
       title={t("seo.title")}
@@ -90,7 +58,6 @@ export default function SEOServicesPage() {
       strategies={strategies}
       results={results}
       faqs={faqs}
-      pricing={pricing}
       relatedServices={[
         { name: t("nav.geo"), href: "/services/geo", description: "AI search visibility for LLMs" },
         { name: t("nav.aiAgents"), href: "/services/ai-agents", description: "Automate SEO tasks" },
