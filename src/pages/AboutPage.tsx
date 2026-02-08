@@ -119,8 +119,69 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Professional Experience Section */}
+      <section className="py-16 md:py-24 bg-muted/30">
+        <div className="container px-4 md:px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("about.expTitle")}</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              {t("about.expSubtitle")}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            {experiences.map((exp, index) => (
+              <div
+                key={index}
+                className="bg-card rounded-2xl p-6 border border-border/50 hover:border-accent/30 transition-all hover:-translate-y-1 hover:shadow-lg animate-fade-in"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="bg-accent/10 rounded-xl p-3 w-fit mb-4">
+                  <Briefcase className="h-6 w-6 text-accent" />
+                </div>
+                <h3 className="font-semibold text-foreground">{exp.role}</h3>
+                <p className="text-accent font-medium">{exp.company}</p>
+                <div className="flex items-center gap-2 mt-3 text-sm text-muted-foreground">
+                  <Globe className="h-3 w-3" />
+                  <span>{exp.location}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Education */}
+          <div className="mt-16 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold mb-6 text-center">{t("about.education")}</h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-card rounded-2xl p-6 border border-border/50 hover:border-purple-500/30 transition-all hover:-translate-y-1">
+                <div className="flex items-start gap-4">
+                  <div className="bg-purple-500/10 rounded-xl p-3">
+                    <GraduationCap className="h-6 w-6 text-purple-500" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold">{t("about.masters")}</h4>
+                    <p className="text-accent">Nova IMS - Portugal</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-card rounded-2xl p-6 border border-border/50 hover:border-blue-500/30 transition-all hover:-translate-y-1">
+                <div className="flex items-start gap-4">
+                  <div className="bg-blue-500/10 rounded-xl p-3">
+                    <GraduationCap className="h-6 w-6 text-blue-500" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold">{t("about.bachelors")}</h4>
+                    <p className="text-accent">Universidade Mackenzie - Brazil</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Company Timeline Section */}
-      <section className="py-16 md:py-24 bg-muted/30 overflow-hidden">
+      <section className="py-16 md:py-24 overflow-hidden">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -178,67 +239,6 @@ export default function AboutPage() {
               <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-6 py-3 rounded-full font-semibold animate-pulse">
                 <Rocket className="h-5 w-5" />
                 {language === "pt" ? "Próxima parada: Infinito e além!" : "Next stop: To Infinity & Beyond!"}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Professional Experience Section */}
-      <section className="py-16 md:py-24">
-        <div className="container px-4 md:px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("about.expTitle")}</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              {t("about.expSubtitle")}
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {experiences.map((exp, index) => (
-              <div
-                key={index}
-                className="bg-card rounded-2xl p-6 border border-border/50 hover:border-accent/30 transition-all hover:-translate-y-1 hover:shadow-lg animate-fade-in"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="bg-accent/10 rounded-xl p-3 w-fit mb-4">
-                  <Briefcase className="h-6 w-6 text-accent" />
-                </div>
-                <h3 className="font-semibold text-foreground">{exp.role}</h3>
-                <p className="text-accent font-medium">{exp.company}</p>
-                <div className="flex items-center gap-2 mt-3 text-sm text-muted-foreground">
-                  <Globe className="h-3 w-3" />
-                  <span>{exp.location}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Education */}
-          <div className="mt-16 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold mb-6 text-center">{t("about.education")}</h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-card rounded-2xl p-6 border border-border/50 hover:border-purple-500/30 transition-all hover:-translate-y-1">
-                <div className="flex items-start gap-4">
-                  <div className="bg-purple-500/10 rounded-xl p-3">
-                    <GraduationCap className="h-6 w-6 text-purple-500" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">{t("about.masters")}</h4>
-                    <p className="text-accent">Nova IMS - Portugal</p>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-card rounded-2xl p-6 border border-border/50 hover:border-blue-500/30 transition-all hover:-translate-y-1">
-                <div className="flex items-start gap-4">
-                  <div className="bg-blue-500/10 rounded-xl p-3">
-                    <GraduationCap className="h-6 w-6 text-blue-500" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">{t("about.bachelors")}</h4>
-                    <p className="text-accent">Universidade Mackenzie - Brazil</p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
