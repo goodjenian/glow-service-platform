@@ -1,8 +1,12 @@
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import { getWhatsAppUrl, getWhatsAppUrlPt } from "@/lib/whatsapp";
 import seoIllustration from "@/assets/seo-illustration.webp";
 
 export function WhyPartnerSection() {
   const { t, language } = useLanguage();
+  const whatsappUrl = language === "pt" ? getWhatsAppUrlPt() : getWhatsAppUrl();
 
   const services = [
     {
@@ -78,6 +82,21 @@ export function WhyPartnerSection() {
               <div className="text-xs text-muted-foreground">{t("hero.clients")}</div>
             </div>
           </div>
+        </div>
+        
+        {/* CTA Button */}
+        <div className="flex justify-center mt-16">
+          <Button 
+            variant="outline" 
+            size="lg" 
+            asChild 
+            className="bg-[hsl(220,10%,25%)] text-white border-[hsl(220,10%,25%)] hover:bg-[hsl(220,10%,30%)] hover:border-[hsl(220,10%,30%)]"
+          >
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+              {language === "pt" ? "Entre em contato" : "Get in Touch"}
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </a>
+          </Button>
         </div>
       </div>
     </section>
