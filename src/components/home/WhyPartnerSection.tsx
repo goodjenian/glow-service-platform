@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import n8nWorkflow from "@/assets/n8n-workflow.jpg";
 
@@ -51,16 +49,9 @@ export function WhyPartnerSection() {
               {services.map((service, index) => (
                 <div key={index} className={`border-l-4 ${service.color} pl-6`}>
                   <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                  <p className="text-muted-foreground text-sm mb-3">
+                  <p className="text-muted-foreground text-sm">
                     {service.description}
                   </p>
-                  <Link 
-                    to={service.href} 
-                    className="text-accent font-medium text-sm inline-flex items-center hover:underline"
-                  >
-                    {t("services.learnMore")}
-                    <ArrowRight className="ml-1 h-4 w-4" />
-                  </Link>
                 </div>
               ))}
             </div>
@@ -73,6 +64,7 @@ export function WhyPartnerSection() {
                 src={n8nWorkflow} 
                 alt={language === "pt" ? "Dashboard de analytics e dados" : "Analytics and data dashboard"}
                 className="w-full h-auto object-cover"
+                style={{ filter: "hue-rotate(240deg) saturate(1.2)" }}
               />
             </div>
             
@@ -83,7 +75,7 @@ export function WhyPartnerSection() {
             </div>
             
             <div className="absolute -top-4 -right-4 bg-card rounded-2xl p-4 shadow-xl border border-border">
-              <div className="text-2xl font-bold text-foreground mb-1">150+</div>
+              <div className="text-2xl font-bold text-foreground mb-1">50+</div>
               <div className="text-xs text-muted-foreground">{t("hero.clients")}</div>
             </div>
           </div>
