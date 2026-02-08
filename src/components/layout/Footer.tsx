@@ -15,7 +15,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-primary text-primary-foreground" role="contentinfo">
+    <footer className="bg-[hsl(220,8%,15%)] text-primary-foreground" role="contentinfo">
       <div className="container px-4 md:px-6 py-12 md:py-16">
         <div className="flex flex-col md:flex-row justify-between items-start gap-8">
           {/* Brand */}
