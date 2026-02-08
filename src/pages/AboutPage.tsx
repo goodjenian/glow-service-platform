@@ -233,7 +233,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-[hsl(145,70%,30%)] via-[hsl(145,60%,25%)] to-[hsl(160,50%,20%)] relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-[hsl(220,8%,18%)] via-[hsl(220,8%,14%)] to-[hsl(220,10%,12%)] relative overflow-hidden">
         {/* Background decorations */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-[10%] left-[5%] w-3 h-3 bg-white/20 rounded-full animate-pulse" />
