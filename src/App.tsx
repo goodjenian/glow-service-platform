@@ -15,6 +15,7 @@ import PaidTrafficPage from "./pages/services/PaidTrafficPage";
 import AIAgentsPage from "./pages/services/AIAgentsPage";
 import SocialMediaPage from "./pages/services/SocialMediaPage";
 import PrivacyPage from "./pages/PrivacyPage";
+import TermsPage from "./pages/TermsPage";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,7 @@ const App = () => (
             <Route path="/services/ai-agents" element={<AIAgentsPage />} />
             <Route path="/services/social-media" element={<SocialMediaPage />} />
             <Route path="/privacy" element={<PrivacyPage />} />
+            <Route path="/terms" element={<TermsPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
