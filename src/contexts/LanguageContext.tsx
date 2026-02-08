@@ -128,7 +128,7 @@ const translations: Record<Language, Record<string, string>> = {
     // About Page
     "about.founderRole": "Founder & SEO Strategist",
     "about.yearsExp": "Years Experience",
-    "about.bio": "Economist with a data science background acting in the digital marketing world. Experienced with executive SEO for SaaS and E-commerce companies across Portugal, Armenia, United States, and Brazil.",
+    "about.bio": "Economist with a data science background working at the intersection of analytics and digital marketing. Specialized in executive-level SEO strategies for both B2B and B2C online businesses.",
     "about.expTitle": "International Experience",
     "about.expSubtitle": "Building SEO strategies for companies across 4 continents",
     "about.exp1Location": "United Kingdom",
@@ -576,7 +576,7 @@ const translations: Record<Language, Record<string, string>> = {
     // About Page
     "about.founderRole": "Fundador e estrategista SEO",
     "about.yearsExp": "Anos de experiência",
-    "about.bio": "Economista com formação em ciência de dados atuando no mundo do marketing digital. Experiente com SEO executivo para empresas SaaS e E-commerce em Portugal, Armênia, Estados Unidos e Brasil.",
+    "about.bio": "Economista com formação em ciência de dados atuando na interseção de analytics e marketing digital. Especializado em estratégias de SEO de nível executivo para negócios online B2B e B2C.",
     "about.expTitle": "Experiência internacional",
     "about.expSubtitle": "Construindo estratégias SEO para empresas em 4 continentes",
     "about.exp1Location": "Reino Unido",
