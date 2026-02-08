@@ -7,6 +7,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { getWhatsAppUrl, getWhatsAppUrlPt } from "@/lib/whatsapp";
 import { ServiceFloatingIcons } from "@/components/services/ServiceFloatingIcons";
 import { ServiceFAQSection } from "@/components/services/ServiceFAQSection";
+import { ServicePricingSection } from "@/components/services/ServicePricingSection";
 import type { LucideIcon } from "lucide-react";
 
 interface Feature {
@@ -35,6 +36,18 @@ interface FAQ {
   answer: string;
 }
 
+interface PricingTier {
+  name: string;
+  description?: string;
+  items: {
+    label: string;
+    price: string;
+    period?: string;
+  }[];
+  includes?: string[];
+  highlight?: boolean;
+}
+
 type ServiceColor = "blue" | "purple" | "beige" | "teal" | "green" | "rose";
 
 interface ServicePageLayoutProps {
@@ -52,6 +65,7 @@ interface ServicePageLayoutProps {
   strategies?: Strategy[];
   results?: Result[];
   faqs?: FAQ[];
+  pricing?: PricingTier[];
 }
 
 const colorClasses: Record<ServiceColor, { gradient: string; accent: string; iconBg: string; accentBg: string; textAccent: string }> = {
@@ -114,6 +128,7 @@ export function ServicePageLayout({
   strategies,
   results,
   faqs,
+  pricing,
 }: ServicePageLayoutProps) {
   const { language, t } = useLanguage();
   const whatsappUrl = language === "pt" 
@@ -320,6 +335,16 @@ export function ServicePageLayout({
             </div>
           </div>
         </section>
+      )}
+
+      {/* Pricing Section */}
+      {pricing && pricing.length > 0 && (
+        <ServicePricingSection 
+          tiers={pricing} 
+          serviceName={serviceName || title}
+          accentColor={colors.textAccent}
+          accentBg={colors.accentBg}
+        />
       )}
 
       {/* Why Choose Section - Galactic Fed Style */}

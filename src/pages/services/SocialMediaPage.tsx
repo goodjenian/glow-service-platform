@@ -43,6 +43,22 @@ export default function SocialMediaPage() {
     { question: t("socialMedia.faq.q3"), answer: t("socialMedia.faq.a3") },
   ];
 
+  const pricing = [
+    {
+      name: t("socialMedia.pricing.tier1.name"),
+      description: t("socialMedia.pricing.tier1.desc"),
+      highlight: true,
+      items: [
+        { label: t("socialMedia.pricing.tier1.price"), price: "" },
+      ],
+      includes: [
+        t("socialMedia.pricing.tier1.inc1"),
+        t("socialMedia.pricing.tier1.inc2"),
+        t("socialMedia.pricing.tier1.inc3"),
+      ],
+    },
+  ];
+
   return (
     <ServicePageLayout
       title={t("socialMedia.title")}
@@ -58,6 +74,7 @@ export default function SocialMediaPage() {
       strategies={strategies}
       results={results}
       faqs={faqs}
+      pricing={pricing}
       relatedServices={[
         { name: t("nav.siteExpress"), href: "/services/site-express", description: "Fast frontend development" },
         { name: t("nav.seo"), href: "/services/seo", description: "Optimize your organic presence" },

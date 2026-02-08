@@ -43,6 +43,35 @@ export default function AIAgentsPage() {
     { question: t("aiAgents.faq.q3"), answer: t("aiAgents.faq.a3") },
   ];
 
+  const pricing = [
+    {
+      name: t("aiAgents.pricing.tier1.name"),
+      description: t("aiAgents.pricing.tier1.desc"),
+      items: [
+        { label: t("pricing.setup"), price: t("aiAgents.pricing.tier1.setup") },
+        { label: t("pricing.monthly"), price: t("aiAgents.pricing.tier1.maintenance") },
+      ],
+      includes: [
+        t("aiAgents.pricing.tier1.inc1"),
+        t("aiAgents.pricing.tier1.inc2"),
+        t("aiAgents.pricing.tier1.inc3"),
+      ],
+    },
+    {
+      name: t("aiAgents.pricing.tier2.name"),
+      description: t("aiAgents.pricing.tier2.desc"),
+      highlight: true,
+      items: [
+        { label: t("aiAgents.pricing.tier2.price"), price: "" },
+      ],
+      includes: [
+        t("aiAgents.pricing.tier2.inc1"),
+        t("aiAgents.pricing.tier2.inc2"),
+        t("aiAgents.pricing.tier2.inc3"),
+      ],
+    },
+  ];
+
   return (
     <ServicePageLayout
       title={t("aiAgents.title")}
@@ -58,6 +87,7 @@ export default function AIAgentsPage() {
       strategies={strategies}
       results={results}
       faqs={faqs}
+      pricing={pricing}
       relatedServices={[
         { name: t("nav.paidTraffic"), href: "/services/paid-traffic", description: "Strategic paid advertising" },
         { name: t("nav.seo"), href: "/services/seo", description: "Optimize your organic presence" },
