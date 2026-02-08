@@ -1,5 +1,5 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import n8nWorkflow from "@/assets/n8n-workflow.jpg";
+import seoIllustration from "@/assets/seo-illustration.webp";
 
 export function WhyPartnerSection() {
   const { t, language } = useLanguage();
@@ -61,10 +61,9 @@ export function WhyPartnerSection() {
           <div className="relative lg:sticky lg:top-24">
             <div className="rounded-3xl overflow-hidden shadow-2xl">
               <img 
-                src={n8nWorkflow} 
+                src={seoIllustration} 
                 alt={language === "pt" ? "Dashboard de analytics e dados" : "Analytics and data dashboard"}
                 className="w-full h-auto object-cover"
-                style={{ filter: "hue-rotate(240deg) saturate(1.2)" }}
               />
             </div>
             

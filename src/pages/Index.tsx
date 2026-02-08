@@ -147,11 +147,11 @@ const Index = () => {
       {/* Why Partner Section */}
       <WhyPartnerSection />
 
-      {/* Testimonial Section */}
-      <TestimonialSection />
-
       {/* Free Analysis CTA */}
       <FreeAnalysisCTA />
+
+      {/* Testimonial Section */}
+      <TestimonialSection />
 
       {/* FAQ Section */}
       <FAQSection />
