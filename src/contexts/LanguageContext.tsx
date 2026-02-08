@@ -25,7 +25,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Hero
     "hero.badge": "Boutique Marketing Agency",
      "hero.title1": "Automations That",
-     "hero.title2": "Drives Growth",
+     "hero.title2": "Drive Growth",
     "hero.description": "Goody SEO is a digital marketing agency focused on organic strategy and artificial intelligence to boost your online presence.",
     "hero.cta": "Book a Free Consultation",
     "hero.whatsapp": "Get in Touch",
