@@ -41,6 +41,7 @@ export default function SiteExpressPage() {
     { question: t("siteExpress.faq.q1"), answer: t("siteExpress.faq.a1") },
     { question: t("siteExpress.faq.q2"), answer: t("siteExpress.faq.a2") },
     { question: t("siteExpress.faq.q3"), answer: t("siteExpress.faq.a3") },
+    { question: t("siteExpress.faq.q4"), answer: t("siteExpress.faq.a4") },
   ];
 
   return (
