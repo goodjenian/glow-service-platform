@@ -233,73 +233,66 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-[hsl(220,8%,18%)] via-[hsl(220,8%,14%)] to-[hsl(220,10%,12%)] relative overflow-hidden">
-        {/* Background decorations */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-[10%] left-[5%] w-3 h-3 bg-white/20 rounded-full animate-pulse" />
-          <div className="absolute top-[30%] right-[10%] w-2 h-2 bg-white/30 rounded-full animate-pulse" style={{ animationDelay: "0.5s" }} />
-          <div className="absolute bottom-[20%] left-[15%] w-2 h-2 bg-white/20 rounded-full animate-pulse" style={{ animationDelay: "1s" }} />
-          <div className="absolute bottom-[40%] right-[20%] w-1.5 h-1.5 bg-white/40 rounded-full animate-pulse" style={{ animationDelay: "1.5s" }} />
-        </div>
+      <section className="py-16 md:py-24 bg-muted/40 relative overflow-hidden">
         
         <div className="container px-4 md:px-6 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">{t("about.teamTitle")}</h2>
-            <p className="text-xl text-white/70 max-w-2xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">{t("about.teamTitle")}</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               {t("about.teamDesc")}
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 text-center hover:bg-white/15 transition-all hover:-translate-y-2 hover:shadow-2xl animate-fade-in group">
-              <div className="w-24 h-24 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+            <div className="bg-card rounded-3xl p-8 border border-border/50 text-center hover:border-blue-500/30 transition-all hover:-translate-y-2 hover:shadow-2xl animate-fade-in group">
+              <div className="w-24 h-24 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                 <span className="text-5xl">🎯</span>
               </div>
-              <h3 className="font-bold text-white text-xl mb-3">{t("about.team1Role")}</h3>
-              <p className="text-white/70">{t("about.team1Desc")}</p>
+              <h3 className="font-bold text-foreground text-xl mb-3">{t("about.team1Role")}</h3>
+              <p className="text-muted-foreground">{t("about.team1Desc")}</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 text-center hover:bg-white/15 transition-all hover:-translate-y-2 hover:shadow-2xl animate-fade-in group" style={{ animationDelay: "150ms" }}>
-              <div className="w-24 h-24 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+            <div className="bg-card rounded-3xl p-8 border border-border/50 text-center hover:border-emerald-500/30 transition-all hover:-translate-y-2 hover:shadow-2xl animate-fade-in group" style={{ animationDelay: "150ms" }}>
+              <div className="w-24 h-24 bg-emerald-500/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                 <span className="text-5xl">🤖</span>
               </div>
-              <h3 className="font-bold text-white text-xl mb-3">{t("about.team2Role")}</h3>
-              <p className="text-white/70">{t("about.team2Desc")}</p>
+              <h3 className="font-bold text-foreground text-xl mb-3">{t("about.team2Role")}</h3>
+              <p className="text-muted-foreground">{t("about.team2Desc")}</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 text-center hover:bg-white/15 transition-all hover:-translate-y-2 hover:shadow-2xl animate-fade-in group" style={{ animationDelay: "300ms" }}>
-              <div className="w-24 h-24 bg-rose-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+            <div className="bg-card rounded-3xl p-8 border border-border/50 text-center hover:border-rose-500/30 transition-all hover:-translate-y-2 hover:shadow-2xl animate-fade-in group" style={{ animationDelay: "300ms" }}>
+              <div className="w-24 h-24 bg-rose-500/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                 <span className="text-5xl">🎨</span>
               </div>
-              <h3 className="font-bold text-white text-xl mb-3">{t("about.team3Role")}</h3>
-              <p className="text-white/70">{t("about.team3Desc")}</p>
+              <h3 className="font-bold text-foreground text-xl mb-3">{t("about.team3Role")}</h3>
+              <p className="text-muted-foreground">{t("about.team3Desc")}</p>
             </div>
           </div>
 
           {/* Skills & Languages */}
           <div className="mt-16 max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+            <div className="bg-card rounded-2xl p-6 border border-border/50">
+              <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
                 ⚡ {t("about.skills")}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {skills.map((skill) => (
                   <span
                     key={skill}
-                    className="bg-white/10 text-white/90 px-4 py-2 rounded-full text-sm font-medium hover:bg-white/20 transition-colors"
+                    className="bg-muted text-foreground/90 px-4 py-2 rounded-full text-sm font-medium hover:bg-muted/70 transition-colors"
                   >
                     {skill}
                   </span>
                 ))}
               </div>
             </div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+            <div className="bg-card rounded-2xl p-6 border border-border/50">
+              <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
                 🌍 {t("about.languages")}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {languages.map((lang) => (
                   <span
                     key={lang}
-                    className="bg-purple-500/20 text-purple-200 px-4 py-2 rounded-full text-sm font-medium hover:bg-purple-500/30 transition-colors"
+                    className="bg-purple-500/10 text-purple-600 dark:text-purple-300 px-4 py-2 rounded-full text-sm font-medium hover:bg-purple-500/20 transition-colors"
                   >
                     {lang}
                   </span>

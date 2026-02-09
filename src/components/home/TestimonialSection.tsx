@@ -1,28 +1,17 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Star, Play } from "lucide-react";
-import { useState } from "react";
-
-interface Testimonial {
-  name: string;
-  role: string;
-  company: string;
-  quote: string;
-  avatar?: string;
-  videoUrl?: string;
-  videoThumbnail?: string;
-}
+import { Star } from "lucide-react";
+import telaAmbientalLogo from "@/assets/tela-ambiental-logo.png";
 
 export function TestimonialSection() {
   const { t } = useLanguage();
-  const [isPlaying, setIsPlaying] = useState(false);
 
-  const testimonial: Testimonial = {
-    name: "Client Name",
-    role: "Position",
-    company: "Company Name",
-    quote: t("testimonial.quote"),
-    videoUrl: "", // Add your YouTube/Vimeo embed URL here
-    videoThumbnail: "", // Add thumbnail URL
+  const testimonial = {
+    name: "Bruna Cação",
+    role: "Co-founder",
+    company: "Tela Ambiental",
+    companyUrl: "https://telaambiental.com.br/",
+    quote: "We've started working with GoodySEO and have already seen great results in our online presence.",
+    logo: telaAmbientalLogo,
   };
 
    return (
@@ -40,85 +29,42 @@ export function TestimonialSection() {
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto">
-          <div className="bg-card rounded-3xl overflow-hidden shadow-2xl border border-border/50">
-            <div className="grid lg:grid-cols-2 gap-0">
-              {/* Quote Section */}
-              <div className="p-8 md:p-12 flex flex-col justify-center">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-card rounded-3xl overflow-hidden shadow-2xl border border-border/50 p-8 md:p-12">
+            <div className="flex flex-col md:flex-row gap-8 items-center">
+              {/* Logo */}
+              <div className="flex-shrink-0">
+                <a href={testimonial.companyUrl} target="_blank" rel="noopener noreferrer">
+                  <img 
+                    src={testimonial.logo} 
+                    alt={`${testimonial.company} logo`}
+                    className="w-24 h-24 md:w-32 md:h-32 object-contain"
+                  />
+                </a>
+              </div>
+
+              {/* Quote & Author */}
+              <div className="flex-1 text-center md:text-left">
                 {/* Stars */}
-                <div className="flex gap-1 mb-6">
+                <div className="flex gap-1 mb-4 justify-center md:justify-start">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="h-5 w-5 fill-amber-400 text-amber-400" />
                   ))}
                 </div>
 
-                {/* Quote */}
-                <blockquote className="text-lg md:text-xl lg:text-2xl font-medium text-foreground mb-8 leading-relaxed">
+                <blockquote className="text-lg md:text-xl lg:text-2xl font-medium text-foreground mb-6 leading-relaxed">
                   "{testimonial.quote}"
                 </blockquote>
 
-                {/* Author */}
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent/20 to-accent/40 flex items-center justify-center">
-                    <span className="text-lg font-bold text-accent">
-                      {testimonial.name.charAt(0)}
-                    </span>
-                  </div>
-                  <div>
-                    <div className="font-semibold text-foreground">{testimonial.name}</div>
-                    <div className="text-sm text-muted-foreground">
-                      {testimonial.role}, {testimonial.company}
-                    </div>
+                <div>
+                  <div className="font-semibold text-foreground">{testimonial.name}</div>
+                  <div className="text-sm text-muted-foreground">
+                    {testimonial.role},{" "}
+                    <a href={testimonial.companyUrl} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+                      {testimonial.company}
+                    </a>
                   </div>
                 </div>
-              </div>
-
-              {/* Video Section */}
-              <div className="relative aspect-video lg:aspect-auto bg-gradient-to-br from-muted/50 to-muted group">
-                {testimonial.videoUrl && isPlaying ? (
-                  <iframe
-                    src={testimonial.videoUrl}
-                    className="absolute inset-0 w-full h-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                ) : (
-                  <>
-                    {/* Placeholder/Thumbnail */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-primary flex items-center justify-center">
-                      {testimonial.videoThumbnail ? (
-                        <img 
-                          src={testimonial.videoThumbnail} 
-                          alt={`${testimonial.name} testimonial`}
-                          className="absolute inset-0 w-full h-full object-cover"
-                        />
-                      ) : (
-                        <div className="text-center p-8">
-                          <div className="w-24 h-24 rounded-full bg-primary-foreground/10 backdrop-blur-sm flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform cursor-pointer"
-                               onClick={() => testimonial.videoUrl && setIsPlaying(true)}>
-                            <Play className="h-10 w-10 text-primary-foreground ml-1" />
-                          </div>
-                          <p className="text-primary-foreground/60 text-sm">
-                            {t("testimonial.watchVideo")}
-                          </p>
-                        </div>
-                      )}
-                    </div>
-                    
-                    {/* Play Button Overlay */}
-                    {testimonial.videoUrl && (
-                      <button
-                        onClick={() => setIsPlaying(true)}
-                        className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-colors"
-                        aria-label="Play testimonial video"
-                      >
-                        <div className="w-20 h-20 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform shadow-2xl">
-                          <Play className="h-8 w-8 text-primary ml-1" />
-                        </div>
-                      </button>
-                    )}
-                  </>
-                )}
               </div>
             </div>
           </div>

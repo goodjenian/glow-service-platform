@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getWhatsAppUrl, getWhatsAppUrlPt } from "@/lib/whatsapp";
-import { EntropyBackground } from "@/components/effects/EntropyBackground";
+
 
 // Service color configs matching brand identity
 const serviceColors = {
@@ -161,18 +161,16 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-16 md:py-24">
         <div className="container px-4 md:px-6">
-          <div className="bg-primary rounded-3xl p-8 md:p-12 lg:p-16 text-center relative overflow-hidden">
-            <EntropyBackground className="opacity-30" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_hsl(217_91%_60%/0.1),_transparent_60%)]" />
+          <div className="bg-gradient-to-br from-white via-[hsl(217,91%,95%)] to-[hsl(270,60%,92%)] rounded-3xl p-8 md:p-12 lg:p-16 text-center relative overflow-hidden border border-border/30">
             <div className="relative">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-4">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
                 {t("cta.title")}
               </h2>
-              <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
+              <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
                 {t("cta.desc")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="heroOutline" size="xl" asChild>
+                <Button variant="default" size="xl" asChild>
                   <a href="https://calendly.com/business-goodyseo/30min" target="_blank" rel="noopener noreferrer">
                     {t("cta.button")}
                     <ArrowRight className="ml-2 h-5 w-5" />
