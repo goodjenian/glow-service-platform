@@ -272,9 +272,9 @@ const translations: Record<Language, Record<string, string>> = {
     // Site Express Page
     "siteExpress.title": "Site Express",
     "siteExpress.subtitle": "Rapid Frontend Development",
-    "siteExpress.desc": "Professional website development at lightning speed. We create beautiful, responsive sites to get you online faster—perfect for landing pages, portfolios, and business websites.",
+    "siteExpress.desc": "Professional website development at lightning speed. We create beautiful, responsive sites to get you online faster—perfect for landing pages, portfolios, and business websites. For existing websites, our new layouts integrate seamlessly with WordPress, Hostinger, and other popular platforms.",
     "siteExpress.cta": "Launch Your Site Fast",
-    "siteExpress.importance": "Your website is your digital storefront—75% of users judge a company's credibility based on web design. In the era of instant gratification, slow-loading, outdated sites hemorrhage leads. Site Express delivers professional, conversion-optimized websites in days, not months, using AI-powered development tools. Stop losing customers to competitors with better web presence while you wait for traditional agencies to deliver.",
+    "siteExpress.importance": "Your website is your digital storefront—75% of users judge a company's credibility based on web design. In the era of instant gratification, slow-loading, outdated sites hemorrhage leads. Site Express delivers professional, conversion-optimized websites in days, not months, using AI-powered development tools. For businesses with existing websites, our layouts can be integrated into WordPress, Hostinger, and other popular platforms—so you don't have to start from scratch. Stop losing customers to competitors with better web presence while you wait for traditional agencies to deliver.",
     "siteExpress.feature1.title": "Rapid Development",
     "siteExpress.feature1.desc": "Get your professional website live in days, not months. We use cutting-edge AI-assisted tools for accelerated delivery.",
     "siteExpress.feature2.title": "Modern Design",
@@ -315,6 +315,8 @@ const translations: Record<Language, Record<string, string>> = {
     "siteExpress.faq.a2": "Absolutely. Every Site Express project includes SEO best practices: proper HTML structure, optimized meta tags, fast loading speeds, and mobile responsiveness. We also offer ongoing SEO services to help you rank higher.",
     "siteExpress.faq.q3": "Can I update the website myself after launch?",
     "siteExpress.faq.a3": "Yes! We provide documentation and training for basic updates. For more complex changes, our ongoing support packages ensure your site stays current and optimized.",
+    "siteExpress.faq.q4": "Can you integrate new layouts into my existing website?",
+    "siteExpress.faq.a4": "Yes! For businesses that already have a website, our new layouts are fully integrable with popular platforms like WordPress, Hostinger, Wix, Squarespace, and others. You don't need to rebuild from scratch—we adapt our designs to work seamlessly with your current setup.",
 
     // Paid Traffic Page
     "paidTraffic.title": "Paid Traffic",
@@ -720,9 +722,9 @@ const translations: Record<Language, Record<string, string>> = {
     // Site Express Page
     "siteExpress.title": "Site Express",
     "siteExpress.subtitle": "Desenvolvimento frontend rápido",
-    "siteExpress.desc": "Desenvolvimento profissional de sites na velocidade da luz. Criamos sites bonitos e responsivos para colocá-lo online mais rápido—perfeito para landing pages, portfólios e sites empresariais.",
+    "siteExpress.desc": "Desenvolvimento profissional de sites na velocidade da luz. Criamos sites bonitos e responsivos para colocá-lo online mais rápido—perfeito para landing pages, portfólios e sites empresariais. Para sites já existentes, nossos novos layouts são integráveis em WordPress, Hostinger e outras plataformas populares.",
     "siteExpress.cta": "Lance seu site rápido",
-    "siteExpress.importance": "Seu website é sua vitrine digital—75% dos usuários julgam a credibilidade de uma empresa com base no design web. Na era da gratificação instantânea, sites lentos e desatualizados sangram leads. Site Express entrega websites profissionais e otimizados para conversão em dias, não meses, usando ferramentas de desenvolvimento com IA. Pare de perder clientes para concorrentes com melhor presença web enquanto espera agências tradicionais entregarem.",
+    "siteExpress.importance": "Seu website é sua vitrine digital—75% dos usuários julgam a credibilidade de uma empresa com base no design web. Na era da gratificação instantânea, sites lentos e desatualizados sangram leads. Site Express entrega websites profissionais e otimizados para conversão em dias, não meses, usando ferramentas de desenvolvimento com IA. Para empresas com sites já existentes, nossos layouts podem ser integrados em WordPress, Hostinger e outras plataformas populares—sem precisar começar do zero. Pare de perder clientes para concorrentes com melhor presença web enquanto espera agências tradicionais entregarem.",
     "siteExpress.feature1.title": "Desenvolvimento rápido",
     "siteExpress.feature1.desc": "Coloque seu site profissional no ar em dias, não meses. Usamos ferramentas de IA de ponta para entrega acelerada.",
     "siteExpress.feature2.title": "Design moderno",
@@ -763,6 +765,8 @@ const translations: Record<Language, Record<string, string>> = {
     "siteExpress.faq.a2": "Com certeza. Todo projeto Site Express inclui melhores práticas de SEO: estrutura HTML adequada, meta tags otimizadas, velocidade de carregamento rápida e responsividade mobile. Também oferecemos serviços contínuos de SEO para ajudá-lo a rankear melhor.",
     "siteExpress.faq.q3": "Posso atualizar o site sozinho após o lançamento?",
     "siteExpress.faq.a3": "Sim! Fornecemos documentação e treinamento para atualizações básicas. Para mudanças mais complexas, nossos pacotes de suporte contínuo garantem que seu site permaneça atual e otimizado.",
+    "siteExpress.faq.q4": "Vocês conseguem integrar novos layouts no meu site existente?",
+    "siteExpress.faq.a4": "Sim! Para empresas que já possuem um site, nossos novos layouts são totalmente integráveis com plataformas populares como WordPress, Hostinger, Wix, Squarespace e outras. Você não precisa reconstruir do zero—adaptamos nossos designs para funcionar perfeitamente com sua configuração atual.",
 
     // Paid Traffic Page
     "paidTraffic.title": "Tráfego pago",

@@ -161,7 +161,7 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-16 md:py-24">
         <div className="container px-4 md:px-6">
-          <div className="bg-gradient-to-br from-white via-[hsl(217,91%,95%)] to-[hsl(270,60%,92%)] rounded-3xl p-8 md:p-12 lg:p-16 text-center relative overflow-hidden border border-border/30">
+          <div className="bg-card rounded-3xl p-8 md:p-12 lg:p-16 text-center relative overflow-hidden border border-border/30">
             <div className="relative">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
                 {t("cta.title")}

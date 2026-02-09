@@ -1,6 +1,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Star } from "lucide-react";
 import telaAmbientalLogo from "@/assets/tela-ambiental-logo.png";
+import brunaCacao from "@/assets/bruna-cacao.jpeg";
 
 export function TestimonialSection() {
   const { t } = useLanguage();
@@ -10,7 +11,7 @@ export function TestimonialSection() {
     role: "Co-founder",
     company: "Tela Ambiental",
     companyUrl: "https://telaambiental.com.br/",
-    quote: "We've started working with GoodySEO and have already seen great results in our online presence.",
+    quote: "We've started working with GoodySEO and have already seen great results in our online presence. We're very excited about the business growth, so I'd definitely recommend GoodySEO for your business as well.",
     logo: telaAmbientalLogo,
   };
 
@@ -32,13 +33,18 @@ export function TestimonialSection() {
         <div className="max-w-4xl mx-auto">
           <div className="bg-card rounded-3xl overflow-hidden shadow-2xl border border-border/50 p-8 md:p-12">
             <div className="flex flex-col md:flex-row gap-8 items-center">
-              {/* Logo */}
-              <div className="flex-shrink-0">
+              {/* Photo & Logo */}
+              <div className="flex-shrink-0 flex flex-col items-center gap-4">
+                <img 
+                  src={brunaCacao} 
+                  alt="Bruna Cação"
+                  className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-border/30"
+                />
                 <a href={testimonial.companyUrl} target="_blank" rel="noopener noreferrer">
                   <img 
                     src={testimonial.logo} 
                     alt={`${testimonial.company} logo`}
-                    className="w-24 h-24 md:w-32 md:h-32 object-contain"
+                    className="w-20 h-auto object-contain"
                   />
                 </a>
               </div>
