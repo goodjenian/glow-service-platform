@@ -168,7 +168,7 @@ const Index = () => {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
                 {t("cta.title")}
               </h2>
-              <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto">
+              <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto font-semibold">
                 {t("cta.desc")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
