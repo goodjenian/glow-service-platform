@@ -46,6 +46,21 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* Company */}
+          <div>
+            <h4 className="font-semibold mb-3 text-sm">{t("nav.about")}</h4>
+            <ul className="space-y-1 text-sm" aria-label="Company">
+              <li>
+                <Link 
+                  to="/about" 
+                  className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+                >
+                  {t("nav.about")}
+                </Link>
+              </li>
+            </ul>
+          </div>
+
           {/* Contact */}
           <div>
             <h4 className="font-semibold mb-3 text-sm">{t("footer.contact")}</h4>
