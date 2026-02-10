@@ -5,6 +5,7 @@ import { FAQSection } from "@/components/home/FAQSection";
 import { FreeAnalysisCTA } from "@/components/home/FreeAnalysisCTA";
 import { WhyPartnerSection } from "@/components/home/WhyPartnerSection";
 
+import { EntropyBackground } from "@/components/effects/EntropyBackground";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -161,12 +162,13 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-16 md:py-24">
         <div className="container px-4 md:px-6">
-          <div className="bg-card rounded-3xl p-8 md:p-12 lg:p-16 text-center relative overflow-hidden border border-border/30">
+          <div className="bg-[hsl(220,15%,8%)] rounded-3xl p-8 md:p-12 lg:p-16 text-center relative overflow-hidden border border-border/30">
+            <EntropyBackground />
             <div className="relative">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
                 {t("cta.title")}
               </h2>
-              <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto">
                 {t("cta.desc")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
