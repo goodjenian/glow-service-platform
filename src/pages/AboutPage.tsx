@@ -313,7 +313,7 @@ export default function AboutPage() {
             <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto">
               {t("about.ctaDesc")}
             </p>
-            <Button size="xl" asChild className="group bg-[hsl(220,8%,10%)] text-white hover:bg-[hsl(220,8%,15%)] shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            <Button size="xl" asChild className="group bg-[hsl(250,50%,55%)] text-white hover:bg-[hsl(250,50%,48%)] shadow-lg hover:shadow-xl hover:-translate-y-0.5">
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                 {t("hero.whatsapp")}
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
