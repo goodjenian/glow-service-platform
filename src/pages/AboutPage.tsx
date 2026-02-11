@@ -306,14 +306,14 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="py-16 md:py-24">
         <div className="container px-4 md:px-6">
-          <div className="bg-[hsl(220,8%,12%)] rounded-3xl p-8 md:p-12 text-center">
+          <div className="bg-[hsl(270,40%,15%)] rounded-3xl p-8 md:p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               {t("about.ctaTitle")}
             </h2>
             <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto">
               {t("about.ctaDesc")}
             </p>
-            <Button variant="contact" size="xl" asChild className="group">
+            <Button size="xl" asChild className="group bg-[hsl(220,8%,10%)] text-white hover:bg-[hsl(220,8%,15%)] shadow-lg hover:shadow-xl hover:-translate-y-0.5">
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                 {t("hero.whatsapp")}
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />

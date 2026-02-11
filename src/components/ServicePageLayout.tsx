@@ -52,6 +52,7 @@ interface ServicePageLayoutProps {
   strategies?: Strategy[];
   results?: Result[];
   faqs?: FAQ[];
+  additionalContent?: React.ReactNode;
 }
 
 const colorClasses: Record<ServiceColor, { gradient: string; accent: string; iconBg: string; accentBg: string; textAccent: string }> = {
@@ -114,6 +115,7 @@ export function ServicePageLayout({
   strategies,
   results,
   faqs,
+  additionalContent,
 }: ServicePageLayoutProps) {
   const { language, t } = useLanguage();
   const whatsappUrl = language === "pt" 
@@ -371,6 +373,9 @@ export function ServicePageLayout({
       {faqs && faqs.length > 0 && (
         <ServiceFAQSection faqs={faqs} accentColor={colors.textAccent} />
       )}
+
+      {/* Additional Content */}
+      {additionalContent}
 
       {/* Related Services Section */}
       {relatedServices && relatedServices.length > 0 && (
