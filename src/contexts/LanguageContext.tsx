@@ -154,6 +154,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Footer
     "footer.desc": "Boutique agency specializing in high-impact, data-driven automation strategies that enhance your online presence and drive business growth.",
     "footer.company": "Company",
+    "footer.services": "Services",
     "footer.contact": "Contact",
     "footer.rights": "All rights reserved.",
     "footer.privacy": "Privacy Policy",
@@ -614,6 +615,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Footer
     "footer.desc": "Agência boutique especializada em estratégias de automação de alto impacto e baseadas em dados que melhoram sua presença online e impulsionam o crescimento do negócio.",
     "footer.company": "Empresa",
+    "footer.services": "Serviços",
     "footer.contact": "Contato",
     "footer.rights": "Todos os direitos reservados.",
     "footer.privacy": "Política de privacidade",
