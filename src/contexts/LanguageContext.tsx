@@ -153,7 +153,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Footer
     "footer.desc": "Boutique agency specializing in high-impact, data-driven automation strategies that enhance your online presence and drive business growth.",
-    "footer.services": "Services",
+    "footer.company": "Company",
     "footer.contact": "Contact",
     "footer.rights": "All rights reserved.",
     "footer.privacy": "Privacy Policy",
@@ -317,6 +317,16 @@ const translations: Record<Language, Record<string, string>> = {
     "siteExpress.faq.a3": "Yes! We provide documentation and training for basic updates. For more complex changes, our ongoing support packages ensure your site stays current and optimized.",
     "siteExpress.faq.q4": "Can you integrate new layouts into my existing website?",
     "siteExpress.faq.a4": "Yes! For businesses that already have a website, our new layouts are fully integrable with popular platforms like WordPress, Hostinger, Wix, Squarespace, and others. You don't need to rebuild from scratch—we adapt our designs to work seamlessly with your current setup.",
+
+    // Site Express - Mobile App
+    "siteExpress.mobileApp.title": "Expand to Mobile Apps",
+    "siteExpress.mobileApp.subtitle": "Take your digital presence even further",
+    "siteExpress.mobileApp.desc": "Already have a website or building one with us? Extend your reach with a custom mobile app. We transform your web presence into a native mobile experience, giving your customers the convenience of accessing your business from their smartphones.",
+    "siteExpress.mobileApp.feature1": "Cross-platform development (iOS & Android)",
+    "siteExpress.mobileApp.feature2": "Seamless integration with your existing website",
+    "siteExpress.mobileApp.feature3": "Push notifications to engage your audience",
+    "siteExpress.mobileApp.feature4": "Offline access capabilities",
+    "siteExpress.mobileApp.cta": "Ask About Mobile App Development",
 
     // Paid Traffic Page
     "paidTraffic.title": "Paid Traffic",
@@ -603,7 +613,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Footer
     "footer.desc": "Agência boutique especializada em estratégias de automação de alto impacto e baseadas em dados que melhoram sua presença online e impulsionam o crescimento do negócio.",
-    "footer.services": "Serviços",
+    "footer.company": "Empresa",
     "footer.contact": "Contato",
     "footer.rights": "Todos os direitos reservados.",
     "footer.privacy": "Política de privacidade",
@@ -767,6 +777,16 @@ const translations: Record<Language, Record<string, string>> = {
     "siteExpress.faq.a3": "Sim! Fornecemos documentação e treinamento para atualizações básicas. Para mudanças mais complexas, nossos pacotes de suporte contínuo garantem que seu site permaneça atual e otimizado.",
     "siteExpress.faq.q4": "Vocês conseguem integrar novos layouts no meu site existente?",
     "siteExpress.faq.a4": "Sim! Para empresas que já possuem um site, nossos novos layouts são totalmente integráveis com plataformas populares como WordPress, Hostinger, Wix, Squarespace e outras. Você não precisa reconstruir do zero—adaptamos nossos designs para funcionar perfeitamente com sua configuração atual.",
+
+    // Site Express - Mobile App
+    "siteExpress.mobileApp.title": "Expanda para Aplicativos Mobile",
+    "siteExpress.mobileApp.subtitle": "Leve sua presença digital ainda mais longe",
+    "siteExpress.mobileApp.desc": "Já tem um site ou está construindo um conosco? Amplie seu alcance com um aplicativo mobile personalizado. Transformamos sua presença web em uma experiência mobile nativa, dando aos seus clientes a conveniência de acessar seu negócio direto do smartphone.",
+    "siteExpress.mobileApp.feature1": "Desenvolvimento multiplataforma (iOS & Android)",
+    "siteExpress.mobileApp.feature2": "Integração perfeita com seu site existente",
+    "siteExpress.mobileApp.feature3": "Notificações push para engajar sua audiência",
+    "siteExpress.mobileApp.feature4": "Capacidade de acesso offline",
+    "siteExpress.mobileApp.cta": "Consulte sobre Desenvolvimento de Apps",
 
     // Paid Traffic Page
     "paidTraffic.title": "Tráfego pago",

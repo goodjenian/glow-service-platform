@@ -48,7 +48,7 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="font-semibold mb-3 text-sm">{t("nav.about")}</h4>
+            <h4 className="font-semibold mb-3 text-sm">{t("footer.company")}</h4>
             <ul className="space-y-1 text-sm" aria-label="Company">
               <li>
                 <Link 
@@ -56,6 +56,22 @@ export function Footer() {
                   className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
                 >
                   {t("nav.about")}
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/privacy" 
+                  className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+                >
+                  {t("footer.privacy")}
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/terms" 
+                  className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+                >
+                  {t("footer.terms")}
                 </Link>
               </li>
             </ul>
@@ -101,14 +117,6 @@ export function Footer() {
           <p className="text-primary-foreground/50">
             © {new Date().getFullYear()} Goody SEO. {t("footer.rights")}
           </p>
-          <div className="flex gap-6 text-primary-foreground/50">
-            <Link to="/privacy" className="hover:text-primary-foreground transition-colors">
-              {t("footer.privacy")}
-            </Link>
-            <Link to="/terms" className="hover:text-primary-foreground transition-colors">
-              {t("footer.terms")}
-            </Link>
-          </div>
         </div>
       </div>
     </footer>
