@@ -3,7 +3,7 @@ import { Search } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function SEOServicesPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const features = [
     { title: t("seo.feature1.title"), description: t("seo.feature1.desc") },
@@ -46,6 +46,8 @@ export default function SEOServicesPage() {
   return (
     <ServicePageLayout
       title={t("seo.title")}
+      metaTitle={language === "pt" ? "Serviços de SEO - Estratégia Orgânica Avançada | GoodySEO" : "SEO Services - Advanced Organic Strategy | GoodySEO"}
+      metaDescription={language === "pt" ? "Serviços profissionais de SEO para empresas SaaS e E-commerce. Estratégias data-driven para aumentar tráfego orgânico e conversões." : "Professional SEO services for SaaS and E-commerce. Data-driven strategies to boost organic traffic and conversions."}
       subtitle={t("seo.subtitle")}
       description={t("seo.desc")}
       icon={Search}

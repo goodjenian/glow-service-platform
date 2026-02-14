@@ -3,7 +3,7 @@ import { Share2 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function SocialMediaPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const features = [
     { title: t("socialMedia.feature1.title"), description: t("socialMedia.feature1.desc") },
@@ -46,6 +46,8 @@ export default function SocialMediaPage() {
   return (
     <ServicePageLayout
       title={t("socialMedia.title")}
+      metaTitle={language === "pt" ? "Social Media - Gestão de Redes Sociais | GoodySEO" : "Social Media Management & Content Strategy | GoodySEO"}
+      metaDescription={language === "pt" ? "Gestão profissional de redes sociais com estratégia de conteúdo e calendário editorial. Aumente seu engajamento com a GoodySEO." : "Professional social media management with content strategy and editorial calendar. Boost engagement with GoodySEO."}
       subtitle={t("socialMedia.subtitle")}
       description={t("socialMedia.desc")}
       icon={Share2}

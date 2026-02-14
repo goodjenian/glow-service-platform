@@ -3,7 +3,7 @@ import { Target } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function PaidTrafficPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const features = [
     { title: t("paidTraffic.feature1.title"), description: t("paidTraffic.feature1.desc") },
@@ -46,6 +46,8 @@ export default function PaidTrafficPage() {
   return (
     <ServicePageLayout
       title={t("paidTraffic.title")}
+      metaTitle={language === "pt" ? "Tráfego Pago - Google Ads & Meta Ads | GoodySEO" : "Paid Traffic - Google Ads & Meta Ads Management | GoodySEO"}
+      metaDescription={language === "pt" ? "Gestão profissional de tráfego pago com Google Ads e Meta Ads. Maximize seu ROI com campanhas otimizadas por dados." : "Professional paid traffic management with Google Ads and Meta Ads. Maximize your ROI with data-optimized campaigns."}
       subtitle={t("paidTraffic.subtitle")}
       description={t("paidTraffic.desc")}
       icon={Target}

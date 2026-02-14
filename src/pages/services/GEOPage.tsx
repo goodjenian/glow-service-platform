@@ -3,7 +3,7 @@ import { Sparkles } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function GEOPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const features = [
     { title: t("geo.feature1.title"), description: t("geo.feature1.desc") },
@@ -46,6 +46,8 @@ export default function GEOPage() {
   return (
     <ServicePageLayout
       title={t("geo.title")}
+      metaTitle={language === "pt" ? "GEO - Otimização para Buscas Generativas e IA | GoodySEO" : "GEO - Generative Engine Optimization for AI Search | GoodySEO"}
+      metaDescription={language === "pt" ? "Otimize sua presença em buscas generativas e LLMs como ChatGPT e Gemini. Apareça nas respostas de IA com a GoodySEO." : "Optimize your visibility in generative AI search engines like ChatGPT and Gemini. Get found in AI-generated answers with GoodySEO."}
       subtitle={t("geo.subtitle")}
       description={t("geo.desc")}
       icon={Sparkles}
