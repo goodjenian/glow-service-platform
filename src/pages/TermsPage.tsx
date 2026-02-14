@@ -1,8 +1,14 @@
 import { Layout } from "@/components/layout/Layout";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 export default function TermsPage() {
   const { language } = useLanguage();
+
+  usePageMeta(
+    language === "pt" ? "Termos de Serviço | GoodySEO" : "Terms of Service | GoodySEO",
+    language === "pt" ? "Consulte os termos de serviço da GoodySEO para entender as condições de uso dos nossos serviços de marketing digital." : "Review GoodySEO's terms of service to understand the conditions for using our digital marketing services."
+  );
 
   return (
     <Layout>

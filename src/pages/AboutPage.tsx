@@ -4,10 +4,16 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Globe, Briefcase, GraduationCap, Rocket, Users, Star, Target } from "lucide-react";
 import { getWhatsAppUrl, getWhatsAppUrlPt } from "@/lib/whatsapp";
 import caiquePhoto from "@/assets/caique-gudjenian.png";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 export default function AboutPage() {
   const { language, t } = useLanguage();
   const whatsappUrl = language === "pt" ? getWhatsAppUrlPt() : getWhatsAppUrl();
+
+  usePageMeta(
+    language === "pt" ? "Sobre Nós - Agência Boutique de Marketing Digital | GoodySEO" : "About Us - Boutique Digital Marketing Agency | GoodySEO",
+    language === "pt" ? "Conheça a GoodySEO: agência boutique de marketing digital com foco em SEO, IA e automação. Atendemos clientes nos EUA, Brasil e Europa." : "Meet GoodySEO: a boutique digital marketing agency focused on SEO, AI, and automation. Serving clients in the US, Brazil, and Europe."
+  );
 
   const timeline = [
     {
@@ -180,7 +186,7 @@ export default function AboutPage() {
 
             {/* Content */}
             <div className="order-2 lg:order-1 text-center lg:text-left">
-            <h2 className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-foreground via-[hsl(270,80%,60%)] to-[hsl(217,91%,60%)] bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-2 pb-2 bg-gradient-to-r from-foreground via-[hsl(270,80%,60%)] to-[hsl(217,91%,60%)] bg-clip-text text-transparent">
                 {t("about.founderRole")}
               </h2>
               <p className="text-2xl font-semibold text-foreground mb-2">

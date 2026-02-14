@@ -1,8 +1,14 @@
 import { Layout } from "@/components/layout/Layout";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 const PrivacyPage = () => {
   const { language } = useLanguage();
+
+  usePageMeta(
+    language === "pt" ? "Política de Privacidade | GoodySEO" : "Privacy Policy | GoodySEO",
+    language === "pt" ? "Leia a política de privacidade da GoodySEO e entenda como protegemos seus dados pessoais." : "Read GoodySEO's privacy policy and understand how we protect your personal data."
+  );
 
   return (
     <Layout>

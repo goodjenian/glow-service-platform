@@ -3,7 +3,7 @@ import { Bot } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function AIAgentsPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const features = [
     { title: t("aiAgents.feature1.title"), description: t("aiAgents.feature1.desc") },
@@ -46,6 +46,8 @@ export default function AIAgentsPage() {
   return (
     <ServicePageLayout
       title={t("aiAgents.title")}
+      metaTitle={language === "pt" ? "Agentes IA & Automação com n8n | GoodySEO" : "AI Agents & n8n Automation Solutions | GoodySEO"}
+      metaDescription={language === "pt" ? "Automatize processos de marketing com agentes IA e workflows n8n. Economize tempo e escale suas operações com inteligência artificial." : "Automate marketing processes with AI agents and n8n workflows. Save time and scale operations with artificial intelligence."}
       subtitle={t("aiAgents.subtitle")}
       description={t("aiAgents.desc")}
       icon={Bot}

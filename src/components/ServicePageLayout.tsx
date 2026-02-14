@@ -7,6 +7,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { getWhatsAppUrl, getWhatsAppUrlPt } from "@/lib/whatsapp";
 import { ServiceFloatingIcons } from "@/components/services/ServiceFloatingIcons";
 import { ServiceFAQSection } from "@/components/services/ServiceFAQSection";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import type { LucideIcon } from "lucide-react";
 
 interface Feature {
@@ -53,6 +54,8 @@ interface ServicePageLayoutProps {
   results?: Result[];
   faqs?: FAQ[];
   additionalContent?: React.ReactNode;
+  metaTitle?: string;
+  metaDescription?: string;
 }
 
 const colorClasses: Record<ServiceColor, { gradient: string; accent: string; iconBg: string; accentBg: string; textAccent: string }> = {
@@ -116,8 +119,15 @@ export function ServicePageLayout({
   results,
   faqs,
   additionalContent,
+  metaTitle,
+  metaDescription,
 }: ServicePageLayoutProps) {
   const { language, t } = useLanguage();
+
+  usePageMeta(
+    metaTitle || `${title} | GoodySEO`,
+    metaDescription || description
+  );
   const whatsappUrl = language === "pt" 
     ? getWhatsAppUrlPt(serviceName || title) 
     : getWhatsAppUrl(serviceName || title);

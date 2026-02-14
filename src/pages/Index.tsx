@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getWhatsAppUrl, getWhatsAppUrlPt } from "@/lib/whatsapp";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 
 // Service color configs matching brand identity
@@ -59,6 +60,11 @@ const serviceColors = {
 const Index = () => {
   const { language, t } = useLanguage();
   const whatsappUrl = language === "pt" ? getWhatsAppUrlPt() : getWhatsAppUrl();
+
+  usePageMeta(
+    language === "pt" ? "Agência Boutique de Marketing Digital - SEO, IA & Automação | GoodySEO" : "Boutique Marketing Agency - SEO, AI & Automation | GoodySEO",
+    language === "pt" ? "GoodySEO: agência boutique de marketing digital especializada em SEO, agentes IA e automação para crescimento sustentável do seu negócio." : "GoodySEO: boutique digital marketing agency specializing in SEO, AI agents, and automation for sustainable business growth."
+  );
 
   const services = [
     {
