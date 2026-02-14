@@ -7,7 +7,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { getWhatsAppUrl, getWhatsAppUrlPt } from "@/lib/whatsapp";
 import { ServiceFloatingIcons } from "@/components/services/ServiceFloatingIcons";
 import { ServiceFAQSection } from "@/components/services/ServiceFAQSection";
-import { usePageMeta } from "@/hooks/usePageMeta";
+import { Helmet } from "react-helmet-async"; // <--- MUDANÇA AQUI
 import type { LucideIcon } from "lucide-react";
 
 interface Feature {
@@ -124,14 +124,12 @@ export function ServicePageLayout({
 }: ServicePageLayoutProps) {
   const { language, t } = useLanguage();
 
-  usePageMeta(
-    metaTitle || `${title} | GoodySEO`,
-    metaDescription || description
-  );
+  // REMOVI O usePageMeta DAQUI
+
   const whatsappUrl = language === "pt" 
     ? getWhatsAppUrlPt(serviceName || title) 
     : getWhatsAppUrl(serviceName || title);
-  
+   
   const colors = colorClasses[serviceColor];
 
   const whyChooseCards = [
@@ -183,6 +181,15 @@ export function ServicePageLayout({
 
   return (
     <Layout>
+      {/* ADICIONEI O HELMET AQUI */}
+      <Helmet>
+        <title>{metaTitle || `${title} | GoodySEO`}</title>
+        <meta name="description" content={metaDescription || description} />
+        <meta property="og:title" content={metaTitle || `${title} | GoodySEO`} />
+        <meta property="og:description" content={metaDescription || description} />
+        <meta property="og:url" content={window.location.href} />
+      </Helmet>
+
       {/* Hero Section */}
       <section className={`relative ${colors.gradient} py-20 md:py-32 overflow-hidden`}>
         {/* Grid Pattern */}
