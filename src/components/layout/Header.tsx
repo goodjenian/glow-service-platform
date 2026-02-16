@@ -22,12 +22,12 @@ export function Header() {
   const whatsappUrl = language === "pt" ? getWhatsAppUrlPt() : getWhatsAppUrl();
 
   const services = [
-    { name: t("nav.seo"), href: "/services/seo", description: "Technical, On-Page & Content SEO" },
-    { name: t("nav.geo"), href: "/services/geo", description: "AI Search Visibility for LLMs" },
-    { name: t("nav.siteExpress"), href: "/services/site-express", description: "Fast Frontend Development" },
-    { name: t("nav.paidTraffic"), href: "/services/paid-traffic", description: "Strategic Paid Advertising" },
-    { name: t("nav.aiAgents"), href: "/services/ai-agents", description: "Automation & Sales AI" },
-    { name: t("nav.socialMedia"), href: "/services/social-media", description: "Visual Content Creation" },
+    { name: t("nav.seo"), href: "/services/seo", description: t("nav.seo.desc") },
+    { name: t("nav.geo"), href: "/services/geo", description: t("nav.geo.desc") },
+    { name: t("nav.siteExpress"), href: "/services/site-express", description: t("nav.siteExpress.desc") },
+    { name: t("nav.paidTraffic"), href: "/services/paid-traffic", description: t("nav.paidTraffic.desc") },
+    { name: t("nav.aiAgents"), href: "/services/ai-agents", description: t("nav.aiAgents.desc") },
+    { name: t("nav.socialMedia"), href: "/services/social-media", description: t("nav.socialMedia.desc") },
   ];
 
   return (

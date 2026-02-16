@@ -177,14 +177,14 @@ const Index = () => {
               <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto font-semibold">
                 {t("cta.desc")}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="default" size="xl" asChild>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center px-4 sm:px-0">
+                <Button variant="default" size="xl" asChild className="w-full sm:w-auto">
                   <a href="https://calendly.com/business-goodyseo/30min" target="_blank" rel="noopener noreferrer">
                     {t("cta.button")}
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </a>
                 </Button>
-                <Button variant="contact" size="xl" asChild>
+                <Button variant="contact" size="xl" asChild className="w-full sm:w-auto">
                   <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                     {t("hero.whatsapp")}
                     <ArrowRight className="ml-2 h-5 w-5" />
