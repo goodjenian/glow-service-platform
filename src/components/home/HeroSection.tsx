@@ -64,14 +64,16 @@ export function HeroSection() {
           {/* Trust Indicators */}
            <div className="mt-12 pt-8 border-t border-primary-foreground/20 animate-fade-in" style={{ animationDelay: "0.8s" }}>
             <p className="text-sm text-primary-foreground/40 mb-4">{t("hero.trust")}</p>
-            <div className="flex flex-wrap justify-center gap-8 text-primary-foreground/50">
-              <span className="text-2xl font-bold">50+</span>
-              <span className="text-primary-foreground/20">|</span>
-              <span className="text-sm font-medium self-center">{t("hero.clients")}</span>
-              <span className="text-primary-foreground/20">|</span>
-              <span className="text-2xl font-bold">3x</span>
-              <span className="text-primary-foreground/20">|</span>
-              <span className="text-sm font-medium self-center">{t("hero.growth")}</span>
+           <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+              <div className="flex items-center gap-2">
+                <span className="text-2xl font-bold text-white">50+</span>
+                <span className="text-sm font-bold text-white">{t("hero.clients")}</span>
+              </div>
+              <span className="text-primary-foreground/20 self-center">|</span>
+              <div className="flex items-center gap-2">
+                <span className="text-2xl font-bold text-white">3x</span>
+                <span className="text-sm font-bold text-white">{t("hero.growth")}</span>
+              </div>
             </div>
           </div>
         </div>

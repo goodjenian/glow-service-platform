@@ -4,14 +4,16 @@ import telaAmbientalLogo from "@/assets/tela-ambiental-logo.png";
 import brunaCacao from "@/assets/bruna-cacao.jpeg";
 
 export function TestimonialSection() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const testimonial = {
     name: "Bruna Cação",
-    role: "Co-founder",
+    role: language === "pt" ? "Co-fundadora" : "Co-founder",
     company: "Tela Ambiental",
     companyUrl: "https://telaambiental.com.br/",
-    quote: "We've started working with GoodySEO and have already seen great results in our online presence. We're very excited about the business growth, so I'd definitely recommend GoodySEO for your business as well.",
+    quote: language === "pt" 
+      ? "Começamos a trabalhar com a GoodySEO e já vimos ótimos resultados na nossa presença online. Estamos muito animados com o crescimento do negócio, então eu definitivamente recomendaria a GoodySEO para o seu negócio também."
+      : "We've started working with GoodySEO and have already seen great results in our online presence. We're very excited about the business growth, so I'd definitely recommend GoodySEO for your business as well.",
     logo: telaAmbientalLogo,
   };
 
