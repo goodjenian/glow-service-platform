@@ -4,6 +4,7 @@ import { TestimonialSection } from "@/components/home/TestimonialSection";
 import { FAQSection } from "@/components/home/FAQSection";
 import { FreeAnalysisCTA } from "@/components/home/FreeAnalysisCTA";
 import { WhyPartnerSection } from "@/components/home/WhyPartnerSection";
+import { SeoHead } from "@/components/SeoHead";
 
 import { EntropyBackground } from "@/components/effects/EntropyBackground";
 import { Button } from "@/components/ui/button";
@@ -20,51 +21,60 @@ import {
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getWhatsAppUrl, getWhatsAppUrlPt } from "@/lib/whatsapp";
-import { usePageMeta } from "@/hooks/usePageMeta";
 
+// Schema: Organization / MarketingAgency
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "MarketingAgency",
+  "name": "GoodySEO",
+  "url": "https://goodyseo.com",
+  "logo": "https://goodyseo.com/favicon-logo.png",
+  "description": "Boutique digital marketing agency specializing in SEO, AI agents, and automation for sustainable business growth.",
+  "email": "business@goodyseo.com",
+  "areaServed": "Worldwide",
+  "sameAs": [
+    "https://linkedin.com/company/goodyseo",
+    "https://instagram.com/goodyseo"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Caíque Gudjenian"
+  }
+};
 
-// Service color configs matching brand identity
+// Schema: WebSite with SearchAction
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "GoodySEO",
+  "url": "https://goodyseo.com",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://goodyseo.com/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+};
+
+// Service colors matching brand identity
 const serviceColors = {
-  seo: {
-    bg: "bg-blue-500/15",
-    icon: "text-blue-500",
-    border: "group-hover:border-blue-500/30",
-  },
-  geo: {
-    bg: "bg-purple-500/15",
-    icon: "text-purple-500",
-    border: "group-hover:border-purple-500/30",
-  },
-  siteExpress: {
-    bg: "bg-amber-500/15",
-    icon: "text-amber-500",
-    border: "group-hover:border-amber-500/30",
-  },
-  paidTraffic: {
-    bg: "bg-teal-500/15",
-    icon: "text-teal-500",
-    border: "group-hover:border-teal-500/30",
-  },
-  aiAgents: {
-    bg: "bg-emerald-500/15",
-    icon: "text-emerald-500",
-    border: "group-hover:border-emerald-500/30",
-  },
-  socialMedia: {
-    bg: "bg-rose-500/15",
-    icon: "text-rose-500",
-    border: "group-hover:border-rose-500/30",
-  },
+  seo: { bg: "bg-blue-500/15", icon: "text-blue-500", border: "group-hover:border-blue-500/30" },
+  geo: { bg: "bg-purple-500/15", icon: "text-purple-500", border: "group-hover:border-purple-500/30" },
+  siteExpress: { bg: "bg-amber-500/15", icon: "text-amber-500", border: "group-hover:border-amber-500/30" },
+  paidTraffic: { bg: "bg-teal-500/15", icon: "text-teal-500", border: "group-hover:border-teal-500/30" },
+  aiAgents: { bg: "bg-emerald-500/15", icon: "text-emerald-500", border: "group-hover:border-emerald-500/30" },
+  socialMedia: { bg: "bg-rose-500/15", icon: "text-rose-500", border: "group-hover:border-rose-500/30" },
 };
 
 const Index = () => {
   const { language, t } = useLanguage();
   const whatsappUrl = language === "pt" ? getWhatsAppUrlPt() : getWhatsAppUrl();
 
-  usePageMeta(
-    language === "pt" ? "Agência Boutique de Marketing Digital - SEO, IA & Automação | GoodySEO" : "Boutique Marketing Agency - SEO, AI & Automation | GoodySEO",
-    language === "pt" ? "GoodySEO: agência boutique de marketing digital especializada em SEO, agentes IA e automação para crescimento sustentável do seu negócio." : "GoodySEO: boutique digital marketing agency specializing in SEO, AI agents, and automation for sustainable business growth."
-  );
+  const metaTitle = language === "pt"
+    ? "GoodySEO | Soluções Digitais, Estratégia Orgânica & Automação"
+    : "GoodySEO | Digital Solutions, Organic Strategy & Automation";
+  const metaDescription = language === "pt"
+    ? "GoodySEO: agência boutique de marketing digital especializada em SEO, agentes IA e automação para crescimento sustentável do seu negócio."
+    : "GoodySEO: boutique digital marketing agency specializing in SEO, AI agents, and automation for sustainable business growth.";
 
   const services = [
     {
@@ -113,6 +123,12 @@ const Index = () => {
 
   return (
     <Layout>
+      <SeoHead
+        title={metaTitle}
+        description={metaDescription}
+        path="/"
+        schemas={[organizationSchema, websiteSchema]}
+      />
       <HeroSection />
 
       {/* Services Section */}

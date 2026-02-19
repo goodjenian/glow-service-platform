@@ -1,17 +1,18 @@
 import { Layout } from "@/components/layout/Layout";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { usePageMeta } from "@/hooks/usePageMeta";
+import { SeoHead } from "@/components/SeoHead";
 
 const PrivacyPage = () => {
   const { language } = useLanguage();
 
-  usePageMeta(
-    language === "pt" ? "Política de Privacidade | GoodySEO" : "Privacy Policy | GoodySEO",
-    language === "pt" ? "Leia a política de privacidade da GoodySEO e entenda como protegemos seus dados pessoais." : "Read GoodySEO's privacy policy and understand how we protect your personal data."
-  );
+  const metaTitle = language === "pt" ? "Política de Privacidade | GoodySEO" : "Privacy Policy | GoodySEO";
+  const metaDescription = language === "pt"
+    ? "Leia a política de privacidade da GoodySEO e entenda como protegemos seus dados pessoais."
+    : "Read GoodySEO's privacy policy and understand how we protect your personal data.";
 
   return (
     <Layout>
+      <SeoHead title={metaTitle} description={metaDescription} path="/privacy" />
       <div className="bg-primary py-16 md:py-24">
         <div className="container px-4 md:px-6">
           <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground text-center">

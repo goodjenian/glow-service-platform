@@ -1,19 +1,39 @@
 import { Layout } from "@/components/layout/Layout";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { SeoHead } from "@/components/SeoHead";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Globe, Briefcase, GraduationCap, Rocket, Users, Star, Target } from "lucide-react";
 import { getWhatsAppUrl, getWhatsAppUrlPt } from "@/lib/whatsapp";
 import caiquePhoto from "@/assets/caique-gudjenian.png";
-import { usePageMeta } from "@/hooks/usePageMeta";
+
+// Schema: Person (founder)
+const founderSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Caíque Gudjenian",
+  "jobTitle": "Founder & SEO Strategist",
+  "worksFor": {
+    "@type": "MarketingAgency",
+    "name": "GoodySEO",
+    "url": "https://goodyseo.com"
+  },
+  "knowsAbout": ["SEO", "GEO", "AI Automation", "Digital Marketing", "n8n"],
+  "alumniOf": [
+    { "@type": "EducationalOrganization", "name": "Nova IMS - Portugal" },
+    { "@type": "EducationalOrganization", "name": "Universidade Mackenzie - Brazil" }
+  ]
+};
 
 export default function AboutPage() {
   const { language, t } = useLanguage();
   const whatsappUrl = language === "pt" ? getWhatsAppUrlPt() : getWhatsAppUrl();
 
-  usePageMeta(
-    language === "pt" ? "Sobre Nós - Agência Boutique de Marketing Digital | GoodySEO" : "About Us - Boutique Digital Marketing Agency | GoodySEO",
-    language === "pt" ? "Conheça a GoodySEO: agência boutique de marketing digital com foco em SEO, IA e automação. Atendemos clientes nos EUA, Brasil e Europa." : "Meet GoodySEO: a boutique digital marketing agency focused on SEO, AI, and automation. Serving clients in the US, Brazil, and Europe."
-  );
+  const metaTitle = language === "pt"
+    ? "Sobre Nós - Agência Boutique de Marketing Digital | GoodySEO"
+    : "About Us - Boutique Digital Marketing Agency | GoodySEO";
+  const metaDescription = language === "pt"
+    ? "Conheça a GoodySEO: agência boutique de marketing digital com foco em SEO, IA e automação. Atendemos clientes nos EUA, Brasil e Europa."
+    : "Meet GoodySEO: a boutique digital marketing agency focused on SEO, AI, and automation. Serving clients in the US, Brazil, and Europe.";
 
   const timeline = [
     {
@@ -55,20 +75,21 @@ export default function AboutPage() {
   ];
 
   const skills = [
-    "Google Analytics",
-    "Google Search Console",
-    "Screaming Frog",
-    "SemRush",
-    "Ahrefs",
-    "n8n",
-    "Python",
-    "HTML/CSS",
+    "Google Analytics", "Google Search Console", "Screaming Frog",
+    "SemRush", "Ahrefs", "n8n", "Python", "HTML/CSS",
   ];
 
   const languages = ["Portuguese", "English", "Spanish", "Armenian"];
 
   return (
     <Layout>
+      <SeoHead
+        title={metaTitle}
+        description={metaDescription}
+        path="/about"
+        schemas={[founderSchema]}
+      />
+
       {/* About Us Hero Section */}
       <section className="py-16 md:py-24 bg-primary">
         <div className="container px-4 md:px-6">
@@ -115,7 +136,6 @@ export default function AboutPage() {
 
           {/* Timeline */}
           <div className="relative max-w-4xl mx-auto">
-            {/* Central line */}
             <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-500 via-emerald-500 to-amber-500 transform -translate-x-1/2 hidden md:block" />
             
             {timeline.map((item, index) => (
@@ -125,7 +145,6 @@ export default function AboutPage() {
                   index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 }`}
               >
-                {/* Content Card */}
                 <div className={`w-full md:w-5/12 ${index % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12 md:text-left"}`}>
                   <div 
                     className="bg-card rounded-2xl p-6 border border-border/50 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fade-in"
@@ -142,17 +161,14 @@ export default function AboutPage() {
                   </div>
                 </div>
 
-                {/* Center Circle */}
                 <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-card border-4 border-accent items-center justify-center z-10">
                   <Star className="h-3 w-3 text-accent" />
                 </div>
 
-                {/* Empty space for alternating layout */}
                 <div className="hidden md:block w-5/12" />
               </div>
             ))}
 
-            {/* Future indicator */}
             <div className="text-center mt-8">
               <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-6 py-3 rounded-full font-semibold animate-pulse">
                 <Rocket className="h-5 w-5" />
@@ -167,7 +183,6 @@ export default function AboutPage() {
       <section className="py-16 md:py-24">
         <div className="container px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Photo */}
             <div className="flex justify-center lg:justify-end order-1 lg:order-2">
               <div className="relative">
                 <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-accent/30 shadow-2xl">
@@ -184,9 +199,8 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Content */}
             <div className="order-2 lg:order-1 text-center lg:text-left">
-            <h2 className="text-4xl md:text-5xl font-bold mb-2 pb-2 bg-gradient-to-r from-foreground via-[hsl(270,80%,60%)] to-[hsl(217,91%,60%)] bg-clip-text text-transparent tracking-tight">
+              <h2 className="text-4xl md:text-5xl font-bold mb-2 pb-2 bg-gradient-to-r from-foreground via-[hsl(270,80%,60%)] to-[hsl(217,91%,60%)] bg-clip-text text-transparent tracking-tight">
                 {t("about.founderRole")}
               </h2>
               <p className="text-2xl font-semibold text-foreground mb-2">
@@ -201,7 +215,6 @@ export default function AboutPage() {
                 {t("about.bio")}
               </p>
 
-              {/* Education */}
               <div className="grid sm:grid-cols-2 gap-4 mb-8">
                 <div className="bg-card rounded-2xl p-4 border border-border/50 hover:border-purple-500/30 transition-all">
                   <div className="flex items-start gap-3">
@@ -240,7 +253,6 @@ export default function AboutPage() {
 
       {/* Team Section */}
       <section className="py-16 md:py-24 bg-muted/40 relative overflow-hidden">
-        
         <div className="container px-4 md:px-6 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">{t("about.teamTitle")}</h2>
@@ -273,7 +285,6 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Skills & Languages */}
           <div className="mt-16 max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
             <div className="bg-card rounded-2xl p-6 border border-border/50">
               <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">

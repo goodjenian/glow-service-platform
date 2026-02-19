@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Home, ArrowLeft } from "lucide-react";
+import { SeoHead } from "@/components/SeoHead";
 
 const NotFound = () => {
   const location = useLocation();
@@ -13,6 +14,7 @@ const NotFound = () => {
 
   return (
     <Layout>
+      <SeoHead title="Page Not Found | GoodySEO" description="The page you are looking for does not exist." path={location.pathname} hasPtAlternate={false} />
       <div className="flex min-h-[60vh] flex-col items-center justify-center px-4">
         <div className="text-center">
           <h1 className="text-8xl font-bold text-muted-foreground/30 mb-4">404</h1>
