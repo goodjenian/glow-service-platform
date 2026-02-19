@@ -73,7 +73,7 @@ export default function AboutPage() {
       <section className="py-16 md:py-24 bg-primary">
         <div className="container px-4 md:px-6">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-[hsl(270,80%,75%)] to-[hsl(217,91%,70%)] bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-[hsl(270,80%,75%)] to-[hsl(217,91%,70%)] bg-clip-text text-transparent pb-1 tracking-tight">
               {language === "pt" ? "Sobre nós" : "About Us"}
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/80 mb-8 leading-relaxed">
@@ -186,7 +186,7 @@ export default function AboutPage() {
 
             {/* Content */}
             <div className="order-2 lg:order-1 text-center lg:text-left">
-            <h2 className="text-4xl md:text-5xl font-bold mb-2 pb-2 bg-gradient-to-r from-foreground via-[hsl(270,80%,60%)] to-[hsl(217,91%,60%)] bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-2 pb-2 bg-gradient-to-r from-foreground via-[hsl(270,80%,60%)] to-[hsl(217,91%,60%)] bg-clip-text text-transparent tracking-tight">
                 {t("about.founderRole")}
               </h2>
               <p className="text-2xl font-semibold text-foreground mb-2">
