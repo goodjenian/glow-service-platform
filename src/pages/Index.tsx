@@ -169,7 +169,7 @@ const Index = () => {
       <section className="py-16 md:py-24">
         <div className="container px-4 md:px-6">
           <div className="bg-[hsl(220,15%,8%)] rounded-3xl p-8 md:p-12 lg:p-16 text-center relative overflow-hidden border border-border/30">
-            <EntropyBackground />
+            <div className="hidden md:block"><EntropyBackground /></div>
             <div className="relative">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-[hsl(270,80%,75%)] to-[hsl(217,91%,70%)] bg-clip-text text-transparent drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)] pb-1 tracking-tight">
                 {t("cta.title")}
