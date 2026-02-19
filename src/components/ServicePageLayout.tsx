@@ -435,14 +435,14 @@ export function ServicePageLayout({
             <p className="text-lg text-white mb-8 max-w-2xl mx-auto font-semibold drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
               {t("service.ctaDesc")}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="heroOutline" size="xl" asChild>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center px-4 sm:px-0">
+              <Button variant="heroOutline" size="xl" asChild className="w-full sm:w-auto text-base sm:text-lg">
                 <a href="https://calendly.com/business-goodyseo/30min" target="_blank" rel="noopener noreferrer">
                   {t("service.ctaButton")}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>
-              <Button variant="contact" size="xl" asChild>
+              <Button variant="contact" size="xl" asChild className="w-full sm:w-auto">
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                   {t("hero.whatsapp")}
                   <ArrowRight className="ml-2 h-5 w-5" />

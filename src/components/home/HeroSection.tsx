@@ -46,14 +46,14 @@ export function HeroSection() {
           </p>
           
           {/* CTA Buttons with Hover Effects */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: "0.6s" }}>
-            <Button variant="heroOutline" size="xl" asChild className="group">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center px-4 sm:px-0 animate-slide-up" style={{ animationDelay: "0.6s" }}>
+            <Button variant="heroOutline" size="xl" asChild className="group w-full sm:w-auto text-base sm:text-lg">
               <a href="https://calendly.com/business-goodyseo/30min" target="_blank" rel="noopener noreferrer">
                 {t("hero.cta")}
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
-             <Button variant="contact" size="xl" asChild className="group">
+             <Button variant="contact" size="xl" asChild className="group w-full sm:w-auto">
                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                  {t("hero.whatsapp")}
                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -63,7 +63,7 @@ export function HeroSection() {
           
           {/* Trust Indicators */}
            <div className="mt-12 pt-8 border-t border-primary-foreground/20 animate-fade-in" style={{ animationDelay: "0.8s" }}>
-            <p className="text-sm text-primary-foreground/40 mb-4">{t("hero.trust")}</p>
+            <p className="text-sm text-white font-bold mb-4">{t("hero.trust")}</p>
            <div className="flex flex-wrap justify-center gap-6 md:gap-8">
               <div className="flex items-center gap-2">
                 <span className="text-2xl font-bold text-white">50+</span>
