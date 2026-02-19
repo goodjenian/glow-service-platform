@@ -209,7 +209,7 @@ export function ServicePageLayout({
             <p className={`${colors.accent} font-medium mb-4 tracking-wide uppercase`}>
               {subtitle}
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in bg-gradient-to-r from-white via-[hsl(270,80%,80%)] to-white bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in bg-gradient-to-r from-white via-[hsl(270,80%,80%)] to-white bg-clip-text text-transparent pb-1 tracking-tight">
               {title}
             </h1>
             <p className="text-lg md:text-xl text-white/70 mb-8 animate-slide-up">
@@ -429,7 +429,7 @@ export function ServicePageLayout({
       <section className="py-16 md:py-24">
         <div className="container px-4 md:px-6">
           <div className="bg-[hsl(220,15%,8%)] rounded-3xl p-8 md:p-12 lg:p-16 text-center relative overflow-hidden border border-border/30">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-[hsl(270,80%,75%)] to-[hsl(217,91%,70%)] bg-clip-text text-transparent drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-[hsl(270,80%,75%)] to-[hsl(217,91%,70%)] bg-clip-text text-transparent drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)] pb-1 tracking-tight">
               {t("service.ctaTitle")}
             </h2>
             <p className="text-lg text-white mb-8 max-w-2xl mx-auto font-semibold drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
