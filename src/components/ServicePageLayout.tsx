@@ -7,7 +7,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { getWhatsAppUrl, getWhatsAppUrlPt } from "@/lib/whatsapp";
 import { ServiceFloatingIcons } from "@/components/services/ServiceFloatingIcons";
 import { ServiceFAQSection } from "@/components/services/ServiceFAQSection";
-import { Helmet } from "react-helmet-async"; // <--- MUDANÇA AQUI
+import { SeoHead } from "@/components/SeoHead";
 import type { LucideIcon } from "lucide-react";
 
 interface Feature {
@@ -179,16 +179,50 @@ export function ServicePageLayout({
     },
   ];
 
+  // Build Service schema
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": metaTitle ? metaTitle.split(" - ")[0] : title,
+    "description": metaDescription || description,
+    "provider": {
+      "@type": "MarketingAgency",
+      "name": "GoodySEO",
+      "url": "https://goodyseo.com"
+    },
+    "areaServed": "Worldwide",
+    "url": typeof window !== "undefined" ? window.location.href : "https://goodyseo.com"
+  };
+
+  // Build FAQPage schema when FAQs are present
+  const faqSchema = faqs && faqs.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  } : null;
+
+  const schemas = [serviceSchema, ...(faqSchema ? [faqSchema] : [])];
+
+  // Derive canonical path from window location
+  const canonicalPath = typeof window !== "undefined"
+    ? window.location.pathname
+    : "/";
+
   return (
     <Layout>
-      {/* ADICIONEI O HELMET AQUI */}
-      <Helmet>
-        <title>{metaTitle || `${title} | GoodySEO`}</title>
-        <meta name="description" content={metaDescription || description} />
-        <meta property="og:title" content={metaTitle || `${title} | GoodySEO`} />
-        <meta property="og:description" content={metaDescription || description} />
-        <meta property="og:url" content={window.location.href} />
-      </Helmet>
+      <SeoHead
+        title={metaTitle || `${title} | GoodySEO`}
+        description={metaDescription || description}
+        path={canonicalPath}
+        schemas={schemas}
+      />
 
       {/* Hero Section */}
       <section className={`relative ${colors.gradient} py-20 md:py-32 overflow-hidden`}>

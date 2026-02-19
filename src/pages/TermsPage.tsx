@@ -1,17 +1,18 @@
 import { Layout } from "@/components/layout/Layout";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { usePageMeta } from "@/hooks/usePageMeta";
+import { SeoHead } from "@/components/SeoHead";
 
 export default function TermsPage() {
   const { language } = useLanguage();
 
-  usePageMeta(
-    language === "pt" ? "Termos de Serviço | GoodySEO" : "Terms of Service | GoodySEO",
-    language === "pt" ? "Consulte os termos de serviço da GoodySEO para entender as condições de uso dos nossos serviços de marketing digital." : "Review GoodySEO's terms of service to understand the conditions for using our digital marketing services."
-  );
+  const metaTitle = language === "pt" ? "Termos de Serviço | GoodySEO" : "Terms of Service | GoodySEO";
+  const metaDescription = language === "pt"
+    ? "Consulte os termos de serviço da GoodySEO para entender as condições de uso dos nossos serviços de marketing digital."
+    : "Review GoodySEO's terms of service to understand the conditions for using our digital marketing services.";
 
   return (
     <Layout>
+      <SeoHead title={metaTitle} description={metaDescription} path="/terms" />
       <div className="min-h-screen bg-background py-16 md:py-24">
         <div className="container px-4 md:px-6 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-8">
