@@ -30,8 +30,8 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Hero
     "hero.badge": "Boutique Marketing Agency",
-     "hero.title1": "Automations That",
-     "hero.title2": "Drive Growth",
+     "hero.title1": "Digital Solutions,",
+     "hero.title2": "Organic Strategy & Automation",
     "hero.description": "Goody SEO is a digital marketing agency focused on organic strategy and artificial intelligence to boost your online presence.",
     "hero.cta": "Book a Free Consultation",
     "hero.whatsapp": "Get in Touch",
@@ -497,8 +497,8 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Hero
     "hero.badge": "Agência boutique de marketing",
-     "hero.title1": "Automações que",
-     "hero.title2": "impulsionam o crescimento",
+     "hero.title1": "Soluções digitais,",
+     "hero.title2": "estratégia orgânica e automação",
     "hero.description": "A Goody SEO é uma agência de marketing digital com foco em estratégia orgânica e inteligência artificial para impulsionar sua presença online.",
     "hero.cta": "Agende uma consulta gratuita",
     "hero.whatsapp": "Entre em contato",

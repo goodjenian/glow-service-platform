@@ -89,10 +89,10 @@
    }, []);
  
    return (
-     <canvas
-       ref={canvasRef}
-       className={`absolute inset-0 w-full h-full pointer-events-none ${className}`}
-       style={{ opacity: 0.8 }}
-     />
+      <canvas
+        ref={canvasRef}
+        className={`absolute inset-0 w-full h-full pointer-events-none hidden md:block ${className}`}
+        style={{ opacity: 0.8 }}
+      />
    );
  }
