@@ -29,14 +29,14 @@ export default function TermsPage() {
                 <section>
                   <h2 className="text-2xl font-bold mb-4">1. Aceitação dos Termos</h2>
                   <p className="text-muted-foreground">
-                    Ao acessar e usar os serviços da Goody SEO ("Empresa", "nós", "nosso"), você concorda em estar vinculado a estes Termos de Serviço. Se você não concordar com qualquer parte destes termos, não poderá acessar nossos serviços.
+                    Ao acessar e usar os serviços da GoodySEO ("Empresa", "nós", "nosso"), você concorda em estar vinculado a estes Termos de Serviço. Se você não concordar com qualquer parte destes termos, não poderá acessar nossos serviços.
                   </p>
                 </section>
 
                 <section>
                   <h2 className="text-2xl font-bold mb-4">2. Descrição dos Serviços</h2>
                   <p className="text-muted-foreground">
-                    A Goody SEO fornece serviços de marketing digital, incluindo mas não limitados a:
+                    A GoodySEO fornece serviços de marketing digital, incluindo mas não limitados a:
                   </p>
                   <ul className="list-disc pl-6 text-muted-foreground space-y-2 mt-4">
                     <li>Otimização para Mecanismos de Busca (SEO)</li>
@@ -72,7 +72,7 @@ export default function TermsPage() {
                 <section>
                   <h2 className="text-2xl font-bold mb-4">5. Propriedade Intelectual</h2>
                   <p className="text-muted-foreground">
-                    Todo o conteúdo, estratégias e materiais criados durante a prestação de serviços serão de propriedade do cliente após o pagamento integral. A Goody SEO mantém o direito de usar trabalhos como referência de portfólio, a menos que acordado de outra forma.
+                    Todo o conteúdo, estratégias e materiais criados durante a prestação de serviços serão de propriedade do cliente após o pagamento integral. A GoodySEO mantém o direito de usar trabalhos como referência de portfólio, a menos que acordado de outra forma.
                   </p>
                 </section>
 
@@ -93,7 +93,7 @@ export default function TermsPage() {
                 <section>
                   <h2 className="text-2xl font-bold mb-4">8. Limitação de Responsabilidade</h2>
                   <p className="text-muted-foreground">
-                    A Goody SEO não garante resultados específicos de classificação ou tráfego, pois os algoritmos de mecanismos de busca estão fora de nosso controle. Trabalhamos diligentemente para melhorar sua presença online usando as melhores práticas da indústria.
+                    A GoodySEO não garante resultados específicos de classificação ou tráfego, pois os algoritmos de mecanismos de busca estão fora de nosso controle. Trabalhamos diligentemente para melhorar sua presença online usando as melhores práticas da indústria.
                   </p>
                 </section>
 
@@ -123,14 +123,14 @@ export default function TermsPage() {
                 <section>
                   <h2 className="text-2xl font-bold mb-4">1. Acceptance of Terms</h2>
                   <p className="text-muted-foreground">
-                    By accessing and using Goody SEO's services ("Company", "we", "our"), you agree to be bound by these Terms of Service. If you do not agree to any part of these terms, you may not access our services.
+                    By accessing and using GoodySEO's services ("Company", "we", "our"), you agree to be bound by these Terms of Service. If you do not agree to any part of these terms, you may not access our services.
                   </p>
                 </section>
 
                 <section>
                   <h2 className="text-2xl font-bold mb-4">2. Description of Services</h2>
                   <p className="text-muted-foreground">
-                    Goody SEO provides digital marketing services, including but not limited to:
+                    GoodySEO provides digital marketing services, including but not limited to:
                   </p>
                   <ul className="list-disc pl-6 text-muted-foreground space-y-2 mt-4">
                     <li>Search Engine Optimization (SEO)</li>
@@ -166,7 +166,7 @@ export default function TermsPage() {
                 <section>
                   <h2 className="text-2xl font-bold mb-4">5. Intellectual Property</h2>
                   <p className="text-muted-foreground">
-                    All content, strategies, and materials created during service delivery shall become the property of the client upon full payment. Goody SEO retains the right to use work as portfolio reference unless otherwise agreed.
+                    All content, strategies, and materials created during service delivery shall become the property of the client upon full payment. GoodySEO retains the right to use work as portfolio reference unless otherwise agreed.
                   </p>
                 </section>
 
@@ -187,7 +187,7 @@ export default function TermsPage() {
                 <section>
                   <h2 className="text-2xl font-bold mb-4">8. Limitation of Liability</h2>
                   <p className="text-muted-foreground">
-                    Goody SEO does not guarantee specific ranking or traffic results, as search engine algorithms are beyond our control. We work diligently to improve your online presence using industry best practices.
+                    GoodySEO does not guarantee specific ranking or traffic results, as search engine algorithms are beyond our control. We work diligently to improve your online presence using industry best practices.
                   </p>
                 </section>
 

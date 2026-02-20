@@ -32,7 +32,7 @@ const translations: Record<Language, Record<string, string>> = {
     "hero.badge": "Boutique Marketing Agency",
      "hero.title1": "Digital Solutions,",
      "hero.title2": "Organic Strategy & Automation",
-    "hero.description": "Goody SEO is a digital marketing agency focused on organic strategy and artificial intelligence to boost your online presence.",
+    "hero.description": "GoodySEO is a digital marketing agency focused on organic strategy and artificial intelligence to boost your online presence.",
     "hero.cta": "Book a Free Consultation",
     "hero.whatsapp": "Get in Touch",
     "hero.trust": "Trusted by growing businesses worldwide",
@@ -57,7 +57,7 @@ const translations: Record<Language, Record<string, string>> = {
     "services.learnMore": "Learn more",
 
     // Why Partner
-    "partner.title": "Why Partner with Goody SEO?",
+    "partner.title": "Why Partner with GoodySEO?",
     "partner.desc": "We leverage cutting-edge automation and AI workflows to accelerate your growth. Our systems handle repetitive tasks while our team focuses on strategic optimization that delivers measurable results.",
     "partner.tailored": "Tailored Strategies",
     "partner.tailoredDesc": "Custom automation solutions built for your specific business goals",
@@ -69,7 +69,7 @@ const translations: Record<Language, Record<string, string>> = {
     "partner.provenDesc": "Consistent results powered by intelligent workflows",
 
     // Why Choose (Galactic Fed style)
-    "whyChoose.title": "Why Choose Goody SEO?",
+    "whyChoose.title": "Why Choose GoodySEO?",
     "whyChoose.subtitle": "Get 5x the value of a traditional agency for half the cost. Your one-stop-shop for affordable marketing growth.",
     "whyChoose.cta": "Talk to an Expert",
     "whyChoose.proven.title": "Proven Expertise",
@@ -107,7 +107,7 @@ const translations: Record<Language, Record<string, string>> = {
     // FAQ
     "faq.title": "Questions?",
     "faq.titleHighlight": "Answers.",
-    "faq.home.q1": "How is Goody SEO different from other marketing agencies?",
+    "faq.home.q1": "How is GoodySEO different from other marketing agencies?",
     "faq.home.a1": "Unlike traditional agencies, we combine deep SEO expertise with cutting-edge automation. Our workflows handle repetitive tasks 24/7, delivering faster results at lower costs. We focus on measurable ROI, not vanity metrics.",
     "faq.home.q2": "Why should I hire an agency instead of an in-house marketing team?",
     "faq.home.a2": "An agency gives you access to specialized expertise across SEO, automation, and AI without the overhead of full-time salaries. Our automation systems work around the clock, and you only pay for results—not office space and benefits.",
@@ -169,7 +169,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Service Pages
     "service.whatWeDeliver": "What We Deliver",
     "service.whatWeDeliverDesc": "Comprehensive solutions tailored to your business needs",
-    "service.whyChoose": "Why Choose Goody SEO?",
+    "service.whyChoose": "Why Choose GoodySEO?",
     "service.whyChooseDesc": "We're a boutique agency that treats every client like a priority, not just another account. Our personalized approach delivers measurable results.",
     "service.related": "Related Services",
     "service.relatedDesc": "Explore our other services that complement this offering",
@@ -499,7 +499,7 @@ const translations: Record<Language, Record<string, string>> = {
     "hero.badge": "Agência boutique de marketing",
      "hero.title1": "Soluções digitais,",
      "hero.title2": "estratégia orgânica e automação",
-    "hero.description": "A Goody SEO é uma agência de marketing digital com foco em estratégia orgânica e inteligência artificial para impulsionar sua presença online.",
+    "hero.description": "A GoodySEO é uma agência de marketing digital com foco em estratégia orgânica e inteligência artificial para impulsionar sua presença online.",
     "hero.cta": "Agende uma consulta gratuita",
     "hero.whatsapp": "Entre em contato",
     "hero.trust": "Confiada por empresas em crescimento no mundo todo",
@@ -524,7 +524,7 @@ const translations: Record<Language, Record<string, string>> = {
     "services.learnMore": "Saiba mais",
 
     // Why Partner
-    "partner.title": "Por que ser parceiro da Goody SEO?",
+    "partner.title": "Por que ser parceiro da GoodySEO?",
     "partner.desc": "Utilizamos automação de ponta e workflows de IA para acelerar seu crescimento. Nossos sistemas lidam com tarefas repetitivas enquanto nossa equipe foca na otimização estratégica que entrega resultados mensuráveis.",
     "partner.tailored": "Estratégias personalizadas",
     "partner.tailoredDesc": "Soluções de automação customizadas para seus objetivos específicos de negócio",
@@ -536,7 +536,7 @@ const translations: Record<Language, Record<string, string>> = {
     "partner.provenDesc": "Resultados consistentes alimentados por workflows inteligentes",
 
     // Why Choose (Galactic Fed style)
-    "whyChoose.title": "Por que escolher a Goody SEO?",
+    "whyChoose.title": "Por que escolher a GoodySEO?",
     "whyChoose.subtitle": "Obtenha 5x o valor de uma agência tradicional pela metade do custo. Sua solução completa para crescimento de marketing acessível.",
     "whyChoose.cta": "Fale com um especialista",
     "whyChoose.proven.title": "Expertise comprovada",
@@ -574,7 +574,7 @@ const translations: Record<Language, Record<string, string>> = {
     // FAQ
     "faq.title": "Perguntas?",
     "faq.titleHighlight": "Respostas.",
-    "faq.home.q1": "Como a Goody SEO é diferente de outras agências de marketing?",
+    "faq.home.q1": "Como a GoodySEO é diferente de outras agências de marketing?",
     "faq.home.a1": "Diferente de agências tradicionais, combinamos expertise profunda em SEO com automação de ponta. Nossos workflows lidam com tarefas repetitivas 24/7, entregando resultados mais rápidos a custos menores. Focamos em ROI mensurável, não métricas de vaidade.",
     "faq.home.q2": "Por que devo contratar uma agência ao invés de um time de marketing interno?",
     "faq.home.a2": "Uma agência dá acesso a expertise especializada em SEO, automação e IA sem o custo de salários em tempo integral. Nossos sistemas de automação trabalham 24 horas, e você paga apenas por resultados—não por espaço de escritório e benefícios.",
@@ -636,7 +636,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Service Pages
     "service.whatWeDeliver": "O que entregamos",
     "service.whatWeDeliverDesc": "Soluções completas adaptadas às necessidades do seu negócio",
-    "service.whyChoose": "Por que escolher a Goody SEO?",
+    "service.whyChoose": "Por que escolher a GoodySEO?",
     "service.whyChooseDesc": "Somos uma agência boutique que trata cada cliente como prioridade, não apenas mais uma conta. Nossa abordagem personalizada entrega resultados mensuráveis.",
     "service.related": "Serviços relacionados",
     "service.relatedDesc": "Explore nossos outros serviços que complementam esta oferta",

@@ -66,7 +66,7 @@ export function FreeAnalysisCTA() {
             <div className="relative">
               <img 
                 src={ctaIllustration} 
-                alt="Goody SEO illustration" 
+                alt="GoodySEO illustration" 
                 className="w-80 h-auto drop-shadow-2xl animate-float"
               />
               {/* Glow effect behind illustration */}
