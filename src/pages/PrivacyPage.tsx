@@ -27,16 +27,16 @@ const PrivacyPage = () => {
             {language === "pt" ? (
               <>
                 <p className="text-muted-foreground leading-relaxed mb-8">
-                  A Goody SEO respeita seu direito à privacidade e implementou medidas de segurança para seus dados pessoais, garantindo que suas informações sejam gerenciadas de acordo com as regulamentações de privacidade de dados aplicáveis. Recomendamos que você leia esta política de privacidade na íntegra para estar totalmente informado.
+                  A GoodySEO respeita seu direito à privacidade e implementou medidas de segurança para seus dados pessoais, garantindo que suas informações sejam gerenciadas de acordo com as regulamentações de privacidade de dados aplicáveis. Recomendamos que você leia esta política de privacidade na íntegra para estar totalmente informado.
                 </p>
 
                 <p className="text-muted-foreground leading-relaxed mb-8">
-                  Esta Política de Privacidade ("Política") aplica-se à coleta e uso de informações pessoalmente identificáveis ("Informações Pessoais") coletadas através do uso do site da Goody SEO ("Site"), incluindo todos os softwares, dados, relatórios, textos, imagens, sons, vídeos e conteúdos disponibilizados através de qualquer parte do site.
+                  Esta Política de Privacidade ("Política") aplica-se à coleta e uso de informações pessoalmente identificáveis ("Informações Pessoais") coletadas através do uso do site da GoodySEO ("Site"), incluindo todos os softwares, dados, relatórios, textos, imagens, sons, vídeos e conteúdos disponibilizados através de qualquer parte do site.
                 </p>
 
                 <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">Limitação de coleta</h2>
                 <p className="text-muted-foreground leading-relaxed mb-8">
-                  A Goody SEO leva sua privacidade a sério. Qualquer Informação Pessoal que você fornecer à Goody SEO é limitada àquela necessária para os fins identificados por nós. As Informações Pessoais são coletadas apenas por meios justos e legais.
+                  A GoodySEO leva sua privacidade a sério. Qualquer Informação Pessoal que você fornecer à GoodySEO é limitada àquela necessária para os fins identificados por nós. As Informações Pessoais são coletadas apenas por meios justos e legais.
                 </p>
 
                 <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">Responsabilidade</h2>
@@ -48,7 +48,7 @@ const PrivacyPage = () => {
                 
                 <h3 className="text-xl font-semibold text-foreground mt-8 mb-3">a. Consultas iniciais através do site</h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Vários tipos de Informações Pessoais podem ser solicitados para prosseguir com uma consulta à Goody SEO ou ao optar por um serviço de assinatura de e-mail. Na maioria dos casos, essas informações incluem seu nome, endereço de e-mail e/ou número de telefone. A Goody SEO pode enviar informações sobre nossos produtos e serviços por e-mail. Você pode optar por receber essas informações preenchendo um formulário de contato em nosso Site e nos dando seu consentimento.
+                  Vários tipos de Informações Pessoais podem ser solicitados para prosseguir com uma consulta à GoodySEO ou ao optar por um serviço de assinatura de e-mail. Na maioria dos casos, essas informações incluem seu nome, endereço de e-mail e/ou número de telefone. A GoodySEO pode enviar informações sobre nossos produtos e serviços por e-mail. Você pode optar por receber essas informações preenchendo um formulário de contato em nosso Site e nos dando seu consentimento.
                 </p>
 
                 <h3 className="text-xl font-semibold text-foreground mt-8 mb-3">b. Gestão de relacionamento com o cliente (CRM)</h3>
@@ -63,7 +63,7 @@ const PrivacyPage = () => {
 
                 <h3 className="text-xl font-semibold text-foreground mt-8 mb-3">d. Google Analytics</h3>
                 <p className="text-muted-foreground leading-relaxed mb-8">
-                  Através do Google Analytics, a Goody SEO pode rastrear a localização do tráfego do site e a fonte de navegação de nossos visitantes, bem como o tempo total gasto no Site. Endereços IP, URLs visitadas e informações relacionadas são registrados para todos os visitantes do site para fins de análise de tráfego. Essas informações são usadas para entender nosso público e melhorar nossa experiência de usuário online.
+                  Através do Google Analytics, a GoodySEO pode rastrear a localização do tráfego do site e a fonte de navegação de nossos visitantes, bem como o tempo total gasto no Site. Endereços IP, URLs visitadas e informações relacionadas são registrados para todos os visitantes do site para fins de análise de tráfego. Essas informações são usadas para entender nosso público e melhorar nossa experiência de usuário online.
                 </p>
 
                 <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">Identificação de propósito</h2>
@@ -87,7 +87,7 @@ const PrivacyPage = () => {
 
                 <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">Transparência</h2>
                 <p className="text-muted-foreground leading-relaxed mb-8">
-                  Mediante solicitação, a Goody SEO fornecerá uma explicação de sua Política com relação à gestão de Informações Pessoais. Você pode nos contatar com quaisquer consultas ou reclamações ou se precisar de mais informações.
+                  Mediante solicitação, a GoodySEO fornecerá uma explicação de sua Política com relação à gestão de Informações Pessoais. Você pode nos contatar com quaisquer consultas ou reclamações ou se precisar de mais informações.
                 </p>
 
                 <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">Acesso individual</h2>
@@ -110,26 +110,26 @@ const PrivacyPage = () => {
                   Se a qualquer momento você tiver dúvidas sobre nossa Política ou nosso acesso e uso de Informações Pessoais, ou se desejar retirar seu nome de qualquer uma de nossas listas de e-mail, não hesite em nos contatar.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  A Goody SEO agradece quaisquer perguntas, comentários ou consultas. Você pode nos contatar sobre suas questões ou preocupações específicas de privacidade em: <a href="mailto:business@goodyseo.com" className="text-accent hover:underline">business@goodyseo.com</a>
+                  A GoodySEO agradece quaisquer perguntas, comentários ou consultas. Você pode nos contatar sobre suas questões ou preocupações específicas de privacidade em: <a href="mailto:business@goodyseo.com" className="text-accent hover:underline">business@goodyseo.com</a>
                 </p>
 
                 <p className="text-sm text-muted-foreground mt-12 pt-8 border-t border-border">
-                  © {new Date().getFullYear()} Goody SEO. Todos os direitos reservados.
+                  © {new Date().getFullYear()} GoodySEO. Todos os direitos reservados.
                 </p>
               </>
             ) : (
               <>
                 <p className="text-muted-foreground leading-relaxed mb-8">
-                  Goody SEO respects your right to privacy, and we have put in place security measures for your personal data, along with ensuring that your personal data is managed in accordance with applicable data privacy regulations. We recommend that you read this privacy policy in full to ensure you are fully informed.
+                  GoodySEO respects your right to privacy, and we have put in place security measures for your personal data, along with ensuring that your personal data is managed in accordance with applicable data privacy regulations. We recommend that you read this privacy policy in full to ensure you are fully informed.
                 </p>
 
                 <p className="text-muted-foreground leading-relaxed mb-8">
-                  This Privacy Policy (the "Policy") applies to the collection and use of personally identifiable information (the 'Personal Information') gathered through the use of the Goody SEO website (the "Website"), including all software, data, reports, text, images, sounds, video, and content made available through any portion of the website.
+                  This Privacy Policy (the "Policy") applies to the collection and use of personally identifiable information (the 'Personal Information') gathered through the use of the GoodySEO website (the "Website"), including all software, data, reports, text, images, sounds, video, and content made available through any portion of the website.
                 </p>
 
                 <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">Limiting Collection</h2>
                 <p className="text-muted-foreground leading-relaxed mb-8">
-                  Goody SEO takes your privacy seriously. Any Personal Information that you provide to Goody SEO is limited to that which is needed for the purposes identified by us. Personal Information is collected by fair and lawful means only.
+                  GoodySEO takes your privacy seriously. Any Personal Information that you provide to GoodySEO is limited to that which is needed for the purposes identified by us. Personal Information is collected by fair and lawful means only.
                 </p>
 
                 <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">Accountability</h2>
@@ -141,7 +141,7 @@ const PrivacyPage = () => {
                 
                 <h3 className="text-xl font-semibold text-foreground mt-8 mb-3">a. Initial inquiries through the Website</h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Various types of Personal Information may be required from you in order to proceed with an inquiry with Goody SEO or when opting in to an email subscription service. In most cases, this Personal Information includes your name, e-mail address and/or telephone number. Goody SEO may send you information regarding our products and services through e-mail. You may choose to receive this information by filling out a contact form on our Website and giving us your consent.
+                  Various types of Personal Information may be required from you in order to proceed with an inquiry with GoodySEO or when opting in to an email subscription service. In most cases, this Personal Information includes your name, e-mail address and/or telephone number. GoodySEO may send you information regarding our products and services through e-mail. You may choose to receive this information by filling out a contact form on our Website and giving us your consent.
                 </p>
 
                 <h3 className="text-xl font-semibold text-foreground mt-8 mb-3">b. Customer Relationship Management (CRM)</h3>
@@ -156,7 +156,7 @@ const PrivacyPage = () => {
 
                 <h3 className="text-xl font-semibold text-foreground mt-8 mb-3">d. Google Analytics</h3>
                 <p className="text-muted-foreground leading-relaxed mb-8">
-                  Through Google Analytics, Goody SEO can track the location of website traffic and the source of our visitors browsing, as well as the total time spent on the Website. IP addresses, URLs visited, and related information is recorded for all site visitors for the purpose of site traffic analytics. This information is used to understand our audiences and improve our online user experience.
+                  Through Google Analytics, GoodySEO can track the location of website traffic and the source of our visitors browsing, as well as the total time spent on the Website. IP addresses, URLs visited, and related information is recorded for all site visitors for the purpose of site traffic analytics. This information is used to understand our audiences and improve our online user experience.
                 </p>
 
                 <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">Identifying Purpose</h2>
@@ -180,7 +180,7 @@ const PrivacyPage = () => {
 
                 <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">Openness</h2>
                 <p className="text-muted-foreground leading-relaxed mb-8">
-                  Upon request, Goody SEO will provide an explanation of its Policy with respect to the management of Personal Information. You can contact us with any inquiries or complaints or if you require further information.
+                  Upon request, GoodySEO will provide an explanation of its Policy with respect to the management of Personal Information. You can contact us with any inquiries or complaints or if you require further information.
                 </p>
 
                 <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">Individual Access</h2>
@@ -200,14 +200,14 @@ const PrivacyPage = () => {
 
                 <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">Contact Us</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  If at any time you have any questions regarding our Policy or our access and use of Personal Information, or if you wish to withdraw your name from any of our mailing lists, do not hesitate to contact us.
+                  If at any time you have questions about our Policy or our access to and use of your Personal Information, or if you wish to withdraw your name from any of our email lists, please do not hesitate to contact us.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Goody SEO welcomes any questions, comments or inquiries. You may contact us regarding your specific privacy questions or concerns at: <a href="mailto:business@goodyseo.com" className="text-accent hover:underline">business@goodyseo.com</a>
+                  GoodySEO welcomes any questions, comments or inquiries. You may contact us regarding your specific privacy questions or concerns at: <a href="mailto:business@goodyseo.com" className="text-accent hover:underline">business@goodyseo.com</a>
                 </p>
 
                 <p className="text-sm text-muted-foreground mt-12 pt-8 border-t border-border">
-                  © {new Date().getFullYear()} Goody SEO. All rights reserved.
+                  © {new Date().getFullYear()} GoodySEO. All rights reserved.
                 </p>
               </>
             )}

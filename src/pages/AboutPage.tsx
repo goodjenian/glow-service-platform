@@ -49,7 +49,7 @@ export default function AboutPage() {
     },
     {
       year: "2024",
-      title: language === "pt" ? "Fundação da Goody SEO" : "Goody SEO Founded",
+      title: language === "pt" ? "Fundação da GoodySEO" : "GoodySEO Founded",
       description: language === "pt"
         ? "Início da jornada empreendedora com a abertura da consultoria de SEO. Primeiro cliente conquistado através de networking estratégico."
         : "Beginning of the entrepreneurial journey with the SEO consultancy opening. First client acquired through strategic networking.",

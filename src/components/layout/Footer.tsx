@@ -20,9 +20,9 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start gap-8">
           {/* Brand */}
           <div className="max-w-xs">
-            <Link to="/" className="flex items-center gap-3 mb-3" aria-label="Goody SEO Home">
+            <Link to="/" className="flex items-center gap-3 mb-3" aria-label="GoodySEO Home">
               <img src={logoDark} alt="" className="h-8 w-8 brightness-0 invert" aria-hidden="true" />
-              <span className="text-lg font-bold">Goody SEO</span>
+              <span className="text-lg font-bold">GoodySEO</span>
             </Link>
             <p className="text-primary-foreground/70 text-sm">
               {t("footer.desc")}
@@ -115,7 +115,7 @@ export function Footer() {
 
         <div className="border-t border-primary-foreground/10 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
           <p className="text-primary-foreground/50">
-            © {new Date().getFullYear()} Goody SEO. {t("footer.rights")}
+            © {new Date().getFullYear()} GoodySEO. {t("footer.rights")}
           </p>
         </div>
       </div>

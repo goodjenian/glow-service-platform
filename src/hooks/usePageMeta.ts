@@ -13,7 +13,7 @@ export function usePageMeta(title: string, description: string) {
     metaDesc.setAttribute("content", description);
 
     return () => {
-      document.title = "Goody SEO | Boutique Marketing Agency";
+      document.title = "GoodySEO | Boutique Marketing Agency";
     };
   }, [title, description]);
 }
