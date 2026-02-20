@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Globe, Briefcase, GraduationCap, Rocket, Users, Star, Target } from "lucide-react";
 import { getWhatsAppUrl, getWhatsAppUrlPt } from "@/lib/whatsapp";
 import caiquePhoto from "@/assets/caique-gudjenian.png";
+import troPhoto from "@/assets/tro-kalaydjian.webp";
+import caioPhoto from "@/assets/caio-gudjenian.webp";
 
 // Schema: Person (founder)
 const founderSchema = {
@@ -255,65 +257,96 @@ export default function AboutPage() {
       <section className="py-16 md:py-24 bg-muted/40 relative overflow-hidden">
         <div className="container px-4 md:px-6 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">{t("about.teamTitle")}</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 pb-2 bg-gradient-to-r from-foreground via-[hsl(270,80%,60%)] to-[hsl(217,91%,60%)] bg-clip-text text-transparent tracking-tight">
+              {t("about.teamTitle")}
+            </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               {t("about.teamDesc")}
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-card rounded-3xl p-8 border border-border/50 text-center hover:border-blue-500/30 transition-all hover:-translate-y-2 hover:shadow-2xl animate-fade-in group">
-              <div className="w-24 h-24 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                <span className="text-5xl">🎯</span>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Trô Armen Kalaydjian */}
+            <div className="bg-card rounded-3xl p-8 border border-border/50 hover:border-accent/40 transition-all hover:-translate-y-2 hover:shadow-2xl animate-fade-in group">
+              <div className="flex flex-col items-center text-center">
+                <div className="relative mb-6">
+                  <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-accent/30 shadow-xl transition-transform duration-500 group-hover:scale-105 group-hover:rotate-1">
+                    <img
+                      src={troPhoto}
+                      alt="Trô Armen Kalaydjian - Software Architecture Specialist"
+                      className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
+                    />
+                  </div>
+                  <div className="absolute -bottom-3 -right-3 bg-card rounded-xl px-3 py-1.5 shadow-lg border border-border text-center">
+                    <div className="text-lg font-bold text-accent">3+</div>
+                    <div className="text-xs text-muted-foreground leading-tight">
+                      {language === "pt" ? "anos exp." : "yrs exp."}
+                    </div>
+                  </div>
+                </div>
+                <h3 className="font-bold text-foreground text-xl mb-1">Trô Armen Kalaydjian</h3>
+                <p className="text-accent font-semibold text-sm mb-4">
+                  {language === "pt" ? "Especialista em Arquitetura de Software" : "Software Architecture Specialist"}
+                </p>
+                <p className="text-muted-foreground text-sm mb-6">
+                  {language === "pt"
+                    ? "Responsável por construir o backend seguro e escalável que sustenta as operações digitais, garantindo que integrações e automações complexas funcionem perfeitamente."
+                    : "Responsible for building the secure, scalable backend that underpins digital operations, ensuring complex integrations and automations run flawlessly."
+                  }
+                </p>
+                <div className="bg-muted/60 rounded-2xl p-4 w-full border border-border/40">
+                  <div className="flex items-center gap-2 mb-3">
+                    <GraduationCap className="h-4 w-4 text-accent flex-shrink-0" />
+                    <span className="text-xs font-semibold text-foreground/70 uppercase tracking-wide">
+                      {language === "pt" ? "Formação" : "Education"}
+                    </span>
+                  </div>
+                  <p className="text-accent text-sm font-medium">Computer Science Technician</p>
+                  <p className="text-muted-foreground text-xs">IFSP</p>
+                </div>
               </div>
-              <h3 className="font-bold text-foreground text-xl mb-3">{t("about.team1Role")}</h3>
-              <p className="text-muted-foreground">{t("about.team1Desc")}</p>
             </div>
-            <div className="bg-card rounded-3xl p-8 border border-border/50 text-center hover:border-emerald-500/30 transition-all hover:-translate-y-2 hover:shadow-2xl animate-fade-in group" style={{ animationDelay: "150ms" }}>
-              <div className="w-24 h-24 bg-emerald-500/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                <span className="text-5xl">🤖</span>
-              </div>
-              <h3 className="font-bold text-foreground text-xl mb-3">{t("about.team2Role")}</h3>
-              <p className="text-muted-foreground">{t("about.team2Desc")}</p>
-            </div>
-            <div className="bg-card rounded-3xl p-8 border border-border/50 text-center hover:border-rose-500/30 transition-all hover:-translate-y-2 hover:shadow-2xl animate-fade-in group" style={{ animationDelay: "300ms" }}>
-              <div className="w-24 h-24 bg-rose-500/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                <span className="text-5xl">🎨</span>
-              </div>
-              <h3 className="font-bold text-foreground text-xl mb-3">{t("about.team3Role")}</h3>
-              <p className="text-muted-foreground">{t("about.team3Desc")}</p>
-            </div>
-          </div>
 
-          <div className="mt-16 max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
-            <div className="bg-card rounded-2xl p-6 border border-border/50">
-              <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
-                ⚡ {t("about.skills")}
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="bg-muted text-foreground/90 px-4 py-2 rounded-full text-sm font-medium hover:bg-muted/70 transition-colors"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div className="bg-card rounded-2xl p-6 border border-border/50">
-              <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
-                🌍 {t("about.languages")}
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {languages.map((lang) => (
-                  <span
-                    key={lang}
-                    className="bg-purple-500/10 text-purple-600 dark:text-purple-300 px-4 py-2 rounded-full text-sm font-medium hover:bg-purple-500/20 transition-colors"
-                  >
-                    {lang}
-                  </span>
-                ))}
+            {/* Caio Gudjenian */}
+            <div className="bg-card rounded-3xl p-8 border border-border/50 hover:border-accent/40 transition-all hover:-translate-y-2 hover:shadow-2xl animate-fade-in group" style={{ animationDelay: "150ms" }}>
+              <div className="flex flex-col items-center text-center">
+                <div className="relative mb-6">
+                  <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-accent/30 shadow-xl transition-transform duration-500 group-hover:scale-105 group-hover:rotate-1">
+                    <img
+                      src={caioPhoto}
+                      alt="Caio Gudjenian - Social Media Specialist"
+                      className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
+                    />
+                  </div>
+                  <div className="absolute -bottom-3 -right-3 bg-card rounded-xl px-3 py-1.5 shadow-lg border border-border text-center">
+                    <div className="text-lg font-bold text-accent">5+</div>
+                    <div className="text-xs text-muted-foreground leading-tight">
+                      {language === "pt" ? "anos exp." : "yrs exp."}
+                    </div>
+                  </div>
+                </div>
+                <h3 className="font-bold text-foreground text-xl mb-1">Caio Gudjenian</h3>
+                <p className="text-accent font-semibold text-sm mb-4">
+                  {language === "pt" ? "Especialista em Social Media" : "Social Media Specialist"}
+                </p>
+                <p className="text-muted-foreground text-sm mb-6">
+                  {language === "pt"
+                    ? "Responsável pela estratégia inspiradora de redes sociais, construindo e fortalecendo o reconhecimento da marca e a conexão com a comunidade."
+                    : "Responsible for inspiring social media strategy, building and strengthening brand awareness and connection with the community."
+                  }
+                </p>
+                <div className="bg-muted/60 rounded-2xl p-4 w-full border border-border/40">
+                  <div className="flex items-center gap-2 mb-3">
+                    <GraduationCap className="h-4 w-4 text-accent flex-shrink-0" />
+                    <span className="text-xs font-semibold text-foreground/70 uppercase tracking-wide">
+                      {language === "pt" ? "Formação" : "Education"}
+                    </span>
+                  </div>
+                  <p className="text-accent text-sm font-medium">Marketing</p>
+                  <p className="text-muted-foreground text-xs mb-2">Anhembi Morumbi</p>
+                  <p className="text-accent text-sm font-medium">Growth Hacking</p>
+                  <p className="text-muted-foreground text-xs">ESPM</p>
+                </div>
               </div>
             </div>
           </div>
