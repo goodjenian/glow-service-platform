@@ -137,43 +137,45 @@ export default function AboutPage() {
           </div>
 
           {/* Timeline */}
-          <div className="relative max-w-4xl mx-auto">
-            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-500 via-emerald-500 to-amber-500 transform -translate-x-1/2 hidden md:block" />
-            
-            {timeline.map((item, index) => (
-              <div 
-                key={index}
-                className={`relative flex items-center mb-12 md:mb-16 ${
-                  index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                }`}
-              >
-                <div className={`w-full md:w-5/12 ${index % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12 md:text-left"}`}>
-                  <div 
-                    className="bg-card rounded-2xl p-6 border border-border/50 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fade-in"
-                    style={{ animationDelay: `${index * 150}ms` }}
-                  >
-                    <div className={`flex items-center gap-3 mb-3 ${index % 2 === 0 ? "md:justify-end" : "md:justify-start"}`}>
-                      <div className={`${item.color} rounded-xl p-2`}>
-                        <item.icon className="h-5 w-5 text-white" />
+          <div className="max-w-4xl mx-auto">
+            <div className="relative">
+              <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-500 via-emerald-500 to-amber-500 transform -translate-x-1/2 hidden md:block" />
+              
+              {timeline.map((item, index) => (
+                <div 
+                  key={index}
+                  className={`relative flex items-center mb-12 md:mb-16 ${
+                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                  }`}
+                >
+                  <div className={`w-full md:w-5/12 ${index % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12 md:text-left"}`}>
+                    <div 
+                      className="bg-card rounded-2xl p-6 border border-border/50 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fade-in"
+                      style={{ animationDelay: `${index * 150}ms` }}
+                    >
+                      <div className={`flex items-center gap-3 mb-3 ${index % 2 === 0 ? "md:justify-end" : "md:justify-start"}`}>
+                        <div className={`${item.color} rounded-xl p-2`}>
+                          <item.icon className="h-5 w-5 text-white" />
+                        </div>
+                        <span className="text-2xl md:text-3xl font-bold text-accent">{item.year}</span>
                       </div>
-                      <span className="text-2xl md:text-3xl font-bold text-accent">{item.year}</span>
+                      <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                      <p className="text-muted-foreground text-sm">{item.description}</p>
                     </div>
-                    <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                    <p className="text-muted-foreground text-sm">{item.description}</p>
                   </div>
+
+                  <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-card border-4 border-accent items-center justify-center z-10">
+                    <Star className="h-3 w-3 text-accent" />
+                  </div>
+
+                  <div className="hidden md:block w-5/12" />
                 </div>
+              ))}
+            </div>
 
-                <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-card border-4 border-accent items-center justify-center z-10">
-                  <Star className="h-3 w-3 text-accent" />
-                </div>
-
-                <div className="hidden md:block w-5/12" />
-              </div>
-            ))}
-
-            <div className="text-center mt-8 relative">
-              <div className="absolute left-1/2 -translate-x-1/2 -top-8 h-8 w-0.5 bg-gradient-to-b from-amber-500 to-accent hidden md:block" />
-              <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-6 py-3 rounded-full font-semibold animate-pulse relative z-10">
+            {/* Badge below the line — outside relative container so line ends before it */}
+            <div className="text-center mt-10">
+              <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-6 py-3 rounded-full font-semibold animate-pulse">
                 <Rocket className="h-5 w-5" />
                 {language === "pt" ? "Próxima parada: Infinito e além!" : "Next stop: To Infinity & Beyond!"}
               </div>
