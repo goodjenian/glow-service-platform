@@ -171,8 +171,9 @@ export default function AboutPage() {
               </div>
             ))}
 
-            <div className="text-center mt-8">
-              <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-6 py-3 rounded-full font-semibold animate-pulse">
+            <div className="text-center mt-8 relative">
+              <div className="absolute left-1/2 -translate-x-1/2 -top-8 h-8 w-0.5 bg-gradient-to-b from-amber-500 to-accent hidden md:block" />
+              <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-6 py-3 rounded-full font-semibold animate-pulse relative z-10">
                 <Rocket className="h-5 w-5" />
                 {language === "pt" ? "Próxima parada: Infinito e além!" : "Next stop: To Infinity & Beyond!"}
               </div>
@@ -187,11 +188,11 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center lg:justify-end order-1 lg:order-2">
               <div className="relative">
-                <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-accent/30 shadow-2xl">
+              <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-accent/30 shadow-2xl transition-transform duration-500 hover:scale-105 hover:rotate-1 group">
                   <img
                     src={caiquePhoto}
                     alt="Caíque Gudjenian - Founder"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                 </div>
                 <div className="absolute -bottom-4 -right-4 bg-card rounded-2xl p-4 shadow-xl border border-border">
@@ -274,7 +275,8 @@ export default function AboutPage() {
                     <img
                       src={troPhoto}
                       alt="Trô Armen Kalaydjian - Software Architecture Specialist"
-                      className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
+                      className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
+                      style={{ objectPosition: "50% 20%" }}
                     />
                   </div>
                   <div className="absolute -bottom-3 -right-3 bg-card rounded-xl px-3 py-1.5 shadow-lg border border-border text-center">
