@@ -274,11 +274,11 @@ export default function AboutPage() {
               <div className="flex flex-col items-center text-center">
                 <div className="relative mb-6">
                   <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-accent/30 shadow-xl transition-transform duration-500 group-hover:scale-105 group-hover:rotate-1">
-                    <img
+                     <img
                       src={troPhoto}
                       alt="Trô Armen Kalaydjian - Software Architecture Specialist"
-                      className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
-                      style={{ objectPosition: "50% 20%" }}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      style={{ objectPosition: "50% 25%", transform: "scale(1.3)" }}
                     />
                   </div>
                   <div className="absolute -bottom-3 -right-3 bg-card rounded-xl px-3 py-1.5 shadow-lg border border-border text-center">
@@ -316,10 +316,11 @@ export default function AboutPage() {
               <div className="flex flex-col items-center text-center">
                 <div className="relative mb-6">
                   <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-accent/30 shadow-xl transition-transform duration-500 group-hover:scale-105 group-hover:rotate-1">
-                    <img
+                     <img
                       src={caioPhoto}
                       alt="Caio Gudjenian - Social Media Specialist"
-                      className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      style={{ objectPosition: "50% 35%", transform: "scale(1.3)" }}
                     />
                   </div>
                   <div className="absolute -bottom-3 -right-3 bg-card rounded-xl px-3 py-1.5 shadow-lg border border-border text-center">
