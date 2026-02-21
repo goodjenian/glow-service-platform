@@ -92,7 +92,7 @@ const translations: Record<Language, Record<string, string>> = {
     // CTA
     "cta.title": "Ready to Grow Your Business?",
     "cta.desc": "Let's discuss your goals and create an automation strategy that delivers real results.",
-    "cta.button": "Schedule Your Free Consultation",
+    "cta.button": "Book Free Consultation",
 
     // Reviews
     "reviews.title": "Reviews",
