@@ -47,7 +47,7 @@ export default function SEOServicesPage() {
     <ServicePageLayout
       title={t("seo.title")}
       metaTitle={language === "pt" ? "Serviços de SEO - Estratégia Orgânica Avançada | GoodySEO" : "SEO Services - Advanced Organic Strategy | GoodySEO"}
-      metaDescription={language === "pt" ? "Serviços profissionais de SEO para empresas SaaS e E-commerce. Estratégias data-driven para aumentar tráfego orgânico e conversões." : "Professional SEO services for SaaS and E-commerce. Data-driven strategies to boost organic traffic and conversions."}
+      metaDescription={language === "pt" ? "Serviços profissionais de SEO técnico, on-page e de conteúdo para empresas SaaS e E-commerce. Estratégias data-driven que aumentam tráfego orgânico e conversões de forma sustentável." : "Professional technical, on-page, and content SEO services for SaaS and E-commerce businesses. Data-driven strategies that boost organic traffic and conversions sustainably."}
       subtitle={t("seo.subtitle")}
       description={t("seo.desc")}
       icon={Search}

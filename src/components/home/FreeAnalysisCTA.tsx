@@ -10,7 +10,7 @@ export function FreeAnalysisCTA() {
   const emailUrl = `mailto:business@goodyseo.com?subject=${emailSubject}&body=${emailBody}`;
 
   return (
-    <section className="py-16 md:py-24 relative overflow-hidden bg-gradient-to-br from-white via-[hsl(217,91%,95%)] to-[hsl(270,60%,92%)]">
+    <section className="py-16 md:py-24 relative overflow-hidden bg-gradient-to-br from-[hsl(270,70%,95%)] via-[hsl(250,60%,92%)] to-[hsl(217,91%,90%)]">
       {/* Animated floating elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Stars/sparkles */}
@@ -35,7 +35,7 @@ export function FreeAnalysisCTA() {
         </div>
         
         {/* Gradient overlay for depth */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(270,60%,92%)]/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(217,91%,90%)]/30 to-transparent" />
       </div>
       
       <div className="container px-4 md:px-6 relative z-10">

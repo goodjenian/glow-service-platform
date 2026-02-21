@@ -29,7 +29,7 @@ const organizationSchema = {
   "name": "GoodySEO",
   "url": "https://goodyseo.com",
   "logo": "https://goodyseo.com/favicon-logo.png",
-  "description": "Boutique digital marketing agency specializing in SEO, AI agents, and automation for sustainable business growth.",
+  "description": "Boutique digital marketing agency offering SEO, generative search optimization, AI automation, and paid traffic strategies for sustainable business growth.",
   "email": "business@goodyseo.com",
   "areaServed": "Worldwide",
   "sameAs": [
@@ -73,8 +73,8 @@ const Index = () => {
     ? "GoodySEO | Soluções Digitais, Estratégia Orgânica & Automação"
     : "GoodySEO | Digital Solutions, Organic Strategy & Automation";
   const metaDescription = language === "pt"
-    ? "GoodySEO: agência boutique de marketing digital especializada em SEO, agentes IA e automação para crescimento sustentável do seu negócio."
-    : "GoodySEO: boutique digital marketing agency specializing in SEO, AI agents, and automation for sustainable business growth.";
+    ? "Agência boutique de marketing digital oferecendo SEO, otimização para buscas generativas, automação com IA e estratégias de tráfego pago para crescimento sustentável."
+    : "Boutique digital marketing agency offering SEO, generative search optimization, AI automation, and paid traffic strategies for sustainable business growth.";
 
   const services = [
     {

@@ -7,8 +7,8 @@ export default function TermsPage() {
 
   const metaTitle = language === "pt" ? "Termos de Serviço | GoodySEO" : "Terms of Service | GoodySEO";
   const metaDescription = language === "pt"
-    ? "Consulte os termos de serviço da GoodySEO para entender as condições de uso dos nossos serviços de marketing digital."
-    : "Review GoodySEO's terms of service to understand the conditions for using our digital marketing services.";
+    ? "Consulte nossos termos de serviço para entender as condições de uso dos serviços de marketing digital, incluindo SEO, automação e tráfego pago."
+    : "Review our terms of service to understand the conditions for using digital marketing services, including SEO, automation, and paid traffic.";
 
   return (
     <Layout>
