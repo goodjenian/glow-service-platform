@@ -34,8 +34,8 @@ export default function AboutPage() {
     ? "Sobre Nós - Agência Boutique de Marketing Digital | GoodySEO"
     : "About Us - Boutique Digital Marketing Agency | GoodySEO";
   const metaDescription = language === "pt"
-    ? "Conheça a GoodySEO: agência boutique de marketing digital com foco em SEO, IA e automação. Atendemos clientes nos EUA, Brasil e Europa."
-    : "Meet GoodySEO: a boutique digital marketing agency focused on SEO, AI, and automation. Serving clients in the US, Brazil, and Europe.";
+    ? "Agência boutique de marketing digital com foco em SEO, inteligência artificial e automação. Atendendo clientes nos EUA, Brasil e Europa com estratégias personalizadas."
+    : "Boutique digital marketing agency focused on SEO, artificial intelligence, and automation. Serving clients across the US, Brazil, and Europe with tailored growth strategies.";
 
   const timeline = [
     {

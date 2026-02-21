@@ -47,7 +47,7 @@ export default function PaidTrafficPage() {
     <ServicePageLayout
       title={t("paidTraffic.title")}
       metaTitle={language === "pt" ? "Tráfego Pago - Google Ads & Meta Ads | GoodySEO" : "Paid Traffic - Google Ads & Meta Ads Management | GoodySEO"}
-      metaDescription={language === "pt" ? "Gestão profissional de tráfego pago com Google Ads e Meta Ads. Maximize seu ROI com campanhas otimizadas por dados." : "Professional paid traffic management with Google Ads and Meta Ads. Maximize your ROI with data-optimized campaigns."}
+      metaDescription={language === "pt" ? "Gestão profissional de tráfego pago com Google Ads, Meta Ads e LinkedIn. Maximize seu ROI com campanhas otimizadas por dados e segmentação avançada de audiência." : "Professional paid traffic management with Google Ads, Meta Ads, and LinkedIn. Maximize your ROI with data-optimized campaigns and advanced audience targeting."}
       subtitle={t("paidTraffic.subtitle")}
       description={t("paidTraffic.desc")}
       icon={Target}

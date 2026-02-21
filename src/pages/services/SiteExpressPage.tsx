@@ -124,7 +124,7 @@ export default function SiteExpressPage() {
     <ServicePageLayout
       title={t("siteExpress.title")}
       metaTitle={language === "pt" ? "Site Express - Criação Rápida de Sites & Apps | GoodySEO" : "Site Express - Fast Website & App Development | GoodySEO"}
-      metaDescription={language === "pt" ? "Criação rápida de sites profissionais com possibilidade de expansão para apps mobile iOS e Android. Desenvolvimento ágil com a GoodySEO." : "Fast professional website creation with optional mobile app expansion for iOS and Android. Agile development by GoodySEO."}
+      metaDescription={language === "pt" ? "Criação rápida de sites profissionais e responsivos com expansão opcional para apps mobile iOS e Android. Desenvolvimento ágil com entrega em dias, não meses." : "Fast professional website creation with responsive design and optional mobile app expansion for iOS and Android. Agile development delivered in days, not months."}
       subtitle={t("siteExpress.subtitle")}
       description={t("siteExpress.desc")}
       icon={Zap}

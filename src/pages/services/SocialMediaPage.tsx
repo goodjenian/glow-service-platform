@@ -47,7 +47,7 @@ export default function SocialMediaPage() {
     <ServicePageLayout
       title={t("socialMedia.title")}
       metaTitle={language === "pt" ? "Social Media - Gestão de Redes Sociais | GoodySEO" : "Social Media Management & Content Strategy | GoodySEO"}
-      metaDescription={language === "pt" ? "Gestão profissional de redes sociais com estratégia de conteúdo e calendário editorial. Aumente seu engajamento com a GoodySEO." : "Professional social media management with content strategy and editorial calendar. Boost engagement with GoodySEO."}
+      metaDescription={language === "pt" ? "Gestão profissional de redes sociais com estratégia de conteúdo, calendário editorial e criação de vídeos e imagens que convertem seguidores em clientes." : "Professional social media management with content strategy, editorial calendar, and video and image creation that converts followers into customers."}
       subtitle={t("socialMedia.subtitle")}
       description={t("socialMedia.desc")}
       icon={Share2}

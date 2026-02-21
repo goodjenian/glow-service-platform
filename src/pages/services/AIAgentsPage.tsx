@@ -47,7 +47,7 @@ export default function AIAgentsPage() {
     <ServicePageLayout
       title={t("aiAgents.title")}
       metaTitle={language === "pt" ? "Agentes IA & Automação com n8n | GoodySEO" : "AI Agents & n8n Automation Solutions | GoodySEO"}
-      metaDescription={language === "pt" ? "Automatize processos de marketing com agentes IA e workflows n8n. Economize tempo e escale suas operações com inteligência artificial." : "Automate marketing processes with AI agents and n8n workflows. Save time and scale operations with artificial intelligence."}
+      metaDescription={language === "pt" ? "Automatize processos de marketing com agentes IA e workflows n8n. Economize tempo, qualifique leads 24/7 e escale operações com automação inteligente." : "Automate marketing processes with AI agents and n8n workflows. Save time, qualify leads 24/7, and scale operations with intelligent automation."}
       subtitle={t("aiAgents.subtitle")}
       description={t("aiAgents.desc")}
       icon={Bot}

@@ -179,6 +179,11 @@ export function ServicePageLayout({
     },
   ];
 
+  // Derive canonical path from window location (pathname only, no query params)
+  const canonicalPath = typeof window !== "undefined"
+    ? window.location.pathname
+    : "/";
+
   // Build Service schema
   const serviceSchema = {
     "@context": "https://schema.org",
@@ -191,7 +196,7 @@ export function ServicePageLayout({
       "url": "https://goodyseo.com"
     },
     "areaServed": "Worldwide",
-    "url": typeof window !== "undefined" ? window.location.href : "https://goodyseo.com"
+    "url": `https://goodyseo.com${canonicalPath}`
   };
 
   // Build FAQPage schema when FAQs are present
@@ -209,11 +214,6 @@ export function ServicePageLayout({
   } : null;
 
   const schemas = [serviceSchema, ...(faqSchema ? [faqSchema] : [])];
-
-  // Derive canonical path from window location
-  const canonicalPath = typeof window !== "undefined"
-    ? window.location.pathname
-    : "/";
 
   return (
     <Layout>

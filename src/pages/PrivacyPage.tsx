@@ -7,8 +7,8 @@ const PrivacyPage = () => {
 
   const metaTitle = language === "pt" ? "Política de Privacidade | GoodySEO" : "Privacy Policy | GoodySEO";
   const metaDescription = language === "pt"
-    ? "Leia a política de privacidade da GoodySEO e entenda como protegemos seus dados pessoais."
-    : "Read GoodySEO's privacy policy and understand how we protect your personal data.";
+    ? "Leia nossa política de privacidade e entenda como seus dados pessoais são protegidos e gerenciados de acordo com as regulamentações aplicáveis."
+    : "Read our privacy policy and understand how your personal data is protected and managed in accordance with applicable regulations.";
 
   return (
     <Layout>

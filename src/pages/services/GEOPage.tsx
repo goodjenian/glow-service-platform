@@ -47,7 +47,7 @@ export default function GEOPage() {
     <ServicePageLayout
       title={t("geo.title")}
       metaTitle={language === "pt" ? "GEO - Otimização para Buscas Generativas e IA | GoodySEO" : "GEO - Generative Engine Optimization for AI Search | GoodySEO"}
-      metaDescription={language === "pt" ? "Otimize sua presença em buscas generativas e LLMs como ChatGPT e Gemini. Apareça nas respostas de IA com a GoodySEO." : "Optimize your visibility in generative AI search engines like ChatGPT and Gemini. Get found in AI-generated answers with GoodySEO."}
+      metaDescription={language === "pt" ? "Otimize sua presença em buscas generativas e LLMs como ChatGPT, Perplexity e Gemini. Estratégias de schema, entidades e LLM.txt para aparecer nas respostas de IA." : "Optimize your visibility in generative AI search engines like ChatGPT, Perplexity, and Gemini. Schema, entity enrichment, and LLM.txt strategies to get cited in AI-generated answers."}
       subtitle={t("geo.subtitle")}
       description={t("geo.desc")}
       icon={Sparkles}
