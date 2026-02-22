@@ -2,8 +2,13 @@
  * SeoHead – centralised per-page SEO using react-helmet-async.
  * Renders <title>, <meta description>, canonical, hreflang tags,
  * and optional JSON-LD schema blocks in a single component.
+ *
+ * `path` should always be the BASE path without /pt/ prefix
+ * (e.g. "/services/seo"). The component derives the correct
+ * canonical and hreflang URLs based on the current language.
  */
 import { Helmet } from "react-helmet-async";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const BASE_URL = "https://goodyseo.com";
 
@@ -12,10 +17,8 @@ interface SeoHeadProps {
   title: string;
   /** Meta description (≤160 chars recommended) */
   description: string;
-  /** Canonical path, e.g. "/services/seo" (default: "/") */
+  /** Base path without language prefix, e.g. "/services/seo" (default: "/") */
   path?: string;
-  /** Whether this page has a pt-BR alternate (default: true) */
-  hasPtAlternate?: boolean;
   /** Additional JSON-LD schema objects to inject as <script> blocks */
   schemas?: object[];
 }
@@ -24,11 +27,13 @@ export function SeoHead({
   title,
   description,
   path = "/",
-  hasPtAlternate = true,
   schemas = [],
 }: SeoHeadProps) {
-  const canonicalUrl = `${BASE_URL}${path}`;
-  const ptUrl = `${BASE_URL}${path}?lang=pt`;
+  const { language } = useLanguage();
+
+  const enUrl = `${BASE_URL}${path}`;
+  const ptUrl = `${BASE_URL}/pt${path === "/" ? "" : path}`;
+  const canonicalUrl = language === "pt" ? ptUrl : enUrl;
 
   return (
     <Helmet>
@@ -39,9 +44,9 @@ export function SeoHead({
       <link rel="canonical" href={canonicalUrl} />
 
       {/* Hreflang */}
-      <link rel="alternate" hrefLang="en" href={canonicalUrl} />
-      {hasPtAlternate && <link rel="alternate" hrefLang="pt-BR" href={ptUrl} />}
-      <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
+      <link rel="alternate" hrefLang="en" href={enUrl} />
+      <link rel="alternate" hrefLang="pt" href={ptUrl} />
+      <link rel="alternate" hrefLang="x-default" href={enUrl} />
 
       {/* Open Graph */}
       <meta property="og:title" content={title} />

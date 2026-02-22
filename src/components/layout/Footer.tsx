@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import logoDark from "@/assets/logo-dark.png";
+import { LocalizedLink } from "@/components/LocalizedLink";
 
 export function Footer() {
   const { t } = useLanguage();
@@ -20,10 +20,10 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start gap-8">
           {/* Brand */}
           <div className="max-w-xs">
-            <Link to="/" className="flex items-center gap-3 mb-3" aria-label="GoodySEO Home">
+            <LocalizedLink to="/" className="flex items-center gap-3 mb-3" aria-label="GoodySEO Home">
               <img src={logoDark} alt="" className="h-8 w-8 brightness-0 invert" aria-hidden="true" />
               <span className="text-lg font-bold">GoodySEO</span>
-            </Link>
+            </LocalizedLink>
             <p className="text-primary-foreground/70 text-sm">
               {t("footer.desc")}
             </p>
@@ -35,12 +35,12 @@ export function Footer() {
             <ul className="grid grid-cols-2 gap-x-8 gap-y-1 text-sm" aria-label="Our services">
               {services.map((service) => (
                 <li key={service.href}>
-                  <Link 
+                  <LocalizedLink 
                     to={service.href} 
                     className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
                   >
                     {service.name}
-                  </Link>
+                  </LocalizedLink>
                 </li>
               ))}
             </ul>
@@ -51,28 +51,28 @@ export function Footer() {
             <h4 className="font-semibold mb-3 text-sm">{t("footer.company")}</h4>
             <ul className="space-y-1 text-sm" aria-label="Company">
               <li>
-                <Link 
+                <LocalizedLink 
                   to="/about" 
                   className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
                 >
                   {t("nav.about")}
-                </Link>
+                </LocalizedLink>
               </li>
               <li>
-                <Link 
+                <LocalizedLink 
                   to="/privacy" 
                   className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
                 >
                   {t("footer.privacy")}
-                </Link>
+                </LocalizedLink>
               </li>
               <li>
-                <Link 
+                <LocalizedLink 
                   to="/terms" 
                   className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
                 >
                   {t("footer.terms")}
-                </Link>
+                </LocalizedLink>
               </li>
             </ul>
           </div>
@@ -91,7 +91,7 @@ export function Footer() {
               </li>
               <li className="flex gap-3 mt-2">
                 <a 
-                  href="https://www.linkedin.com/company/goodyseo" 
+                  href="https://www.linkedin.com/company/goody-seo/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:text-primary-foreground transition-colors"

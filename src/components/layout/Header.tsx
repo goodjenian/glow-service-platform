@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
@@ -15,6 +14,7 @@ import {
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getWhatsAppUrl, getWhatsAppUrlPt } from "@/lib/whatsapp";
+import { LocalizedLink } from "@/components/LocalizedLink";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,19 +33,19 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="container flex h-16 items-center justify-between px-4 md:px-6" aria-label="Main navigation">
-        <Link to="/" className="flex items-center gap-3" aria-label="GoodySEO Home">
+        <LocalizedLink to="/" className="flex items-center gap-3" aria-label="GoodySEO Home">
           <img src={logoDark} alt="" className="h-10 w-10" aria-hidden="true" />
           <span className="text-xl font-bold text-foreground">GoodySEO</span>
-        </Link>
+        </LocalizedLink>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6">
-          <Link 
+          <LocalizedLink 
             to="/" 
             className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
             Home
-          </Link>
+          </LocalizedLink>
           
           <NavigationMenu>
             <NavigationMenuList>
@@ -56,7 +56,7 @@ export function Header() {
                     {services.map((service) => (
                       <li key={service.href}>
                         <NavigationMenuLink asChild>
-                          <Link
+                          <LocalizedLink
                             to={service.href}
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent/10 hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
@@ -64,7 +64,7 @@ export function Header() {
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                               {service.description}
                             </p>
-                          </Link>
+                          </LocalizedLink>
                         </NavigationMenuLink>
                       </li>
                     ))}
@@ -74,12 +74,12 @@ export function Header() {
             </NavigationMenuList>
           </NavigationMenu>
           
-          <Link 
+          <LocalizedLink 
             to="/about" 
             className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
             {t("nav.about")}
-          </Link>
+          </LocalizedLink>
 
           <LanguageSwitcher />
           
@@ -101,15 +101,15 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <div className="flex flex-col gap-6 mt-8">
-                <Link to="/" className="flex items-center gap-3" onClick={() => setIsOpen(false)}>
+                <LocalizedLink to="/" className="flex items-center gap-3" onClick={() => setIsOpen(false)}>
                   <img src={logoDark} alt="" className="h-8 w-8" aria-hidden="true" />
                   <span className="text-lg font-bold">GoodySEO</span>
-                </Link>
+                </LocalizedLink>
                 
                 <div className="flex flex-col gap-2">
                   <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">{t("nav.services")}</p>
                   {services.map((service) => (
-                    <Link
+                    <LocalizedLink
                       key={service.href}
                       to={service.href}
                       onClick={() => setIsOpen(false)}
@@ -117,17 +117,17 @@ export function Header() {
                     >
                       <span className="font-medium">{service.name}</span>
                       <span className="text-sm text-muted-foreground">{service.description}</span>
-                    </Link>
+                    </LocalizedLink>
                   ))}
                 </div>
 
-                <Link
+                <LocalizedLink
                   to="/about"
                   onClick={() => setIsOpen(false)}
                   className="font-medium py-2 px-3 rounded-md hover:bg-muted transition-colors"
                 >
                   {t("nav.about")}
-                </Link>
+                </LocalizedLink>
                 
                 <Button variant="contact" className="mt-4" asChild>
                   <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">

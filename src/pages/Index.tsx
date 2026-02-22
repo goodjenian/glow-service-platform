@@ -9,7 +9,7 @@ import { SeoHead } from "@/components/SeoHead";
 import { EntropyBackground } from "@/components/effects/EntropyBackground";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Link } from "react-router-dom";
+import { LocalizedLink } from "@/components/LocalizedLink";
 import { 
   Search, 
   Sparkles, 
@@ -33,8 +33,8 @@ const organizationSchema = {
   "email": "business@goodyseo.com",
   "areaServed": "Worldwide",
   "sameAs": [
-    "https://linkedin.com/company/goodyseo",
-    "https://instagram.com/goodyseo"
+    "https://www.linkedin.com/company/goody-seo/",
+    "https://www.instagram.com/goodyseo"
   ],
   "founder": {
     "@type": "Person",
@@ -53,6 +53,19 @@ const websiteSchema = {
     "target": "https://goodyseo.com/?s={search_term_string}",
     "query-input": "required name=search_term_string"
   }
+};
+
+// Standalone Organization schema for logo display in SERP
+const orgLogoSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "GoodySEO",
+  "url": "https://goodyseo.com/",
+  "logo": "https://goodyseo.com/favicon-logo.png",
+  "sameAs": [
+    "https://www.instagram.com/goodyseo",
+    "https://www.linkedin.com/company/goody-seo/"
+  ]
 };
 
 // Service colors matching brand identity
@@ -127,7 +140,7 @@ const Index = () => {
         title={metaTitle}
         description={metaDescription}
         path="/"
-        schemas={[organizationSchema, websiteSchema]}
+        schemas={[organizationSchema, websiteSchema, orgLogoSchema]}
       />
       <HeroSection />
 
@@ -143,7 +156,7 @@ const Index = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
-              <Link key={index} to={service.href} className="group">
+              <LocalizedLink key={index} to={service.href} className="group">
                 <Card className={`h-full hover-lift border-border/50 bg-gradient-card transition-all duration-300 ${service.colors.border}`}>
                   <CardHeader>
                     <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl ${service.colors.bg} mb-4`}>
@@ -162,7 +175,7 @@ const Index = () => {
                     </div>
                   </CardContent>
                 </Card>
-              </Link>
+              </LocalizedLink>
             ))}
           </div>
         </div>
@@ -170,7 +183,6 @@ const Index = () => {
 
       {/* Why Partner Section */}
       <WhyPartnerSection />
-
 
       {/* Free Analysis CTA */}
       <FreeAnalysisCTA />

@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { ScrollToTop } from "@/components/ScrollToTop";
-import { HelmetProvider } from "react-helmet-async"; // <--- NOVO IMPORT
+import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import AboutPage from "./pages/AboutPage";
@@ -20,32 +20,42 @@ import TermsPage from "./pages/TermsPage";
 
 const queryClient = new QueryClient();
 
+/** All page routes – rendered once for EN (/) and once for PT (/pt) */
+const pageRoutes = (
+  <>
+    <Route index element={<Index />} />
+    <Route path="about" element={<AboutPage />} />
+    <Route path="services/seo" element={<SEOPage />} />
+    <Route path="services/geo" element={<GEOPage />} />
+    <Route path="services/site-express" element={<SiteExpressPage />} />
+    <Route path="services/paid-traffic" element={<PaidTrafficPage />} />
+    <Route path="services/ai-agents" element={<AIAgentsPage />} />
+    <Route path="services/social-media" element={<SocialMediaPage />} />
+    <Route path="privacy" element={<PrivacyPage />} />
+    <Route path="terms" element={<TermsPage />} />
+  </>
+);
+
 const App = () => (
-  // Envolvemos tudo com o HelmetProvider aqui embaixo
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
-      <LanguageProvider>
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <LanguageProvider>
             <ScrollToTop />
             <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/services/seo" element={<SEOPage />} />
-              <Route path="/services/geo" element={<GEOPage />} />
-              <Route path="/services/site-express" element={<SiteExpressPage />} />
-              <Route path="/services/paid-traffic" element={<PaidTrafficPage />} />
-              <Route path="/services/ai-agents" element={<AIAgentsPage />} />
-              <Route path="/services/social-media" element={<SocialMediaPage />} />
-              <Route path="/privacy" element={<PrivacyPage />} />
-              <Route path="/terms" element={<TermsPage />} />
+              {/* EN routes */}
+              <Route path="/">{pageRoutes}</Route>
+              {/* PT routes – same components, language derived from /pt prefix */}
+              <Route path="/pt">{pageRoutes}</Route>
+              {/* 404 */}
               <Route path="*" element={<NotFound />} />
             </Routes>
-          </BrowserRouter>
-        </TooltipProvider>
-      </LanguageProvider>
+          </LanguageProvider>
+        </BrowserRouter>
+      </TooltipProvider>
     </QueryClientProvider>
   </HelmetProvider>
 );
