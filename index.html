@@ -23,7 +23,7 @@
     <!-- Canonical & hreflang (overridden per-page by react-helmet-async) -->
     <link rel="canonical" href="https://goodyseo.com/" />
     <link rel="alternate" hreflang="en" href="https://goodyseo.com/" />
-    <link rel="alternate" hreflang="pt-BR" href="https://goodyseo.com/?lang=pt" />
+    <link rel="alternate" hreflang="pt" href="https://goodyseo.com/pt" />
     <link rel="alternate" hreflang="x-default" href="https://goodyseo.com/" />
 
     <meta property="og:title" content="GoodySEO | Digital Solutions, Organic Strategy &amp; Automation" />
@@ -48,7 +48,10 @@
   </head>
 
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Static H1 for crawlers that don't execute JavaScript -->
+      <h1>Digital Solutions, Organic Strategy &amp; Automation</h1>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

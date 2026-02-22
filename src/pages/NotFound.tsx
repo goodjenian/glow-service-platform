@@ -1,9 +1,10 @@
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Home, ArrowLeft } from "lucide-react";
 import { SeoHead } from "@/components/SeoHead";
+import { LocalizedLink } from "@/components/LocalizedLink";
 
 const NotFound = () => {
   const location = useLocation();
@@ -14,7 +15,7 @@ const NotFound = () => {
 
   return (
     <Layout>
-      <SeoHead title="Page Not Found | GoodySEO" description="The page you are looking for does not exist." path={location.pathname} hasPtAlternate={false} />
+      <SeoHead title="Page Not Found | GoodySEO" description="The page you are looking for does not exist." path={location.pathname} />
       <div className="flex min-h-[60vh] flex-col items-center justify-center px-4">
         <div className="text-center">
           <h1 className="text-8xl font-bold text-muted-foreground/30 mb-4">404</h1>
@@ -24,10 +25,10 @@ const NotFound = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="accent" asChild>
-              <Link to="/">
+              <LocalizedLink to="/">
                 <Home className="mr-2 h-4 w-4" />
                 Back to Home
-              </Link>
+              </LocalizedLink>
             </Button>
             <Button variant="outline" onClick={() => window.history.back()}>
               <ArrowLeft className="mr-2 h-4 w-4" />

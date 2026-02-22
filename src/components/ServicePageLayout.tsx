@@ -2,7 +2,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, ArrowRight, TrendingUp, Target, Lightbulb, BarChart3, Award, Coins, Users, FlaskConical } from "lucide-react";
-import { Link } from "react-router-dom";
+import { LocalizedLink } from "@/components/LocalizedLink";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getWhatsAppUrl, getWhatsAppUrlPt } from "@/lib/whatsapp";
 import { ServiceFloatingIcons } from "@/components/services/ServiceFloatingIcons";
@@ -179,10 +179,9 @@ export function ServicePageLayout({
     },
   ];
 
-  // Derive canonical path from window location (pathname only, no query params)
-  const canonicalPath = typeof window !== "undefined"
-    ? window.location.pathname
-    : "/";
+  // Derive base canonical path (strip /pt prefix if present)
+  const rawPath = typeof window !== "undefined" ? window.location.pathname : "/";
+  const canonicalPath = rawPath.startsWith("/pt") ? (rawPath.replace(/^\/pt/, "") || "/") : rawPath;
 
   // Build Service schema
   const serviceSchema = {
@@ -440,7 +439,7 @@ export function ServicePageLayout({
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
               {relatedServices.map((service, index) => (
-                <Link key={index} to={service.href} className="group">
+                <LocalizedLink key={index} to={service.href} className="group">
                   <Card className="h-full hover-lift border-border/50 bg-gradient-card transition-all duration-300 group-hover:border-accent/30">
                     <CardContent className="p-6">
                       <h3 className="text-xl font-semibold mb-2 group-hover:text-accent transition-colors">
@@ -452,7 +451,7 @@ export function ServicePageLayout({
                       </div>
                     </CardContent>
                   </Card>
-                </Link>
+                </LocalizedLink>
               ))}
             </div>
           </div>
