@@ -21,7 +21,7 @@ export function Footer() {
           {/* Brand */}
           <div className="max-w-xs">
             <LocalizedLink to="/" className="flex items-center gap-3 mb-3" aria-label="GoodySEO Home">
-              <img src={logoDark} alt="" className="h-8 w-8 brightness-0 invert" aria-hidden="true" />
+              <img src={logoDark} alt="GoodySEO logo" className="h-8 w-8 brightness-0 invert" />
               <span className="text-lg font-bold">GoodySEO</span>
             </LocalizedLink>
             <p className="text-primary-foreground/70 text-sm">

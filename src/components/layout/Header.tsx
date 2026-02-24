@@ -34,7 +34,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="container flex h-16 items-center justify-between px-4 md:px-6" aria-label="Main navigation">
         <LocalizedLink to="/" className="flex items-center gap-3" aria-label="GoodySEO Home">
-          <img src={logoDark} alt="" className="h-10 w-10" aria-hidden="true" />
+          <img src={logoDark} alt="GoodySEO logo" className="h-10 w-10" />
           <span className="text-xl font-bold text-foreground">GoodySEO</span>
         </LocalizedLink>
 
@@ -102,7 +102,7 @@ export function Header() {
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <div className="flex flex-col gap-6 mt-8">
                 <LocalizedLink to="/" className="flex items-center gap-3" onClick={() => setIsOpen(false)}>
-                  <img src={logoDark} alt="" className="h-8 w-8" aria-hidden="true" />
+                  <img src={logoDark} alt="GoodySEO logo" className="h-8 w-8" />
                   <span className="text-lg font-bold">GoodySEO</span>
                 </LocalizedLink>
                 
