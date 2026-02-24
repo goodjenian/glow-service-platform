@@ -18,6 +18,9 @@ export function EntropyBackground({ className = "" }: EntropyBackgroundProps) {
     const ctx = canvas.getContext('2d')
     if (!ctx) return
 
+    let animationId: number | null = null
+    let isVisible = false
+
     const updateSize = () => {
       const rect = container.getBoundingClientRect()
       const dpr = window.devicePixelRatio || 1
@@ -32,32 +35,18 @@ export function EntropyBackground({ className = "" }: EntropyBackgroundProps) {
     let { width, height } = updateSize()
 
     const particleColor = '#ffffff'
-    const accentColor = 'hsl(217 91% 60%)'
 
     class Particle {
-      x: number
-      y: number
-      size: number
-      order: boolean
+      x: number; y: number; size: number; order: boolean
       velocity: { x: number; y: number }
-      originalX: number
-      originalY: number
-      influence: number
-      neighbors: Particle[]
+      originalX: number; originalY: number
+      influence: number; neighbors: Particle[]
 
       constructor(x: number, y: number, order: boolean) {
-        this.x = x
-        this.y = y
-        this.originalX = x
-        this.originalY = y
-        this.size = 1.5
-        this.order = order
-        this.velocity = {
-          x: (Math.random() - 0.5) * 2,
-          y: (Math.random() - 0.5) * 2
-        }
-        this.influence = 0
-        this.neighbors = []
+        this.x = x; this.y = y; this.originalX = x; this.originalY = y
+        this.size = 1.5; this.order = order
+        this.velocity = { x: (Math.random() - 0.5) * 2, y: (Math.random() - 0.5) * 2 }
+        this.influence = 0; this.neighbors = []
       }
 
       update(width: number, height: number) {
@@ -80,10 +69,8 @@ export function EntropyBackground({ className = "" }: EntropyBackgroundProps) {
         } else {
           this.velocity.x += (Math.random() - 0.5) * 0.3
           this.velocity.y += (Math.random() - 0.5) * 0.3
-          this.velocity.x *= 0.95
-          this.velocity.y *= 0.95
-          this.x += this.velocity.x
-          this.y += this.velocity.y
+          this.velocity.x *= 0.95; this.velocity.y *= 0.95
+          this.x += this.velocity.x; this.y += this.velocity.y
           if (this.x < 0 || this.x > width) this.velocity.x *= -1
           if (this.y < 0 || this.y > height) this.velocity.y *= -1
           this.x = Math.max(0, Math.min(width, this.x))
@@ -101,7 +88,7 @@ export function EntropyBackground({ className = "" }: EntropyBackgroundProps) {
     }
 
     const particles: Particle[] = []
-    const gridSize = 30
+    const gridSize = 20 // reduced from 30
     const spacingX = width / gridSize
     const spacingY = height / gridSize
 
@@ -125,14 +112,12 @@ export function EntropyBackground({ className = "" }: EntropyBackgroundProps) {
     }
 
     let time = 0
-    let animationId: number
     
     function animate() {
+      if (!isVisible) { animationId = null; return }
       ctx.clearRect(0, 0, width, height)
       
-      if (time % 30 === 0) {
-        updateNeighbors()
-      }
+      if (time % 30 === 0) updateNeighbors()
 
       particles.forEach(particle => {
         particle.update(width, height)
@@ -155,7 +140,11 @@ export function EntropyBackground({ className = "" }: EntropyBackgroundProps) {
       animationId = requestAnimationFrame(animate)
     }
 
-    animate()
+    const observer = new IntersectionObserver(([entry]) => {
+      isVisible = entry.isIntersecting
+      if (isVisible && !animationId) animate()
+    }, { threshold: 0 })
+    observer.observe(container)
 
     const handleResize = () => {
       const newSize = updateSize()
@@ -166,9 +155,8 @@ export function EntropyBackground({ className = "" }: EntropyBackgroundProps) {
     window.addEventListener('resize', handleResize)
 
     return () => {
-      if (animationId) {
-        cancelAnimationFrame(animationId)
-      }
+      if (animationId) cancelAnimationFrame(animationId)
+      observer.disconnect()
       window.removeEventListener('resize', handleResize)
     }
   }, [])
