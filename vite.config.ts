@@ -26,7 +26,7 @@ export default defineConfig(({ mode }) => ({
           'vendor-router': ['react-router-dom'],
           'vendor-ui': ['@radix-ui/react-accordion', '@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-navigation-menu', '@radix-ui/react-tooltip', '@radix-ui/react-toast', '@radix-ui/react-popover', '@radix-ui/react-tabs'],
           'vendor-query': ['@tanstack/react-query'],
-          'vendor-charts': ['recharts'],
+          
           'vendor-helmet': ['react-helmet-async'],
         },
       },
