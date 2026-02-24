@@ -6,17 +6,19 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { HelmetProvider } from "react-helmet-async";
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
-import AboutPage from "./pages/AboutPage";
-import SEOPage from "./pages/services/SEOPage";
-import GEOPage from "./pages/services/GEOPage";
-import SiteExpressPage from "./pages/services/SiteExpressPage";
-import PaidTrafficPage from "./pages/services/PaidTrafficPage";
-import AIAgentsPage from "./pages/services/AIAgentsPage";
-import SocialMediaPage from "./pages/services/SocialMediaPage";
-import PrivacyPage from "./pages/PrivacyPage";
-import TermsPage from "./pages/TermsPage";
+import { lazy, Suspense } from "react";
+
+const Index = lazy(() => import("./pages/Index"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const AboutPage = lazy(() => import("./pages/AboutPage"));
+const SEOPage = lazy(() => import("./pages/services/SEOPage"));
+const GEOPage = lazy(() => import("./pages/services/GEOPage"));
+const SiteExpressPage = lazy(() => import("./pages/services/SiteExpressPage"));
+const PaidTrafficPage = lazy(() => import("./pages/services/PaidTrafficPage"));
+const AIAgentsPage = lazy(() => import("./pages/services/AIAgentsPage"));
+const SocialMediaPage = lazy(() => import("./pages/services/SocialMediaPage"));
+const PrivacyPage = lazy(() => import("./pages/PrivacyPage"));
+const TermsPage = lazy(() => import("./pages/TermsPage"));
 
 const queryClient = new QueryClient();
 
@@ -45,14 +47,16 @@ const App = () => (
         <BrowserRouter>
           <LanguageProvider>
             <ScrollToTop />
-            <Routes>
-              {/* EN routes */}
-              <Route path="/">{pageRoutes}</Route>
-              {/* PT routes – same components, language derived from /pt prefix */}
-              <Route path="/pt">{pageRoutes}</Route>
-              {/* 404 */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
+            <Suspense fallback={null}>
+              <Routes>
+                {/* EN routes */}
+                <Route path="/">{pageRoutes}</Route>
+                {/* PT routes – same components, language derived from /pt prefix */}
+                <Route path="/pt">{pageRoutes}</Route>
+                {/* 404 */}
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Suspense>
           </LanguageProvider>
         </BrowserRouter>
       </TooltipProvider>
