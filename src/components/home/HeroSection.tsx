@@ -35,10 +35,11 @@ export function HeroSection() {
           
           {/* Headline with Animated Text */}
            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight tracking-tight">
-             <span className="animate-fade-in block bg-gradient-to-r from-[hsl(270,70%,65%)] to-[hsl(217,91%,60%)] bg-clip-text text-transparent pb-1">{t("hero.title1")}</span>
-             <span className="block bg-gradient-to-r from-white via-[hsl(270,80%,75%)] to-[hsl(217,91%,70%)] bg-clip-text text-transparent animate-slide-up pb-1" style={{ animationDelay: "0.2s" }}>
-              {t("hero.title2")}
-            </span>
+              <span className="animate-fade-in block bg-gradient-to-r from-[hsl(270,70%,65%)] to-[hsl(217,91%,60%)] bg-clip-text text-transparent pb-1">{t("hero.title1")}</span>
+              {" "}
+              <span className="block bg-gradient-to-r from-white via-[hsl(270,80%,75%)] to-[hsl(217,91%,70%)] bg-clip-text text-transparent animate-slide-up pb-1" style={{ animationDelay: "0.2s" }}>
+               {t("hero.title2")}
+             </span>
           </h1>
           
           <p className="text-lg md:text-xl text-primary-foreground/70 mb-10 max-w-2xl mx-auto animate-slide-up" style={{ animationDelay: "0.4s" }}>
