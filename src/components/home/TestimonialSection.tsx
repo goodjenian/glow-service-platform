@@ -1,7 +1,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Star } from "lucide-react";
 import telaAmbientalLogo from "@/assets/tela-ambiental-logo.png";
-import brunaCacao from "@/assets/bruna-cacao.jpeg";
+import brunaCacao from "@/assets/bruna-cacao.webp";
 
 export function TestimonialSection() {
   const { t, language } = useLanguage();

@@ -1,5 +1,5 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import logoDark from "@/assets/logo-dark.png";
+import logoDark from "@/assets/logo-dark.webp";
 import { LocalizedLink } from "@/components/LocalizedLink";
 
 export function Footer() {
