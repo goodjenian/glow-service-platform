@@ -14,23 +14,26 @@
       const ctx = canvas.getContext("2d");
       if (!ctx) return;
 
-      let animationId: number | null = null;
-      let time = 0;
-      let isVisible = false;
+    let animationId: number | null = null;
+    let time = 0;
+    let isVisible = false;
+    let cachedWidth = 0;
+    let cachedHeight = 0;
 
-      const resize = () => {
-        const dpr = window.devicePixelRatio || 1;
-        const rect = canvas.getBoundingClientRect();
-        canvas.width = rect.width * dpr;
-        canvas.height = rect.height * dpr;
-        ctx.scale(dpr, dpr);
-      };
+    const resize = () => {
+      const dpr = window.devicePixelRatio || 1;
+      const rect = canvas.getBoundingClientRect();
+      cachedWidth = rect.width;
+      cachedHeight = rect.height;
+      canvas.width = cachedWidth * dpr;
+      canvas.height = cachedHeight * dpr;
+      ctx.scale(dpr, dpr);
+    };
 
-      const draw = () => {
-        if (!isVisible) { animationId = null; return; }
-        const rect = canvas.getBoundingClientRect();
-        const width = rect.width;
-        const height = rect.height;
+    const draw = () => {
+      if (!isVisible) { animationId = null; return; }
+      const width = cachedWidth;
+      const height = cachedHeight;
 
         ctx.clearRect(0, 0, width, height);
 
