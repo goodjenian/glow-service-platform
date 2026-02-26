@@ -323,6 +323,16 @@ const translations: Record<Language, Record<string, string>> = {
     "siteExpress.faq.a2": "We use React, Next.js, and Tailwind CSS—the same technology stack used by companies like Netflix, Airbnb, and Nike. This ensures your site is fast, scalable, and future-proof.",
     "siteExpress.faq.q3": "Will my site be optimized for search engines?",
     "siteExpress.faq.a3": "Absolutely. Every Site Express project includes on-page SEO optimization, schema markup, meta tags, sitemap generation, and Core Web Vitals optimization. Your site will be ready to rank from day one.",
+    "siteExpress.faq.q4": "Can you integrate with my existing platform?",
+    "siteExpress.faq.a4": "Yes! We can integrate with WordPress, Hostinger, Wix, Squarespace, and many other platforms. We also build custom solutions that connect with your existing tools and workflows.",
+    "siteExpress.mobileApp.subtitle": "Mobile App Expansion",
+    "siteExpress.mobileApp.title": "Expand to Mobile Apps",
+    "siteExpress.mobileApp.desc": "Take your web presence further with native iOS and Android mobile apps built from your existing site layout—offered as an add-on service.",
+    "siteExpress.mobileApp.feature1": "Native iOS & Android development",
+    "siteExpress.mobileApp.feature2": "Consistent design with your website",
+    "siteExpress.mobileApp.feature3": "Push notifications & offline support",
+    "siteExpress.mobileApp.feature4": "App Store & Google Play submission",
+    "siteExpress.mobileApp.cta": "Ask About Mobile Apps",
 
     // Paid Traffic Page
     "paidTraffic.title": "Paid Traffic",
@@ -778,6 +788,16 @@ const translations: Record<Language, Record<string, string>> = {
     "siteExpress.faq.a2": "Usamos React, Next.js e Tailwind CSS—a mesma stack tecnológica usada por empresas como Netflix, Airbnb e Nike. Isso garante que seu site seja rápido, escalável e preparado para o futuro.",
     "siteExpress.faq.q3": "Meu site será otimizado para motores de busca?",
     "siteExpress.faq.a3": "Com certeza. Todo projeto Site Express inclui otimização SEO on-page, schema markup, meta tags, geração de sitemap e otimização de Core Web Vitals. Seu site estará pronto para rankear desde o primeiro dia.",
+    "siteExpress.faq.q4": "Vocês integram com minha plataforma existente?",
+    "siteExpress.faq.a4": "Sim! Podemos integrar com WordPress, Hostinger, Wix, Squarespace e muitas outras plataformas. Também construímos soluções personalizadas que conectam com suas ferramentas e fluxos de trabalho existentes.",
+    "siteExpress.mobileApp.subtitle": "Expansão para Apps Mobile",
+    "siteExpress.mobileApp.title": "Expanda para Apps Mobile",
+    "siteExpress.mobileApp.desc": "Leve sua presença digital ainda mais longe com apps mobile nativos para iOS e Android criados a partir do layout do seu site—oferecido como serviço adicional.",
+    "siteExpress.mobileApp.feature1": "Desenvolvimento nativo iOS & Android",
+    "siteExpress.mobileApp.feature2": "Design consistente com seu website",
+    "siteExpress.mobileApp.feature3": "Notificações push & suporte offline",
+    "siteExpress.mobileApp.feature4": "Publicação na App Store & Google Play",
+    "siteExpress.mobileApp.cta": "Consulte sobre Apps Mobile",
 
     // Paid Traffic Page
     "paidTraffic.title": "Tráfego pago",
