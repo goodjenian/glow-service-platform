@@ -23,7 +23,7 @@ const buttonVariants = cva(
         // Vivid purple contact variant
         contact: "bg-[hsl(270,70%,60%)] text-white hover:bg-[hsl(270,70%,55%)] shadow-lg hover:shadow-xl hover:-translate-y-0.5",
         // Blue CTA variant
-        cta: "bg-[hsl(217,91%,50%)] text-white hover:bg-[hsl(217,91%,45%)] shadow-lg hover:shadow-xl hover:-translate-y-0.5",
+        cta: "bg-[hsl(217,80%,85%)] text-[hsl(217,50%,25%)] hover:bg-[hsl(217,80%,80%)] shadow-lg hover:shadow-xl hover:-translate-y-0.5",
       },
       size: {
         default: "h-10 px-4 py-2",
