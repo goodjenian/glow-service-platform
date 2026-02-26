@@ -206,7 +206,7 @@ const Index = () => {
                 {t("cta.desc")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center px-4 sm:px-0">
-                <Button variant="default" size="xl" asChild className="w-full sm:w-auto">
+                <Button variant="cta" size="xl" asChild className="w-full sm:w-auto">
                   <a href="https://calendly.com/business-goodyseo/30min" target="_blank" rel="noopener noreferrer">
                     {t("cta.button")}
                     <ArrowRight className="ml-2 h-5 w-5" />
